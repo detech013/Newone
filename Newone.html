@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newone</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family: Arial, sans-serif; color:#222; line-height:1.6;}
+
+   header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 메뉴 기본 */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  position: relative; /* submenu 위치 기준 */
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 10px;
+}
+
+/* 서브메뉴 공통 스타일 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;   /* 메인 메뉴 바로 아래 붙음 */
+  left: 0;
+  background: #f4f4f4;
+  padding: 15px;
+  list-style: none;
+  min-width: 200px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 6px 10px;
+  color: #a60000;
+  text-decoration: none;
+}
+
+/* 호버했을 때 해당 메뉴만 강조 */
+.has-sub:hover > a {
+  background: #e0e0e0;
+}
+
+/* ====== 핵심 부분 ====== */
+/* 하나라도 hover하면 네 개 서브메뉴 모두 보이기 */
+.menu:hover .submenu {
+  display: block;
+}
+
+/* 가로로 정렬된 서브메뉴 배치 */
+.menu > li:nth-child(1) > .submenu { left: 0; }
+.menu > li:nth-child(2) > .submenu { left: 200px; }
+.menu > li:nth-child(3) > .submenu { left: 400px; }
+.menu > li:nth-child(4) > .submenu { left: 600px; }
+
+/* 블록끼리 딱 붙도록 */
+.submenu {
+  border: 1px solid #ddd;
+  margin: 0;
+}
+
+    
+
+    /* 메인 배너 */
+    .banner {
+      background: url('https://picsum.photos/1920/900?random=1') no-repeat center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* 섹션 */
+    section {
+      padding: 100px 20px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {margin-bottom: 20px;}
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    /* 공지사항 */
+    .notice-list {margin-top: 15px;}
+    .notice-list li {
+      border-bottom: 1px solid #ddd;
+      padding: 8px 0;
+      list-style: none;
+    }
+
+    /* 푸터 */
+    footer {
+      background: #f5f5f5;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    footer .grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      text-align: left;
+    }
+    footer p {margin: 5px 0;}
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+ <header>
+  <nav>
+    <div class="logo"><a href="#home">NEWONE</a></div>
+    <ul class="menu">
+      <li class="has-sub">
+        <a href="#company">회사 소개</a>
+        <ul class="submenu">
+          <li><a href="#greeting">인사말</a></li>
+          <li><a href="#history">회사 연혁</a></li>
+          <li><a href="#goal">경영목표</a></li>
+          <li><a href="#cert">인증 및 등록현황</a></li>
+          <li><a href="#map">오시는 길</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#esg">ESG</a>
+        <ul class="submenu">
+          <li><a href="#2023ESG">2023 ESG</a></li>
+          <li><a href="#2024ESG">2024 ESG</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#products">주요 제품</a>
+        <ul class="submenu">
+          <li><a href="#all-products">전체</a></li>
+          <li><a href="#pollution">생산환경오염 검출 장치</a></li>
+          <li><a href="#firezero">파이어 제로</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#support">고객센터</a>
+        <ul class="submenu">
+          <li><a href="#notice">공지사항</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">문의하기</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="lang">
+      <select>
+        <option>한국어</option>
+        <option>English</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+  <!-- BANNER -->
+  <div class="banner" id="home">
+    자세히 보기
+  </div>
+
+  <!-- 주요 제품 -->
+  <section id="products">
+    <h2>지금, 당신의 현장을 지켜보세요</h2>
+    <p>산업 현장에 일어나는 눈에 보이지 않는 위험을 검지하는 것에서 시작됩니다.</p>
+    <div class="grid" style="margin-top:30px;">
+      <div class="card">제품 이미지 1</div>
+      <div class="card">제품 이미지 2</div>
+    </div>
+  </section>
+
+  <!-- 회사 소개 -->
+  <section id="company">
+    <h2>함께 성장하는 기업</h2>
+    <p>조직 구성원이 일할 즐길 수 있는 회사, 파트너사와 함께 성장하는 회사, 모두가 단계별 성장하는 회사가 되겠습니다.</p>
+    <div class="grid" style="margin-top:30px;">
+      <div class="card">회사 소개 이미지</div>
+    </div>
+  </section>
+
+  <!-- ESG -->
+  <section id="esg">
+    <h2>뉴원의 ESG 지속가능경영</h2>
+    <p>2022년부터 ESG 활동을 진행하여, 2023년 ESG 지속가능 리포트를 발간했습니다.</p>
+    <div class="grid" style="margin-top:30px;">
+      <div class="card">Environment</div>
+      <div class="card">Social</div>
+      <div class="card">Governance</div>
+    </div>
+  </section>
+
+  <!-- 공지사항 -->
+  <section id="support">
+    <h2>뉴원 공지사항</h2>
+    <ul class="notice-list">
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="grid">
+      <div>
+        <h3>본사</h3>
+        <p>경기도 수원시 권선구 서둔로 21</p>
+        <p>Tel: 031-298-1191</p>
+        <p>Fax: 031-297-4460</p>
+      </div>
+      <div>
+        <h3>일산지사</h3>
+        <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+        <p>Tel: 031-912-1191</p>
+        <p>Fax: 031-912-4460</p>
+      </div>
+    </div>
+    <p style="margin-top:20px;">© NEWONE. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
