@@ -84,6 +84,7 @@ header:hover {
 
 /* 서브 메뉴 */
 .navbar__submenu {
+  
   margin-top: 10px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -141,6 +142,69 @@ header:hover .navbar__submenu {
     }
     h2 {margin-bottom: 20px;}
 
+    /* 제품 */
+ .products {
+    text-align: left;
+    padding: 40px 20px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    gap: 30px; /* 간격은 gap으로 줌 */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 calc(50% - 15px); /* 두 개가 들어가도록 조정 */
+    box-sizing: border-box;
+  }
+
+  .card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 60px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 200px; /* 임시 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .nav-btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(0%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 16px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { 
+  left: -25px; /* 이미지 바깥으로 살짝 */
+}
+.next { 
+  right: -25px; /* 이미지 바깥으로 살짝 */
+}
+
+  /* 반응형: 모바일에서는 1개 */
+  @media (max-width: 768px) {
+    .slide {
+      flex: 0 0 100%;
+    }
+  }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -175,6 +239,20 @@ header:hover .navbar__submenu {
       text-align: left;
     }
     footer p {margin: 5px 0;}
+
+        /* 빈 페이지 영역 */
+    .blankpage {
+      min-height:80vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.5rem;
+      color:#999;
+    }
+
+    .hidden {
+  display: none;
+}
     </style>
 </head>
 <body>
@@ -183,42 +261,42 @@ header:hover .navbar__submenu {
     <nav class="navbar">
       <!-- 왼쪽 로고 -->
       <div class="navbar__logo">
-        <a href="#">LOGO</a>
+        <a href="./연습용.HTML">LOGO</a>
       </div>
 
       <!-- 메뉴 -->
       <ul class="navbar__menu">
         <li class="menu">
-          <div><a class="menu__title" href="#company">회사 소개</a></div>
+          <div><a class="menu__title" onclick="showBlank('company')">회사 소개</a></div>
           <ul class="navbar__submenu">
-            <li><a href="#greeting">인사말</a></li>
-            <li><a href="#history">회사 연혁</a></li>
-            <li><a href="#goal">경영목표</a></li>
-            <li><a href="#cert">인증 및 등록현황</a></li>
-            <li><a href="#map">오시는 길</a></li>
+            <li><a onclick="showBlank('company')">인사말</a></li>
+            <li><a onclick="showBlank('history')">회사 연혁</a></li>
+            <li><a onclick="showBlank('goal')">경영목표</a></li>
+            <li><a onclick="showBlank('chart')">인증 및 등록현황</a></li>
+            <li><a onclick="showBlank('map')">오시는 길</a></li>
           </ul>
         </li>
         <li class="menu">
-          <div><a class="menu__title" href="#esg">ESG</a></div>
+          <div><a class="menu__title" onclick="showBlank('esg')">ESG</a></div>
           <ul class="navbar__submenu">
-            <li><a href="#2023ESG">2023 ESG</a></li>
-            <li><a href="#2024ESG">2024 ESG</a></li>
+            <li><a onclick="showBlank('2023esg')">2023 ESG</a></li>
+            <li><a onclick="showBlank('2024esg')">2024 ESG</a></li>
           </ul>
         </li>
         <li class="menu">
-          <div><a class="menu__title" href="#products">주요 제품</a></div>
+          <div><a class="menu__title" onclick="showBlank('products')">주요 제품</a></div>
           <ul class="navbar__submenu">
-            <li><a href="#all-products">전체</a></li>
-            <li><a href="#pollution">생산환경오염 검출 장치</a></li>
-            <li><a href="#firezero">파이어 제로</a></li>
+            <li><a onclick="showBlank('products')">전체</a></li>
+            <li><a onclick="showBlank('first')">생산환경오염 검출 장치</a></li>
+            <li><a onclick="showBlank('fire')">파이어 제로</a></li>
           </ul>
         </li>
         <li class="menu">
-          <div><a class="menu__title" href="#support">고객센터</a></div>
+          <div><a class="menu__title"  onclick="showBlank('support')">고객센터</a></div>
           <ul class="navbar__submenu">
-            <li><a href="#notice">공지사항</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">문의하기</a></li>
+            <li><a onclick="showBlank('support')">공지사항</a></li>
+            <li><a onclick="showBlank('faq')">FAQ</a></li>
+            <li><a onclick="showBlank('contact')">문의하기</a></li>
           </ul>
         </li>
       </ul>
@@ -241,18 +319,34 @@ header:hover .navbar__submenu {
   </div>
 
   <!-- 주요 제품 -->
-  <section id="products">
-    <h4>Newone</h4>
-    <h2>지금, 당신의 현장을 지켜보세요</h2>
-    <p>산업 현장에 일어나는 눈에 보이지 않는 위험을 검지하는 것에서 시작됩니다.</p>
-    <div class="grid" style="margin-top:30px;">
-      <div class="card">제품 이미지 1</div>
-      <div class="card">제품 이미지 2</div>
+<section class="products">
+  <h4>Newone</h4>
+  <h2>지금, 당신의 현장을 지켜보세요</h2>
+  <p>산업 현장에 일어나는 눈에 보이지 않는 위험을 검지하는 것에서 시작됩니다.</p>
+
+  <div class="slider-container" style="margin-top:30px;">
+    <div class="slider">
+      <!-- clone: 마지막 2개 복제 (무한 루프용) -->
+      <div class="slide card">제품 이미지 3</div>
+      <div class="slide card">제품 이미지 4</div>
+
+      <!-- 실제 슬라이드 -->
+      <div class="slide card">제품 이미지 1</div>
+      <div class="slide card">제품 이미지 2</div>
+      <div class="slide card">제품 이미지 3</div>
+      <div class="slide card">제품 이미지 4</div>
+
+      <!-- clone: 처음 2개 복제 -->
+      <div class="slide card">제품 이미지 1</div>
+      <div class="slide card">제품 이미지 2</div>
     </div>
-  </section>
+  </div>
+  <button class="nav-btn prev">&#10094;</button>
+  <button class="nav-btn next">&#10095;</button>
+</section>
 
   <!-- 회사 소개 -->
-  <section id="company">
+  <section class="company">
     <h4>Newone</h4>
     <h2>함께 성장하는 기업</h2>
     <p>조직 구성원이 일할 즐길 수 있는 회사, 파트너사와 함께 성장하는 회사, 모두가 단계별 성장하는 회사가 되겠습니다.</p>
@@ -262,7 +356,7 @@ header:hover .navbar__submenu {
   </section>
 
   <!-- ESG -->
-  <section id="esg">
+  <section class="esg">
     <h4>Newone</h4>
     <h2>뉴원의 ESG 지속가능경영</h2>
     <p>2022년부터 ESG 활동을 진행하여, 2023년 ESG 지속가능 리포트를 발간했습니다.</p>
@@ -274,7 +368,7 @@ header:hover .navbar__submenu {
   </section>
 
   <!-- 공지사항 -->
-  <section id="support">
+  <section class="support">
     <h4>Newone</h4>
     <h2>뉴원 공지사항</h2>
     <ul class="notice-list">
@@ -284,6 +378,8 @@ header:hover .navbar__submenu {
       <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
     </ul>
   </section>
+
+  <div id="blankPage" class="blankpage hidden"></div>
 
   <!-- FOOTER -->
   <footer>
@@ -303,5 +399,54 @@ header:hover .navbar__submenu {
     </div>
     <p style="margin-top:20px;">© NEWONE. All Rights Reserved.</p>
   </footer>
+
+    <script>
+  function showBlank(type) {
+  const sections = document.querySelectorAll("section, .banner");
+  sections.forEach(sec => sec.style.display = "none"); // 기존 콘텐츠 숨기기
+  const blank = document.getElementById("blankPage");
+  blank.style.display = "flex"; // 보이기
+  blank.textContent = type.toUpperCase() + " 페이지 (콘텐츠 준비중)";}
+
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  const totalSlides = slides.length;
+  const itemsPerView = 2; 
+  let index = itemsPerView; // 처음 클론 때문에 offset
+
+  function updateSlide() {
+    const slideWidth = slider.querySelector('.slide').offsetWidth + 30; // gap 포함
+    slider.style.transform = `translateX(${-index * slideWidth}px)`;
+  }
+
+  updateSlide();
+
+  function moveSlide(step) {
+    index += step;
+    slider.style.transition = "transform 0.5s ease-in-out";
+    updateSlide();
+  }
+
+  nextBtn.addEventListener('click', () => moveSlide(1));
+  prevBtn.addEventListener('click', () => moveSlide(-1));
+
+  slider.addEventListener('transitionend', () => {
+    if (index >= totalSlides - itemsPerView) {
+      index = itemsPerView;
+      slider.style.transition = "none";
+      updateSlide();
+    }
+    if (index <= 0) {
+      index = totalSlides - itemsPerView * 2;
+      slider.style.transition = "none";
+      updateSlide();
+    }
+  });
+
+  window.addEventListener('resize', updateSlide);
+  </script>
 </body>
 </html>
