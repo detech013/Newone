@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../CSS/Main.css">
+</head>
+
+<body>
+  <header class="pc-header">
+    <div class="navbar__div">
+      <nav class="navbar">
+        <!-- 왼쪽 로고 -->
+        <div class="navbar__logo">
+          <a href="./Main.html"><img src="../IMG/컬러 로고.webp" alt=""></a>
+        </div>
+
+        <!-- 메뉴 -->
+        <ul class="navbar__menu">
+          <li class="menu">
+            <div><a href="./회사소개.html" class="menu__title">회사 소개</a></div>
+            <ul class="navbar__submenu">
+              <li><a href="./회사소개.html">인사말</a></li>
+              <li><a href="./회사연혁.html">회사 연혁</a></li>
+              <li><a href="./경영목표.html">경영목표</a></li>
+              <li><a href="./인증등록.html">인증 및 등록현황</a></li>
+              <li><a href="./오시는길.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <div><a href="./ESG.html" class="menu__title">ESG</a></div>
+            <ul class="navbar__submenu">
+              <li><a href="./2023.html">2023 ESG</a></li>
+              <li><a href="./2024.html">2024 ESG</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <div><a href="./주요제품.html" class="menu__title">주요 제품</a></div>
+            <ul class="navbar__submenu">
+              <li><a href="./주요제품.html">전체</a></li>
+              <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
+              <li><a href="./파이어.html">파이어 제로</a></li>
+            </ul>
+          </li>
+          <li class="menu">
+            <div><a href="./공지사항.html" class="menu__title">고객센터</a></div>
+            <ul class="navbar__submenu">
+              <li><a href="./공지사항.html">공지사항</a></li>
+              <li><a href="./FAQ.html">FAQ</a></li>
+              <li><a href="./문의사항.html">문의하기</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- 오른쪽 언어 선택 -->
+        <div class="navbar__lang">
+          <select>
+            <option value="ko">KOR</option>
+            <option value="en">ENG</option>
+            <option value="jp">JPN</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 모바일 전용 헤더 -->
+  <header class="mobile-header">
+    <div class="mobile-navbar">
+      <div class="mobile-logo">
+        <a href="./Newone.HTML"><img src="../IMG/컬러 로고.webp" alt="logo"></a>
+      </div>
+      <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">☰</button>
+    </div>
+  </header>
+
+  <!-- 사이드바 -->
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+    <nav>
+      <ul>
+        <li>
+          <a href="./회사소개.html" class="main-link">회사 소개</a>
+          <ul>
+            <li><a href="./회사소개.html">인사말</a></li>
+            <li><a href="./회사연혁.html">회사 연혁</a></li>
+            <li><a href="./경영목표.html">경영목표</a></li>
+            <li><a href="./인증등록.html">인증 및 등록현황</a></li>
+            <li><a href="./오시는길.html">오시는 길</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./ESG.html" class="main-link">ESG</a>
+          <ul>
+            <li><a href="./2023.html">2023 ESG</a></li>
+            <li><a href="./2024.html">2024 ESG</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./주요제품.html" class="main-link">주요 제품</a>
+          <ul>
+              <li><a href="./주요제품.html">전체</a></li>
+              <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
+              <li><a href="./파이어.html">파이어 제로</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./공지사항.html" class="main-link">고객센터</a>
+          <ul>
+              <li><a href="./공지사항.html">공지사항</a></li>
+              <li><a href="./FAQ.html">FAQ</a></li>
+              <li><a href="./문의사항.html">문의하기</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- BANNER -->
+  <div class="banner" id="home">
+    자세히보기
+  </div>
+
+  <!-- 주요 제품 -->
+  <section class="products">
+    <div class="text">
+      <h4>Newone</h4>
+      <h2>지금, 당신의 현장을 지켜보세요</h2>
+      <p>산업 현장에 일어나는 눈에 보이지 않는 위험을 검지하는 것에서 시작됩니다.</p>
+    </div>
+
+    <div class="slider-container" style="margin-top:30px;">
+      <div class="slider">
+        <!-- 무한 루프용 -->
+        <div class="slide card"><img src="../IMG/고정형.jpg" alt=""></div>
+        <div class="slide card"><img src="../IMG/파이어.jpg" alt=""></div>
+
+        <!-- 실제 슬라이드 -->
+        <div class="slide card"><img src="../IMG/기본형.jpg" alt=""></div>
+        <div class="slide card"><img src="../IMG/핸디형.jpg" alt=""></div>
+        <div class="slide card"><img src="../IMG/고정형.jpg" alt=""></div>
+        <div class="slide card"><img src="../IMG/파이어.jpg" alt=""></div>
+
+        <!-- 무한 루프용 -->
+        <div class="slide card"><img src="../IMG/기본형.jpg" alt=""></div>
+        <div class="slide card"><img src="../IMG/핸디형.jpg" alt=""></div>
+      </div>
+    </div>
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+  </section>
+
+  <!-- 회사 소개 -->
+  <section class="company">
+    <div class="text">
+      <h4>Newone</h4>
+      <h2>함께 성장하는 기업</h2>
+      <p>조직 구성원이 일할 즐길 수 있는 회사, 파트너사와 함께 성장하는 회사, 모두가 단계별 성장하는 회사가 되겠습니다.</p>
+
+    </div>
+    <div class="grid">
+      <div class="card">회사 소개 이미지</div>
+    </div>
+  </section>
+
+  <!-- ESG -->
+  <section class="esg">
+    <div class="text">
+      <h4>Newone</h4>
+      <h2>뉴원의 ESG 지속가능경영</h2>
+      <p>2022년부터 ESG 활동을 진행하여, 2023년 ESG 지속가능 리포트를 발간했습니다.</p>
+    </div>
+    <div class="grid">
+      <div class="card">Environment</div>
+      <div class="card">Social</div>
+      <div class="card">Governance</div>
+    </div>
+  </section>
+
+  <!-- 공지사항 -->
+  <section class="support">
+    <h4>Newone</h4>
+    <h2>뉴원 공지사항</h2>
+    <ul class="notice-list">
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footerlogo">
+      <img src="../IMG/화이트 로고.webp" alt="">
+    </div>
+    <div class="grid">
+      <div>
+        <h3>본사</h3>
+        <p>경기도 수원시 권선구 서둔로 21</p>
+        <p>Tel: 031-298-1191</p>
+        <p>Fax: 031-297-4460</p>
+      </div>
+      <div class="box"></div>
+      <div>
+        <h3>일산지사</h3>
+        <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+        <p>Tel: 031-912-1191</p>
+        <p>Fax: 031-912-4460</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JAVASCRIPT/Main.JS"></script>
+</body>
+
+</html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        /* 헤더 */
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 60px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: height 0.3s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* hover 시 전체 header 늘어나기 */
+        header:hover {
+            height: 250px;
+        }
+
+        /* navbar */
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* <-- 여기! 위쪽 정렬 */
+            padding: 0 20px;
+        }
+
+        /* 로고 */
+        .navbar__logo a {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 60px;
+            /* 높이에 맞춰 중앙 */
+        }
+
+        /* 메뉴 */
+        .navbar__menu {
+            display: flex;
+            gap: 50px;
+        }
+
+        .menu {
+            position: relative;
+        }
+
+        /* 메인 메뉴 */
+        .menu>div>a {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 60px;
+            /* 중앙 정렬 */
+            transition: color 0.2s;
+        }
+
+        /* hover 효과 */
+        .menu:hover>div>a.menu__title {
+            color: red;
+        }
+
+        /* 서브 메뉴 */
+        .navbar__submenu {
+
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        header:hover .navbar__submenu {
+            opacity: 1;
+        }
+
+        .navbar__submenu li {
+            margin-top: 8px;
+        }
+
+        .navbar__submenu li a:hover {
+            color: red;
+        }
+
+        .navbar__logo>a>img {
+            height: 36px;
+            vertical-align: middle;
+            /* 세로 정렬 */
+            margin-bottom: 5px;
+            /* 필요하면 여백 추가 */
+        }
+
+        /* 언어 선택 */
+        .navbar__lang {
+            display: flex;
+            align-items: center;
+            /* flex로 수직 가운데 정렬 */
+            height: 60px;
+            /* 네비게이션 바 높이랑 똑같이 */
+        }
+
+        .navbar__lang select {
+            margin: 0;
+            /* 혹시 기본 margin 있으면 제거 */
+            padding: 6px 10px;
+            font-size: 14px;
+            border: 0.5px solid #ccc;
+            border-radius: 6px;
+            height: 36px;
+            /* select 높이를 딱 정해줘야 */
+            line-height: 1.2;
+            /* 글자가 위로 안 치우침 */
+            box-sizing: border-box;
+        }
+
+        /* PC 기본 보이기 */
+        .pc-header {
+            display: block;
+        }
+
+        .mobile-header {
+            display: none;
+        }
+
+        /* 모바일일 때 PC 헤더 숨기고 모바일 헤더 보이기 */
+        @media (max-width: 768px) {
+            .pc-header {
+                display: none;
+            }
+
+            .mobile-header {
+                display: block;
+            }
+
+            .mobile-header:hover {
+                height: 60px !important;
+            }
+        }
+
+        .mobile-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 6px 14px;
+        }
+
+        .mobile-logo>a>img {
+            height: 36px;
+            vertical-align: middle;
+            /* 세로 정렬 */
+            margin-bottom: 10px;
+        }
+
+        /* 햄버거 버튼 (눈에 잘 띄게) */
+        .hamburger {
+            width: 46px;
+            height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 14px;
+        }
+
+        .hamburger:focus {
+            outline: 1px solid rgba(0, 0, 0, 0.12);
+        }
+
+        /* 사이드바 (오른쪽에서 슬라이드) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 320px;
+            max-width: 80%;
+            transform: translateX(100%);
+            background: #fff;
+            box-shadow: -6px 0 28px rgba(0, 0, 0, 0.15);
+            transition: transform .28s cubic-bezier(.2, .9, .2, 1);
+            padding: 18px 18px 36px 18px;
+            z-index: 2300;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+            aria-hidden: false;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 26px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 사이드바 네비게이션 */
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 56px 0 0 0;
+        }
+
+        .sidebar nav>ul>li {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .sidebar nav a {
+            text-decoration: none;
+            color: #111;
+            display: block;
+            font-size: 16px;
+        }
+
+        .sidebar nav li>ul {
+            margin-top: 8px;
+            padding-left: 14px;
+        }
+
+        .sidebar nav li>ul li {
+            padding: 6px 0;
+            font-size: 15px;
+            color: #333;
+            border: none;
+        }
+
+        /* (선택) 메뉴 헤더와 화살표 정렬 */
+        .sidebar .main-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 오버레이 (사이드바 열렸을 때 배경 어둡게) */
+        .sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.34);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .2s;
+            z-index: 2250;
+        }
+
+        .sidebar-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .main-link>ul>li>a {
+            text-align: left;
+        }
+
+        /* 스크롤 숨김 처리(사이드바 열 때) - body에 클래스 추가할 예정 */
+        body.no-scroll {
+            overflow: hidden;
+            touch-action: none;
+        }
+
+/* 공통 컨테이너 */
+.container {
+  max-width: 1200px;   /* 원하는 최대 너비 */
+  margin: 0 auto;      /* 가운데 정렬 */
+  padding: 0 20px;     /* 좌우 여백 */
+}
+
+/* 배너 */
+.banner {
+  width: 100%;
+  height: 200px; /* 배너 높이 조정 */
+  background: url('../IMG/assets_task_01k5x5c90jfy7tjge8j493qh7b_1758694184_img_0.webp') no-repeat center/cover;
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+}
+
+.banner-inner {
+  width: 100%;
+  max-width: 1200px; /* 내용 영역 제한 */
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.banner-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 아이콘 크기 */
+.breadcrumb svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  flex-shrink: 0; 
+}
+
+/* 모바일에서 큰 제목 숨기기 */
+@media (max-width: 768px) {
+  .banner-title {
+    display: none;
+  }
+}
+
+/* 서브 메뉴 */
+.sub-menu {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.sub-menu ul {
+  display: flex;
+  justify-content: center;  /* 가운데 정렬 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sub-menu li {
+  margin: 0 15px;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.sub-menu li.active,
+.sub-menu li:hover {
+  color: #0b2f77;
+  border-bottom: 3px solid #0b2f77;
+}
+
+/* 푸터 */
+footer {
+  background: #444;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerlogo img {
+  height: 56px;
+}
+
+.box {
+  width: 1.5px;
+  height: 150px;
+  background-color: #ffffff;
+  margin: 0 30px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footerlogo img {
+    height: 36px;
+  }
+
+  .box {
+    display: none;
+  }
+
+  footer div {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 왼쪽 로고 -->
+                <div class="navbar__logo">
+                    <a href="./Main.html"><img src="../IMG/컬러 로고.webp" alt=""></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./회사소개.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./회사소개.html">인사말</a></li>
+                            <li><a href="./회사연혁.html">회사 연혁</a></li>
+                            <li><a href="./경영목표.html">경영목표</a></li>
+                            <li><a href="./인증등록.html">인증 및 등록현황</a></li>
+                            <li><a href="./오시는길.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./ESG.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./주요제품.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./주요제품.html">전체</a></li>
+                            <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./파이어.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./공지사항.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./공지사항.html">공지사항</a></li>
+                            <li><a href="./FAQ.html">FAQ</a></li>
+                            <li><a href="./문의사항.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 오른쪽 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 모바일 전용 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./Newone.HTML"><img src="../IMG/컬러 로고.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+<path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black"/>
+</svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./회사소개.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./회사소개.html">인사말</a></li>
+                        <li><a href="./회사연혁.html">회사 연혁</a></li>
+                        <li><a href="./경영목표.html">경영목표</a></li>
+                        <li><a href="./인증등록.html">인증 및 등록현황</a></li>
+                        <li><a href="./오시는길.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./ESG.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./주요제품.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./주요제품.html">전체</a></li>
+                        <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./파이어.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./공지사항.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./공지사항.html">공지사항</a></li>
+                        <li><a href="./FAQ.html">FAQ</a></li>
+                        <li><a href="./문의사항.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+<!-- 배너 -->
+<div class="banner">
+  <div class="banner-inner">
+    <h1 class="banner-title">회사 소개</h1>
+    <span class="breadcrumb">
+      <!-- 아이콘은 여기에 SVG 직접 넣으시면 됩니다 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z" fill="white"/>
+</svg> 
+      회사소개
+     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z" fill="white"/>
+</svg> 
+      인사말
+    </span>
+  </div>
+</div>
+
+<!-- 서브 메뉴 -->
+<div class="sub-menu">
+  <div class="container">
+    <ul>
+      <li class="active">인사말</li>
+      <li>회사 연혁</li>
+      <li>경영목표</li>
+      <li>인증 및 등록현황</li>
+      <li>오시는 길</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 푸터 -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footerlogo">
+      <img src="../IMG/화이트 로고.webp" alt="">
+    </div>
+    <div>
+      <h3>본사</h3>
+      <p>경기도 수원시 권선구 서둔로 21</p>
+      <p>Tel: 031-298-1191</p>
+      <p>Fax: 031-297-4460</p>
+    </div>
+    <div class="box"></div>
+    <div>
+      <h3>일산지사</h3>
+      <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+      <p>Tel: 031-912-1191</p>
+      <p>Fax: 031-912-4460</p>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // 모바일 헤더 사이드바
+        (function () {
+            const openBtn = document.getElementById('openSidebar');
+            const closeBtn = document.getElementById('closeSidebar');
+            const sidebar = document.getElementById('sidebar');
+
+            // overlay 요소가 없다면 생성
+            let overlay = document.getElementById('sidebarOverlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'sidebarOverlay';
+                overlay.className = 'sidebar-overlay';
+                document.body.appendChild(overlay);
+            }
+
+            function openSide() {
+                if (!sidebar) return;
+                sidebar.classList.add('open');
+                overlay.classList.add('show');
+                document.body.classList.add('no-scroll');
+                sidebar.setAttribute('aria-hidden', 'false');
+            }
+            function closeSide() {
+                if (!sidebar) return;
+                sidebar.classList.remove('open');
+                overlay.classList.remove('show');
+                document.body.classList.remove('no-scroll');
+                sidebar.setAttribute('aria-hidden', 'true');
+            }
+
+            if (openBtn) openBtn.addEventListener('click', openSide);
+            if (closeBtn) closeBtn.addEventListener('click', closeSide);
+            overlay.addEventListener('click', closeSide);
+
+            // Esc 키로도 닫기
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeSide();
+            });
+        })();
+    </script>
+</body>
+
+</html>
