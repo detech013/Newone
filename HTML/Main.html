@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <!-- 헤더 -->
   <header class="pc-header">
     <div class="navbar__div">
       <nav class="navbar">
@@ -36,7 +37,7 @@
             </ul>
           </li>
           <li class="menu">
-            <div><a href="./ESG.html" class="menu__title">ESG</a></div>
+            <div><a href="./2023.html" class="menu__title">ESG</a></div>
             <ul class="navbar__submenu">
               <li><a href="./2023.html">2023 ESG</a></li>
               <li><a href="./2024.html">2024 ESG</a></li>
@@ -78,7 +79,11 @@
       <div class="mobile-logo">
         <a href="./Newone.HTML"><img src="../IMG/컬러 로고.webp" alt="logo"></a>
       </div>
-      <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">☰</button>
+      <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -98,7 +103,7 @@
           </ul>
         </li>
         <li>
-          <a href="./ESG.html" class="main-link">ESG</a>
+          <a href="./2023.html" class="main-link">ESG</a>
           <ul>
             <li><a href="./2023.html">2023 ESG</a></li>
             <li><a href="./2024.html">2024 ESG</a></li>
@@ -107,26 +112,32 @@
         <li>
           <a href="./주요제품.html" class="main-link">주요 제품</a>
           <ul>
-              <li><a href="./주요제품.html">전체</a></li>
-              <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
-              <li><a href="./파이어.html">파이어 제로</a></li>
+            <li><a href="./주요제품.html">전체</a></li>
+            <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
+            <li><a href="./파이어.html">파이어 제로</a></li>
           </ul>
         </li>
         <li>
           <a href="./공지사항.html" class="main-link">고객센터</a>
           <ul>
-              <li><a href="./공지사항.html">공지사항</a></li>
-              <li><a href="./FAQ.html">FAQ</a></li>
-              <li><a href="./문의사항.html">문의하기</a></li>
+            <li><a href="./공지사항.html">공지사항</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
+            <li><a href="./문의사항.html">문의하기</a></li>
           </ul>
         </li>
       </ul>
     </nav>
   </aside>
 
-  <!-- BANNER -->
-  <div class="banner" id="home">
-    자세히보기
+  <!-- 메인 -->
+  <div class="main" id="home">
+    <video autoplay muted loop playsinline class="main-video">
+      <source src="../MP4/메인 페이지 영상.mp4" type="video/mp4">
+      브라우저가 영상을 지원하지 않습니다.
+    </video>
+    <div class="main-content">
+      <a href="../HTML/주요제품.html" class="main-btn">자세히 보기</a>
+    </div>
   </div>
 
   <!-- 주요 제품 -->
@@ -137,7 +148,12 @@
       <p>산업 현장에 일어나는 눈에 보이지 않는 위험을 검지하는 것에서 시작됩니다.</p>
     </div>
 
-    <div class="slider-container" style="margin-top:30px;">
+    <button class="nav-btn prev">
+     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21" fill="none">
+<path d="M12.3848 2.36961L10.6148 0.599609L0.714844 10.4996L10.6148 20.3996L12.3848 18.6296L4.25484 10.4996L12.3848 2.36961Z" fill="black"/>
+</svg>
+    </button>
+    <div class="slider-container">
       <div class="slider">
         <!-- 무한 루프용 -->
         <div class="slide card"><img src="../IMG/고정형.jpg" alt=""></div>
@@ -154,8 +170,11 @@
         <div class="slide card"><img src="../IMG/핸디형.jpg" alt=""></div>
       </div>
     </div>
-    <button class="nav-btn prev">&#10094;</button>
-    <button class="nav-btn next">&#10095;</button>
+    <button class="nav-btn next">
+     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21" fill="none">
+<path d="M12.3848 2.36961L10.6148 0.599609L0.714844 10.4996L10.6148 20.3996L12.3848 18.6296L4.25484 10.4996L12.3848 2.36961Z" fill="black"/>
+</svg>
+    </button>
   </section>
 
   <!-- 회사 소개 -->
@@ -164,10 +183,9 @@
       <h4>Newone</h4>
       <h2>함께 성장하는 기업</h2>
       <p>조직 구성원이 일할 즐길 수 있는 회사, 파트너사와 함께 성장하는 회사, 모두가 단계별 성장하는 회사가 되겠습니다.</p>
-
     </div>
     <div class="grid">
-      <div class="card">회사 소개 이미지</div>
+      <div class="card"></div>
     </div>
   </section>
 
@@ -197,12 +215,12 @@
     </ul>
   </section>
 
-  <!-- FOOTER -->
+  <!-- 푸터 -->
   <footer>
-    <div class="footerlogo">
-      <img src="../IMG/화이트 로고.webp" alt="">
-    </div>
-    <div class="grid">
+    <div class="container footer-inner">
+      <div class="footerlogo">
+        <img src="../IMG/화이트 로고.webp" alt="">
+      </div>
       <div>
         <h3>본사</h3>
         <p>경기도 수원시 권선구 서둔로 21</p>
