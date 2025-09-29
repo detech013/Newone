@@ -1,143 +1,248 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEO Greeting</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Noto Sans KR", Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-    }
-
-    /* 본문 섹션 */
-    .greeting-section {
-      padding: 60px 20px;
-    }
-
-    .greeting-section .container {
-      display: flex;
-      gap: 60px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* 왼쪽 (스티키) */
-    .greeting-section .left {
-      flex: 1;
-      position: sticky;
-      top: 100px; /* 메뉴바 높이에 맞춰 조정 */
-      align-self: flex-start;
-    }
-
-    .greeting-section .left h2 {
-      font-size: 36px;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
-
-    .greeting-section .left .intro {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.8;
-    }
-
-    /* 오른쪽 (스크롤 내용) */
-    .greeting-section .right {
-      flex: 2;
-    }
-
-    .greeting-section .ceo-info {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .greeting-section .person {
-      text-align: center;
-    }
-
-    .greeting-section .person p {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .greeting-section .person img {
-      max-width: 150px;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* 본문 텍스트 */
-    .greeting-section .content p {
-      font-size: 16px;
-      line-height: 1.9;
-      text-align: justify;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Greeting</title>
+    <link rel="stylesheet" href="../css/header-banner.css">
+    <link rel="stylesheet" href="../css/company.css">
 </head>
+
 <body>
+    <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
 
-  <!-- 본문 -->
-  <section class="greeting-section">
-    <div class="container">
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-      <!-- 왼쪽 (스티키) -->
-      <div class="left">
-        <h2>CEO GREETING</h2>
-        <p class="intro">
-          존경하는 이해관계자 여러분,<br>
-          함께 성장하는 기업<br>
-          주식회사 뉴원입니다.
-        </p>
-      </div>
-
-      <!-- 오른쪽 (스크롤 내용) -->
-      <div class="right">
-        <div class="ceo-info">
-          <div class="person">
-            <p><strong>CEO 이율범</strong></p>
-            <img src="ceo.jpg" alt="CEO">
-          </div>
-          <div class="person">
-            <p><strong>COO 조창호</strong></p>
-            <img src="coo.jpg" alt="COO">
-          </div>
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <div class="content">
-          <p>
-            뉴원은 2005년 전기공사 자재납품업에서 시작하여, 현재는 28명의 임직원과 3개의 공장, 41개의 비즈넷 파트너들과 함께 하는
-            관리, 통신, 산업 기계장치 기업으로 성장하였습니다.<br><br>
-
-            2011년 스마트 자동화 서비스(RPA)를 창립하였고, 2023년 스마트 하비스트 고모듈 서비스 전환에 맞춰 지능화된 엣지서비스
-            시스템을 구축하였으며, 2022년부터 ESG경영을 실천하여, 2032년 ESG지속경영 목표를 달성하고자 합니다.<br><br>
-
-            뉴원은 ESG지속경영을 통해 아프리카와 인도 전역에 "관리 및 컨트롤 장비"를 보급하고 있습니다. 회사 경영의 가장 중요한
-            원칙은 계속 성장할 수 있는 동력을 확보하고 유지하는 것이라고 생각합니다.<br><br>
-
-            미래에 대표가 아니더라도 임직원들이 영속할 수 있는 회사로 성장하며, 즐겁게 일할 수 있는 문화를 만들어 나가겠습니다.
-          </p>
-
-          <p>
-            또한 글로벌 시장 확장을 위해 연구개발(R&D)에 적극 투자하고 있으며, AI 기반 스마트 팩토리 솔루션,
-            친환경 에너지 관리 시스템 등 다양한 혁신 프로젝트를 추진하고 있습니다.<br><br>
-
-            뉴원은 앞으로도 고객, 협력사, 지역사회와 함께하는 상생을 기반으로 성장하며, "사람과 기술 중심의 가치 창출"을
-            이어 나갈 것입니다.
-          </p>
-
-          <p>
-            끝으로 뉴원을 아껴주시고 성원해주시는 모든 분들께 감사드리며, 지속가능한 미래를 함께 만들어 가겠습니다.<br>
-            감사합니다.
-          </p>
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
         </div>
-      </div>
+    </header>
+
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 배너 -->
+    <div class="banner">
+        <div class="banner-inner">
+            <h1 class="banner-title">회사 소개</h1>
+            <span class="breadcrumb">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                회사소개
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                인사말
+            </span>
+        </div>
     </div>
-  </section>
 
+    <!-- 서브 메뉴 -->
+    <div class="sub-menu">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="./company.html">인사말</a></li>
+                <li><a href="./history.html">회사 연혁</a></li>
+                <li><a href="./goals.html">경영목표</a></li>
+                <li><a href="./registration.html">인증 및 등록현황</a></li>
+                <li><a href="./location.html">오시는 길</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 본문 -->
+    <section class="greeting-section">
+        <div class="container">
+
+            <!-- 스티키 -->
+            <div class="left">
+                <h2>CEO GREETING</h2>
+                <p class="intro">
+                    존경하는 이해관계자 여러분,<br>
+                    함께 성장하는 기업<br>
+                    주식회사 뉴원입니다.
+                </p>
+            </div>
+
+            <!-- 스크롤 -->
+            <div class="right">
+                <div class="ceo-info">
+                    <div class="person">
+                        <p><strong>CEO 이율범</strong></p>
+                        <img src="ceo.jpg" alt="CEO">
+                    </div>
+                    <div class="person">
+                        <p><strong>COO 조창호</strong></p>
+                        <img src="coo.jpg" alt="COO">
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p>
+                        뉴원은 2005년 전기공사 자재납품업에서 시작하여, 현재는 28명의 임직원과 3개의 공장, 41개의 비즈넷 파트너들과 함께 하는
+                        관리, 통신, 산업 기계장치 기업으로 성장하였습니다.<br><br>
+
+                        2011년 스마트 자동화 서비스(RPA)를 창립하였고, 2023년 스마트 하비스트 고모듈 서비스 전환에 맞춰 지능화된 엣지서비스
+                        시스템을 구축하였으며, 2022년부터 ESG경영을 실천하여, 2032년 ESG지속경영 목표를 달성하고자 합니다.<br><br>
+
+                        뉴원은 ESG지속경영을 통해 아프리카와 인도 전역에 "관리 및 컨트롤 장비"를 보급하고 있습니다. 회사 경영의 가장 중요한
+                        원칙은 계속 성장할 수 있는 동력을 확보하고 유지하는 것이라고 생각합니다.<br><br>
+
+                        미래에 대표가 아니더라도 임직원들이 영속할 수 있는 회사로 성장하며, 즐겁게 일할 수 있는 문화를 만들어 나가겠습니다.
+                    </p>
+
+                    <p>
+                        또한 글로벌 시장 확장을 위해 연구개발(R&D)에 적극 투자하고 있으며, AI 기반 스마트 팩토리 솔루션,
+                        친환경 에너지 관리 시스템 등 다양한 혁신 프로젝트를 추진하고 있습니다.<br><br>
+
+                        뉴원은 앞으로도 고객, 협력사, 지역사회와 함께하는 상생을 기반으로 성장하며, "사람과 기술 중심의 가치 창출"을
+                        이어 나갈 것입니다.
+                    </p>
+
+                    <p>
+                        끝으로 뉴원을 아껴주시고 성원해주시는 모든 분들께 감사드리며, 지속가능한 미래를 함께 만들어 가겠습니다.<br>
+                        감사합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footerlogo">
+                <img src="../img/logo-white.webp" alt="">
+            </div>
+            <div>
+                <h3>본사</h3>
+                <p>경기도 수원시 권선구 서둔로 21</p>
+                <p>Tel: 031-298-1191</p>
+                <p>Fax: 031-297-4460</p>
+            </div>
+            <div class="box"></div>
+            <div>
+                <h3>일산지사</h3>
+                <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+                <p>Tel: 031-912-1191</p>
+                <p>Fax: 031-912-4460</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/header.js">
+    </script>
 </body>
+
 </html>
