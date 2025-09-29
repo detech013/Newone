@@ -11,136 +11,136 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="../CSS/Main.css">
+  <link rel="stylesheet" href="../css/mains.css">
 </head>
 
 <body>
-  <!-- 헤더 -->
-  <header class="pc-header">
-    <div class="navbar__div">
-      <nav class="navbar">
-        <!-- 왼쪽 로고 -->
-        <div class="navbar__logo">
-          <a href="./Main.html"><img src="../IMG/컬러 로고.webp" alt=""></a>
+     <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <!-- 메뉴 -->
-        <ul class="navbar__menu">
-          <li class="menu">
-            <div><a href="./회사소개.html" class="menu__title">회사 소개</a></div>
-            <ul class="navbar__submenu">
-              <li><a href="./회사소개.html">인사말</a></li>
-              <li><a href="./회사연혁.html">회사 연혁</a></li>
-              <li><a href="./경영목표.html">경영목표</a></li>
-              <li><a href="./인증등록.html">인증 및 등록현황</a></li>
-              <li><a href="./오시는길.html">오시는 길</a></li>
-            </ul>
-          </li>
-          <li class="menu">
-            <div><a href="./2023.html" class="menu__title">ESG</a></div>
-            <ul class="navbar__submenu">
-              <li><a href="./2023.html">2023 ESG</a></li>
-              <li><a href="./2024.html">2024 ESG</a></li>
-            </ul>
-          </li>
-          <li class="menu">
-            <div><a href="./주요제품.html" class="menu__title">주요 제품</a></div>
-            <ul class="navbar__submenu">
-              <li><a href="./주요제품.html">전체</a></li>
-              <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
-              <li><a href="./파이어.html">파이어 제로</a></li>
-            </ul>
-          </li>
-          <li class="menu">
-            <div><a href="./공지사항.html" class="menu__title">고객센터</a></div>
-            <ul class="navbar__submenu">
-              <li><a href="./공지사항.html">공지사항</a></li>
-              <li><a href="./FAQ.html">FAQ</a></li>
-              <li><a href="./문의사항.html">문의하기</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- 오른쪽 언어 선택 -->
-        <div class="navbar__lang">
-          <select>
-            <option value="ko">KOR</option>
-            <option value="en">ENG</option>
-            <option value="jp">JPN</option>
-          </select>
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
         </div>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- 모바일 전용 헤더 -->
-  <header class="mobile-header">
-    <div class="mobile-navbar">
-      <div class="mobile-logo">
-        <a href="./Newone.HTML"><img src="../IMG/컬러 로고.webp" alt="logo"></a>
-      </div>
-      <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
-        </svg>
-      </button>
-    </div>
-  </header>
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-  <!-- 사이드바 -->
-  <aside id="sidebar" class="sidebar" aria-hidden="true">
-    <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
-    <nav>
-      <ul>
-        <li>
-          <a href="./회사소개.html" class="main-link">회사 소개</a>
-          <ul>
-            <li><a href="./회사소개.html">인사말</a></li>
-            <li><a href="./회사연혁.html">회사 연혁</a></li>
-            <li><a href="./경영목표.html">경영목표</a></li>
-            <li><a href="./인증등록.html">인증 및 등록현황</a></li>
-            <li><a href="./오시는길.html">오시는 길</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="./2023.html" class="main-link">ESG</a>
-          <ul>
-            <li><a href="./2023.html">2023 ESG</a></li>
-            <li><a href="./2024.html">2024 ESG</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="./주요제품.html" class="main-link">주요 제품</a>
-          <ul>
-            <li><a href="./주요제품.html">전체</a></li>
-            <li><a href="./검출장치.html">생산환경오염 검출 장치</a></li>
-            <li><a href="./파이어.html">파이어 제로</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="./공지사항.html" class="main-link">고객센터</a>
-          <ul>
-            <li><a href="./공지사항.html">공지사항</a></li>
-            <li><a href="./FAQ.html">FAQ</a></li>
-            <li><a href="./문의사항.html">문의하기</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-
-  <!-- 메인 -->
+     <!-- 메인 -->
   <div class="main" id="home">
     <video autoplay muted loop playsinline class="main-video">
-      <source src="../MP4/메인 페이지 영상.mp4" type="video/mp4">
+      <source src="../video/main-video.mp4" type="video/mp4">
       브라우저가 영상을 지원하지 않습니다.
     </video>
     <div class="main-content">
-      <a href="../HTML/주요제품.html" class="main-btn">자세히 보기</a>
+      <a href="../html/products.html" class="main-btn">자세히 보기</a>
     </div>
   </div>
 
-  <!-- 주요 제품 -->
+   <!-- 주요 제품 -->
   <section class="products">
     <div class="text">
       <h4>Newone</h4>
@@ -156,86 +156,49 @@
     <div class="slider-container">
       <div class="slider">
         <!-- 무한 루프용 -->
-        <div class="slide card"><img src="../IMG/고정형.jpg" alt=""></div>
-        <div class="slide card"><img src="../IMG/파이어.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nwenc-400s.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nfz-800a.jpg" alt=""></div>
 
         <!-- 실제 슬라이드 -->
-        <div class="slide card"><img src="../IMG/기본형.jpg" alt=""></div>
-        <div class="slide card"><img src="../IMG/핸디형.jpg" alt=""></div>
-        <div class="slide card"><img src="../IMG/고정형.jpg" alt=""></div>
-        <div class="slide card"><img src="../IMG/파이어.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nwenc-400.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nwenc-100.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nwenc-400s.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nfz-800a.jpg" alt=""></div>
 
         <!-- 무한 루프용 -->
-        <div class="slide card"><img src="../IMG/기본형.jpg" alt=""></div>
-        <div class="slide card"><img src="../IMG/핸디형.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nwenc-400.jpg" alt=""></div>
+        <div class="slide card"><img src="../img/nwenc-100.jpg" alt=""></div>
       </div>
     </div>
     <button class="nav-btn next">
-     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21" fill="none">
-<path d="M12.3848 2.36961L10.6148 0.599609L0.714844 10.4996L10.6148 20.3996L12.3848 18.6296L4.25484 10.4996L12.3848 2.36961Z" fill="black"/>
-</svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21" fill="none">
+    <path d="M0.714844 2.36961L2.48484 0.599609L12.3848 10.4996L2.48484 20.3996L0.714844 18.6296L8.84484 10.4996L0.714844 2.36961Z"/>
+  </svg>
     </button>
   </section>
 
-  <!-- 회사 소개 -->
-  <section class="company">
-    <div class="text">
-      <h4>Newone</h4>
-      <h2>함께 성장하는 기업</h2>
-      <p>조직 구성원이 일할 즐길 수 있는 회사, 파트너사와 함께 성장하는 회사, 모두가 단계별 성장하는 회사가 되겠습니다.</p>
-    </div>
-    <div class="grid">
-      <div class="card"></div>
-    </div>
-  </section>
 
-  <!-- ESG -->
-  <section class="esg">
-    <div class="text">
-      <h4>Newone</h4>
-      <h2>뉴원의 ESG 지속가능경영</h2>
-      <p>2022년부터 ESG 활동을 진행하여, 2023년 ESG 지속가능 리포트를 발간했습니다.</p>
-    </div>
-    <div class="grid">
-      <div class="card">Environment</div>
-      <div class="card">Social</div>
-      <div class="card">Governance</div>
-    </div>
-  </section>
-
-  <!-- 공지사항 -->
-  <section class="support">
-    <h4>Newone</h4>
-    <h2>뉴원 공지사항</h2>
-    <ul class="notice-list">
-      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
-      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
-      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
-      <li>가나다라... <span style="float:right; color:#666;">2025/07/15</span></li>
-    </ul>
-  </section>
-
-  <!-- 푸터 -->
-  <footer>
-    <div class="container footer-inner">
-      <div class="footerlogo">
-        <img src="../IMG/화이트 로고.webp" alt="">
-      </div>
-      <div>
-        <h3>본사</h3>
-        <p>경기도 수원시 권선구 서둔로 21</p>
-        <p>Tel: 031-298-1191</p>
-        <p>Fax: 031-297-4460</p>
-      </div>
-      <div class="box"></div>
-      <div>
-        <h3>일산지사</h3>
-        <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
-        <p>Tel: 031-912-1191</p>
-        <p>Fax: 031-912-4460</p>
-      </div>
-    </div>
-  </footer>
+       <!-- 푸터 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footerlogo">
+                <img src="../img/logo-white.webp" alt="">
+            </div>
+            <div>
+                <h3>본사</h3>
+                <p>경기도 수원시 권선구 서둔로 21</p>
+                <p>Tel: 031-298-1191</p>
+                <p>Fax: 031-297-4460</p>
+            </div>
+            <div class="box"></div>
+            <div>
+                <h3>일산지사</h3>
+                <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+                <p>Tel: 031-912-1191</p>
+                <p>Fax: 031-912-4460</p>
+            </div>
+        </div>
+    </footer>
 
   <script src="../JAVASCRIPT/Main.JS"></script>
 </body>

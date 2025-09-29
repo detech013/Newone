@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEO Greeting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans KR", Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    /* 본문 섹션 */
+    .greeting-section {
+      padding: 60px 20px;
+    }
+
+    .greeting-section .container {
+      display: flex;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 왼쪽 (스티키) */
+    .greeting-section .left {
+      flex: 1;
+      position: sticky;
+      top: 100px; /* 메뉴바 높이에 맞춰 조정 */
+      align-self: flex-start;
+    }
+
+    .greeting-section .left h2 {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .greeting-section .left .intro {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.8;
+    }
+
+    /* 오른쪽 (스크롤 내용) */
+    .greeting-section .right {
+      flex: 2;
+    }
+
+    .greeting-section .ceo-info {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .greeting-section .person {
+      text-align: center;
+    }
+
+    .greeting-section .person p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .greeting-section .person img {
+      max-width: 150px;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* 본문 텍스트 */
+    .greeting-section .content p {
+      font-size: 16px;
+      line-height: 1.9;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 본문 -->
+  <section class="greeting-section">
+    <div class="container">
+
+      <!-- 왼쪽 (스티키) -->
+      <div class="left">
+        <h2>CEO GREETING</h2>
+        <p class="intro">
+          존경하는 이해관계자 여러분,<br>
+          함께 성장하는 기업<br>
+          주식회사 뉴원입니다.
+        </p>
+      </div>
+
+      <!-- 오른쪽 (스크롤 내용) -->
+      <div class="right">
+        <div class="ceo-info">
+          <div class="person">
+            <p><strong>CEO 이율범</strong></p>
+            <img src="ceo.jpg" alt="CEO">
+          </div>
+          <div class="person">
+            <p><strong>COO 조창호</strong></p>
+            <img src="coo.jpg" alt="COO">
+          </div>
+        </div>
+
+        <div class="content">
+          <p>
+            뉴원은 2005년 전기공사 자재납품업에서 시작하여, 현재는 28명의 임직원과 3개의 공장, 41개의 비즈넷 파트너들과 함께 하는
+            관리, 통신, 산업 기계장치 기업으로 성장하였습니다.<br><br>
+
+            2011년 스마트 자동화 서비스(RPA)를 창립하였고, 2023년 스마트 하비스트 고모듈 서비스 전환에 맞춰 지능화된 엣지서비스
+            시스템을 구축하였으며, 2022년부터 ESG경영을 실천하여, 2032년 ESG지속경영 목표를 달성하고자 합니다.<br><br>
+
+            뉴원은 ESG지속경영을 통해 아프리카와 인도 전역에 "관리 및 컨트롤 장비"를 보급하고 있습니다. 회사 경영의 가장 중요한
+            원칙은 계속 성장할 수 있는 동력을 확보하고 유지하는 것이라고 생각합니다.<br><br>
+
+            미래에 대표가 아니더라도 임직원들이 영속할 수 있는 회사로 성장하며, 즐겁게 일할 수 있는 문화를 만들어 나가겠습니다.
+          </p>
+
+          <p>
+            또한 글로벌 시장 확장을 위해 연구개발(R&D)에 적극 투자하고 있으며, AI 기반 스마트 팩토리 솔루션,
+            친환경 에너지 관리 시스템 등 다양한 혁신 프로젝트를 추진하고 있습니다.<br><br>
+
+            뉴원은 앞으로도 고객, 협력사, 지역사회와 함께하는 상생을 기반으로 성장하며, "사람과 기술 중심의 가치 창출"을
+            이어 나갈 것입니다.
+          </p>
+
+          <p>
+            끝으로 뉴원을 아껴주시고 성원해주시는 모든 분들께 감사드리며, 지속가능한 미래를 함께 만들어 가겠습니다.<br>
+            감사합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

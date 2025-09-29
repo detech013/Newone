@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yearly Growth Highlights - Timeline</title>
+<style>
+
+     body {
+     margin: 0;
+     font-family: "Noto Sans KR", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+ }
+
+ /* 헤더 */
+ ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ li {
+     text-align: center;
+ }
+
+ a {
+     text-decoration: none;
+     color: black;
+ }
+
+ header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 60px;
+     background-color: #fff;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     z-index: 1000;
+     transition: height 0.3s;
+     overflow: hidden;
+     cursor: pointer;
+ }
+
+ header:hover {
+     height: 250px;
+ }
+
+ .navbar {
+     max-width: 1200px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     padding: 0 20px;
+ }
+
+ /* 로고 */
+ .navbar__logo a {
+     font-size: 20px;
+     font-weight: bold;
+     line-height: 60px;
+ }
+
+ /* 메뉴 */
+ .navbar__menu {
+     display: flex;
+     gap: 50px;
+ }
+
+ .menu {
+     position: relative;
+ }
+
+ /* 메인 메뉴 */
+ .menu>div>a {
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 60px;
+     transition: color 0.2s;
+ }
+
+ .menu:hover>div>a.menu__title {
+     color: red;
+ }
+
+ /* 서브 메뉴 */
+ .navbar__submenu {
+
+     margin-top: 10px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ header:hover .navbar__submenu {
+     opacity: 1;
+ }
+
+ .navbar__submenu li {
+     margin-top: 8px;
+ }
+
+ .navbar__submenu li a:hover {
+     color: red;
+ }
+
+ .navbar__logo>a>img {
+     height: 36px;
+     vertical-align: middle;
+     margin-bottom: 5px;
+ }
+
+ /* 언어 선택 */
+ .navbar__lang {
+     display: flex;
+     align-items: center;
+     height: 60px;
+ }
+
+ .navbar__lang select {
+     margin: 0;
+     padding: 6px 30px 6px 10px;
+     font-size: 14px;
+     border: 0.5px solid #ccc;
+     border-radius: 6px;
+     height: 36px;
+     line-height: 1.2;
+     box-sizing: border-box;
+     background-color: #fff;
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     background: url("data:image/svg+xml;utf8,<svg fill='%23000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 5px center;
+     background-color: #fff;
+ }
+
+ .pc-header {
+     display: block;
+ }
+
+ .mobile-header {
+     display: none;
+ }
+
+ /* 반응형 헤더 */
+ @media (max-width: 768px) {
+     .pc-header {
+         display: none;
+     }
+
+     .mobile-header {
+         display: block;
+     }
+
+     .mobile-header:hover {
+         height: 60px !important;
+     }
+ }
+
+ .mobile-navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 60px;
+     padding: 6px 14px;
+ }
+
+ .mobile-logo>a>img {
+     height: 36px;
+     vertical-align: middle;
+     margin-bottom: 10px;
+ }
+
+ .hamburger {
+     width: 46px;
+     height: 46px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     background: none;
+     border: none;
+     cursor: pointer;
+     margin-bottom: 14px;
+ }
+
+ .hamburger:focus {
+     outline: 1px solid rgba(0, 0, 0, 0.12);
+ }
+
+ /* 사이드바 */
+ .sidebar {
+     position: fixed;
+     top: 0;
+     right: 0;
+     height: 100vh;
+     width: 320px;
+     max-width: 80%;
+     transform: translateX(100%);
+     background: #fff;
+     box-shadow: -6px 0 28px rgba(0, 0, 0, 0.15);
+     transition: transform .28s cubic-bezier(.2, .9, .2, 1);
+     padding: 18px 18px 36px 18px;
+     z-index: 2300;
+     overflow-y: auto;
+     -webkit-overflow-scrolling: touch;
+ }
+
+ .sidebar.open {
+     transform: translateX(0);
+ }
+
+ .sidebar .closebtn {
+     position: absolute;
+     top: 10px;
+     right: 12px;
+     font-size: 26px;
+     background: none;
+     border: none;
+     cursor: pointer;
+ }
+
+ .sidebar nav ul {
+     list-style: none;
+     padding: 0;
+     margin: 56px 0 0 0;
+ }
+
+ .sidebar nav>ul>li {
+     border-bottom: 1px solid #eee;
+     padding: 10px 0;
+ }
+
+ .sidebar nav a {
+     text-decoration: none;
+     color: #111;
+     display: block;
+     font-size: 16px;
+ }
+
+ .sidebar nav li>ul {
+     margin-top: 8px;
+     padding-left: 14px;
+ }
+
+ .sidebar nav li>ul li {
+     padding: 6px 0;
+     font-size: 15px;
+     color: #333;
+     border: none;
+ }
+
+ .sidebar li a:hover {
+     color: red;
+ }
+
+ .sidebar .main-link {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .sidebar-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.34);
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity .2s;
+     z-index: 2250;
+ }
+
+ .sidebar-overlay.show {
+     opacity: 1;
+     visibility: visible;
+ }
+
+ .main-link>ul>li>a {
+     text-align: left;
+ }
+
+ body.no-scroll {
+     overflow: hidden;
+     touch-action: none;
+ }
+
+ /* 공통 컨테이너 */
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ /* 배너 */
+ .banner {
+     position: relative;
+     width: 100%;
+     height: 200px;
+     background: url('../IMG/제품배너.webp') no-repeat center/cover;
+     display: flex;
+     align-items: flex-end;
+     padding-bottom: 40px;
+ }
+
+ .banner::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.1);
+     z-index: 1;
+ }
+
+ .banner-inner {
+     position: relative;
+     z-index: 2;
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+     display: flex;
+     align-items: baseline;
+     gap: 15px;
+ }
+
+ .banner-title {
+     font-size: 32px;
+     font-weight: 700;
+     color: white;
+     margin: 0;
+     line-height: 1.2;
+ }
+
+ .breadcrumb {
+     font-size: 16px;
+     font-weight: 400;
+     color: white;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     position: relative;
+     top: 4px;
+ }
+
+ .breadcrumb svg {
+     width: 18px;
+     height: 18px;
+     fill: white;
+     flex-shrink: 0;
+ }
+
+ /* 반응형 배너 */
+ @media (max-width: 768px) {
+     .banner {
+         height: 120px;
+         padding-bottom: 15px;
+     }
+
+     .banner-title {
+         display: none;
+     }
+
+     .breadcrumb {
+         font-size: 14px;
+         top: -12px;
+     }
+ }
+
+ /* 서브 메뉴 */
+ .sub-menu {
+     margin-top: 30px;
+     background: #fff;
+     border-bottom: 1px solid #ccc;
+ }
+
+ .sub-menu ul {
+     display: flex;
+     justify-content: center;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     border-bottom: 1px #949494;
+ }
+
+ .sub-menu li {
+     margin: 0px;
+     padding: 15px 36px;
+     cursor: pointer;
+     font-weight: 500;
+     color: #949494;
+     border-bottom: 3px solid transparent;
+     transition: all 0.3s;
+ }
+
+ .sub-menu a {
+     text-decoration: none;
+     color: inherit;
+     display: block;
+ }
+
+ .sub-menu li.active,
+ .sub-menu li:hover {
+     color: #001B8B;
+     border-bottom: 3px solid #001B8B;
+ }
+
+ @media (max-width: 768px) {
+     .sub-menu li {
+         padding: 15px 16px;
+         font-size: 13px;
+     }
+ }
+
+ /* 푸터 */
+ footer {
+     background: #4E4E4E;
+     color: #fff;
+     padding: 24px 0;
+ }
+
+ .footer-inner {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ footer div {
+     line-height: 1.2;
+ }
+
+ .footerlogo img {
+     height: 56px;
+ }
+
+ .box {
+     width: 1px;
+     height: 150px;
+     background-color: #ffffff;
+     margin: 0 30px;
+ }
+
+ /* 반응형 푸터 */
+ @media (max-width: 768px) {
+     .footer-inner {
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         gap: 30px;
+         width: 100%;
+         padding: 0 15px;
+         text-align: center;
+     }
+
+     .footerlogo img {
+         height: 32px;
+     }
+
+     .box {
+         display: none;
+     }
+
+     footer div {
+         font-size: 12px;
+         line-height: 1.4;
+         text-align: left;
+     }
+
+     footer {
+         padding: 10px 0;
+     }
+ }
+  :root{
+    --left-width: 360px;
+    --dot-col: 30px;
+    --dot-size: 12px;
+    --line-width: 2px;
+    --accent: #0a4bff;
+  }
+
+  /* 전체 레이아웃 */
+  .history-section{ padding:60px 20px; }
+  .history-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    gap:60px;
+  }
+
+  /* 왼쪽 sticky */
+  .history-left{
+    width:var(--left-width);
+    position:sticky;
+    top:100px;
+    align-self:flex-start;
+  }
+  .history-left h2{
+    margin:0 0 24px 0;
+    font-size:38px;
+    font-weight:900;
+    line-height:1.02;
+    letter-spacing:1px;
+  }
+  .history-left .intro{
+    margin:0;
+    font-size:16px;
+    line-height:1.8;
+    font-weight:600;
+    color:#222;
+  }
+
+  /* 오른쪽 연혁 */
+  .history-right{
+    flex:1;
+    position:relative;
+  }
+
+  .timeline-grid{
+    position:relative; /* 세로선 기준 */
+  }
+  /* 세로 라인: 첫 칼럼(도트 칼럼) 가운데로 위치 */
+  .timeline-grid::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: calc(var(--dot-col) / 2); /* first column center */
+    width: var(--line-width);
+    background:#e6e6e6;
+  }
+
+  /* 각 아이템: 왼쪽(dot) / 오른쪽(text) 그리드 */
+  .timeline-item{
+    display:grid;
+    grid-template-columns: var(--dot-col) 1fr;
+    gap:20px;
+    align-items:start;
+    margin-bottom:48px;
+  }
+
+  /* 도트(왼쪽 칸 가운데 정렬) */
+  .timeline-item .dot{
+    width:var(--dot-size);
+    height:var(--dot-size);
+    border-radius:50%;
+    background:var(--accent);
+    border:3px solid #fff; /* 흰 테두리 강조(선 위에서 시각적으로 깔끔) */
+    box-shadow:0 0 0 2px rgba(10,75,255,0.12);
+    justify-self:center; /* 칼럼 가운데 정렬 -> line과 정확히 겹침 */
+    margin-top:4px; /* 날짜 텍스트와 높이 맞추기 */
+  }
+
+  /* 날짜 / 텍스트 */
+  .timeline-date{
+    font-weight:700;
+    color:var(--accent);
+    margin-bottom:6px;
+    font-size:15px;
+  }
+  .timeline-text{
+    font-size:14.5px;
+    color:#333;
+    line-height:1.7;
+    margin:0;
+  }
+
+  /* 반응형: 좁아지면 left sticky가 차지하던 영역을 줄임 */
+  @media (max-width:900px){
+    .history-container{ gap:30px; }
+    .history-left{ width:260px; top:80px; }
+    :root{ --left-width:260px; }
+  }
+  @media (max-width:640px){
+    /* 모바일: 좌/우 수직배치 */
+    .history-container{ flex-direction:column; }
+    .history-left{ position:static; width:100%; margin-bottom:24px; }
+    .timeline-grid::before{ left: calc(var(--dot-col) / 2); } /* 그대로 */
+  }
+</style>
+</head>
+<body>
+    <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 배너 -->
+    <div class="banner">
+        <div class="banner-inner">
+            <h1 class="banner-title">회사 소개</h1>
+            <span class="breadcrumb">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                회사소개
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                인사말
+            </span>
+        </div>
+    </div>
+
+<!-- 서브 메뉴 -->
+<div class="sub-menu">
+    <div class="container">
+        <ul>
+            <li class="active"><a href="./company.html">인사말</a></li>
+            <li><a href="./history.html">회사 연혁</a></li>
+            <li><a href="./goals.html">경영목표</a></li>
+            <li><a href="./registration.html">인증 및 등록현황</a></li>
+            <li><a href="./location.html">오시는 길</a></li>
+        </ul>
+    </div>
+</div>
+
+  <!-- 본문 -->
+<section class="history-section">
+  <div class="history-container">
+
+    <!-- LEFT (sticky) -->
+    <div class="history-left">
+      <h2>YEARLY<br>GROWTH<br>HIGHLIGHTS</h2>
+      <p class="intro">
+        존경하는 이해관계자 여러분,<br>
+        함께 성장하는 기업<br>
+        주식회사 뉴원입니다.
+      </p>
+    </div>
+
+    <!-- RIGHT (timeline) -->
+    <div class="history-right">
+      <div class="timeline-grid">
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2005.09</div>
+            <p class="timeline-text">뉴원 전기 설립<br>(경기도 화성시 상탑길 팔리)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2010.08</div>
+            <p class="timeline-text">(주) 뉴원 전기 법인 전환</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2018.08</div>
+            <p class="timeline-text">전기, 통신, 소방, 가설, 산업안전용품 토탈 자재 유통 물류망 구축</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2022.05</div>
+            <p class="timeline-text">ESG 경영 본격 도입</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2023.11</div>
+            <p class="timeline-text">스마트 하비스트 고모듈 서비스 전환</p>
+          </div>
+        </div>
+
+               <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2010.08</div>
+            <p class="timeline-text">(주) 뉴원 전기 법인 전환</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2018.08</div>
+            <p class="timeline-text">전기, 통신, 소방, 가설, 산업안전용품 토탈 자재 유통 물류망 구축</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2022.05</div>
+            <p class="timeline-text">ESG 경영 본격 도입</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <div class="timeline-date">2023.11</div>
+            <p class="timeline-text">스마트 하비스트 고모듈 서비스 전환</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footerlogo">
+                <img src="../img/logo-white.webp" alt="">
+            </div>
+            <div>
+                <h3>본사</h3>
+                <p>경기도 수원시 권선구 서둔로 21</p>
+                <p>Tel: 031-298-1191</p>
+                <p>Fax: 031-297-4460</p>
+            </div>
+            <div class="box"></div>
+            <div>
+                <h3>일산지사</h3>
+                <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+                <p>Tel: 031-912-1191</p>
+                <p>Fax: 031-912-4460</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/header.js">
+    </script>
+</body>
+</html>
