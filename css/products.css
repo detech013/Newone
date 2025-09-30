@@ -1,0 +1,114 @@
+   /* 제품 상세페이지 */
+     .pcontainer {
+         max-width: 1100px;
+         margin: 40px auto 0;
+         padding: 0 20px;
+     }
+
+     .product {
+         display: flex;
+         align-items: center;
+         gap: 60px;
+         margin-bottom: 40px;
+         border-bottom: 1px solid #ddd;
+         padding-bottom: 40px;
+     }
+
+     .product img {
+         width: 400px;
+         height: 400px;
+         object-fit: contain;
+         border: 1px solid #ccc;
+         border-radius: 6px;
+         background: #ffffff;
+         flex-shrink: 0;
+     }
+
+     .product-info {
+         flex: 1;
+     }
+
+     .product-title {
+         font-size: 28px;
+         font-weight: bold;
+         margin-bottom: 8px;
+     }
+
+     .product-subtitle {
+         font-size: 22px;
+         font-weight: bold;
+         color: #555;
+         margin-bottom: 8px
+     }
+
+     .product-desc {
+         margin-bottom: 12px;
+         font-size: 18px;
+         line-height: 1.4;
+         color: #555;
+     }
+
+     .product-btn {
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         text-decoration: none;
+         font-weight: bold;
+         color: #001B8B;
+         font-size: 1rem;
+         font-size: 18px;
+     }
+
+     .product-btn svg {
+         width: 24px;
+         fill: currentColor;
+     }
+
+     .product.right {
+         flex-direction: row-reverse;
+     }
+
+     .product-info {
+         flex: 1;
+         text-align: left;
+     }
+
+     .product.right .product-info {
+         text-align: right;
+     }
+
+     @media (max-width: 768px) {
+         .product {
+             flex-direction: column;
+         }
+
+         .product.right {
+             flex-direction: column;
+         }
+
+         .product img {
+             width: 300px;
+             height: 300px;
+         }
+
+         .product-title {
+             font-size: 24px;
+             font-weight: bold;
+             margin-bottom: 8px;
+         }
+
+         .product-subtitle {
+             font-size: 20px;
+             font-weight: bold;
+             color: #555;
+             margin-bottom: 8px
+         }
+
+         .product-desc {
+             margin-bottom: 12px;
+             font-size: 16px;
+             line-height: 1.4;
+             color: #555;
+         }
+
+     }
