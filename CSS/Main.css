@@ -331,35 +331,52 @@
        margin-bottom: 20px;
    }
 
-   /* 제품 */
-   .products {
-       text-align: left;
-       padding: 40px 20px;
-       position: relative;
-       max-width: 1200px;
-       margin: 0 auto;
-   }
+ .products {
+  text-align: left;
+  padding: 40px 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-   .slider-container {
-       position: relative;
-       overflow: hidden;
-   }
+.products .text {
+  margin-bottom: 30px;
+}
 
-   .slider {
-       display: flex;
-       gap: 30px;
-       transition: transform 0.5s ease-in-out;
-   }
+/* 슬라이드+버튼 래퍼 */
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px; /* 버튼 포함 전체 폭 */
+  margin: 0 auto;
+}
 
-   .slide {
-       flex: 0 0 calc(50% - 15px);
-       box-sizing: border-box;
-   }
+/* 슬라이더 */
+.slider-container {
+  overflow: hidden;
+}
 
+.slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 calc(50% - 15px);
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 버튼 */
 .nav-btn {
   position: absolute;
-  top: 60%;
-  transform: translateY(0%);
+  top: 50%;
+  transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   border: none;
   padding: 15px;
@@ -378,11 +395,11 @@
 }
 
 .prev {
-  left: -60px; /* 이미지 바깥쪽 */
+  left: 10px;
 }
 
 .next {
-  right: -60px;
+  right: 10px;
 }
 
    /* 제품 반응형 */
