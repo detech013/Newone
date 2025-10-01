@@ -1,12 +1,3 @@
-
-     body {
-      font-family: 'NanumGothic', sans-serif;
-      background-color: #fff; /* 흰 배경 */
-      color: #000; /* 검정 글씨 */
-      margin: 0;
-      padding: 0;
-    }
-    
    .container {
       max-width: 900px;
       margin: 0 auto;
