@@ -1,133 +1,134 @@
   /* 본문 섹션 */
-    .history-section {
+  .history-section {
       padding: 60px;
-    }
+  }
 
-    .section-container {
+  .section-container {
       display: flex;
       gap: 60px;
       max-width: 1100px;
       margin: 0 auto;
-    }
+  }
 
-    /* 왼쪽 (스티키) */
-    .left {
+  /* 왼쪽 (스티키) */
+  .left {
       flex: 1;
       position: sticky;
-      top: 100px; /* 메뉴바 높이에 맞춰 조정 */
+      top: 100px;
+      /* 메뉴바 높이에 맞춰 조정 */
       align-self: flex-start;
-    }
+  }
 
-    h2 {
+  h2 {
       font-size: 36px;
       font-weight: 900;
       margin-bottom: 20px;
-    }
+  }
 
-    .intro {
+  .intro {
       font-size: 18px;
       font-weight: 600;
       line-height: 1.8;
-    }
+  }
 
-         :root {
-         --left-width: 360px;
-         --dot-col: 30px;
-         --dot-size: 12px;
-         --line-width: 2px;
-         --accent: #0a4bff;
-     }
+  :root {
+      --left-width: 360px;
+      --dot-col: 30px;
+      --dot-size: 12px;
+      --line-width: 2px;
+      --accent: #0a4bff;
+  }
 
-     /* 오른쪽 연혁 */
-     .history-section .right {
-         flex: 1;
-         position: relative;
-     }
+  /* 오른쪽 연혁 */
+  .history-section .right {
+      flex: 1;
+      position: relative;
+  }
 
-     .timeline-grid {
-        margin-top: 40px;
-         position: relative;
-         /* 세로선 기준 */
-     }
+  .timeline-grid {
+      margin-top: 40px;
+      position: relative;
+      /* 세로선 기준 */
+  }
 
-     /* 세로 라인 */
-     .timeline-grid::before {
-         content: "";
-         position: absolute;
-         top: 3px;
-         bottom: 0;
-         left: calc(var(--dot-col) / 2.05);
-         width: var(--line-width);
-         background: #e6e6e6;
-     }
+  /* 세로 라인 */
+  .timeline-grid::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      bottom: 0;
+      left: calc(var(--dot-col) / 2.05);
+      width: var(--line-width);
+      background: #e6e6e6;
+  }
 
-     /* 각 아이템: 왼쪽(dot) / 오른쪽(text) 그리드 */
-     .timeline-item {
-         display: grid;
-         grid-template-columns: var(--dot-col) 1fr;
-         gap: 20px;
-         align-items: start;
-         margin-bottom: 48px;
-     }
+  /* 각 아이템: 왼쪽(dot) / 오른쪽(text) 그리드 */
+  .timeline-item {
+      display: grid;
+      grid-template-columns: var(--dot-col) 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 48px;
+  }
 
-     /* 도트(왼쪽 칸 가운데 정렬) */
-     .timeline-item .dot {
-         width: var(--dot-size);
-         height: var(--dot-size);
-         border-radius: 50%;
-         background: var(--accent);
-         border: 3px solid #fff;
-         box-shadow: 0 0 0 2px rgba(10, 75, 255, 0.12);
-         justify-self: center;
-         margin-top: 4px;
-         z-index: 1;
-     }
+  /* 도트(왼쪽 칸 가운데 정렬) */
+  .timeline-item .dot {
+      width: var(--dot-size);
+      height: var(--dot-size);
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px rgba(10, 75, 255, 0.12);
+      justify-self: center;
+      margin-top: 4px;
+      z-index: 1;
+  }
 
-     /* 날짜 / 텍스트 */
-     .timeline-date {
-         font-weight: 700;
-         color: var(--accent);
-         margin-bottom: 6px;
-         font-size: 15px;
-     }
+  /* 날짜 / 텍스트 */
+  .timeline-date {
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+      font-size: 15px;
+  }
 
-     .timeline-text {
-         font-size: 14.5px;
-         color: #333;
-         line-height: 1.7;
-         margin: 0;
-     }
+  .timeline-text {
+      font-size: 14.5px;
+      color: #333;
+      line-height: 1.7;
+      margin: 0;
+  }
 
-     /* 반응형 */
-     @media (max-width:900px) {
-         .history-container {
-             gap: 30px;
-         }
+  /* 반응형 */
+  @media (max-width:900px) {
+      .history-container {
+          gap: 30px;
+      }
 
-         .history-left {
-             width: 260px;
-             top: 80px;
-         }
+      .history-left {
+          width: 260px;
+          top: 80px;
+      }
 
-         :root {
-             --left-width: 260px;
-         }
-     }
+      :root {
+          --left-width: 260px;
+      }
+  }
 
-     @media (max-width:640px) {
+  @media (max-width:640px) {
 
-         /* 모바일: 좌/우 수직배치 */
-         .history-container {
-             flex-direction: column;
-         }
+      /* 모바일: 좌/우 수직배치 */
+      .history-container {
+          flex-direction: column;
+      }
 
-         .history-left {
-             position: static;
-             width: 100%;
-             margin-bottom: 24px;
-         }
+      .history-left {
+          position: static;
+          width: 100%;
+          margin-bottom: 24px;
+      }
 
-         .timeline-grid::before {
-             left: calc(var(--dot-col) / 2);
-         }
-     }
+      .timeline-grid::before {
+          left: calc(var(--dot-col) / 2);
+      }
+  }

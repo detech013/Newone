@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registration</title>
     <link rel="stylesheet" href="../css/header-banner.css">
+    <link rel="stylesheet" href="../css/registration.css">
 </head>
 
 <body>
@@ -124,7 +125,7 @@
     </aside>
 
     <!-- 배너 -->
-    <div class="banner" style="background: url(../img/banner-company.webp);">
+    <div class="banner" style="background: url(../img/banner-company.webp) no-repeat center/cover;">
         <div class="banner-inner">
             <h1 class="banner-title">회사 소개</h1>
             <span class="breadcrumb">
@@ -160,10 +161,13 @@
         </div>
     </div>
 
-    <section class="section registration-section">
-        <div class="container">
+    <!-- 본문 -->
+
+    <section class="registration-section">
+        <div class="section-container">
+            <!-- 왼쪽 텍스트 -->
             <div class="left">
-                <h2>CERTIFICATIONS</h2>
+                <h2>CERTIFICATE &<br> REGISTRATION</h2>
                 <p class="intro">
                     존경하는 이해관계자 여러분,<br>
                     함께 성장하는 기업<br>
@@ -171,16 +175,39 @@
                 </p>
             </div>
 
-            <div class="right certificates">
-                <img src="../img/certificate1.jpg" alt="인증서 1">
-                <img src="../img/certificate2.jpg" alt="인증서 2">
-                <img src="../img/certificate3.jpg" alt="인증서 3">
-                <img src="../img/certificate4.jpg" alt="인증서 4">
-                <img src="../img/certificate5.jpg" alt="인증서 5">
-                <img src="../img/certificate6.jpg" alt="인증서 6">
+            <!-- 상단 오른쪽: 맨 위 2개 (오른쪽 칸에 위치) -->
+            <div class="top-right">
+                <div class="top-row">
+                    <div class="cert-item"><img src="../img/certificate1.png" alt="인증서1"></div>
+                    <div class="cert-item"><img src="../img/certificate2.png" alt="인증서2"></div>
+
+                </div>
+            </div>
+
+            <!-- 전체 폭으로 펼쳐지는 인증서 그리드 (여기에 4열씩 채움) -->
+            <div class="cert-grid">
+                <div class="cert-item"><img src="../img/certificate3.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate4.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate5.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate6.png" alt=""></div>
+
+                <div class="cert-item"><img src="../img/certificate7.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate8.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate9.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate10.png" alt=""></div>
+
+                <div class="cert-item"><img src="../img/certificate11.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate12.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate13.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate14.png" alt=""></div>
+
+                <div class="cert-item"><img src="../img/certificate15.png" alt=""></div>
+                <div class="cert-item"><img src="../img/certificate16.png" alt=""></div>
+
             </div>
         </div>
     </section>
+
     <!-- 푸터 -->
     <footer>
         <div class="container footer-inner">

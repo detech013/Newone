@@ -1,0 +1,122 @@
+/* 본문 섹션 */
+        .registration-section {
+            padding: 60px;
+        }
+
+        .section-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        .top-right {
+            grid-column: 2;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .top-row {
+            display: flex;
+            gap: 30px;
+            justify-content: flex-start;
+        }
+
+        .top-row .cert-item {
+            width: 100%;
+            height: 340px;
+        }
+
+        /* 전체 폭으로 펼쳐지는 그리드: 컨테이너 내에서 가로 전체(span) */
+        .cert-grid {
+            grid-column: 1 / -1;
+            /* <-- 중요: 부모 그리드 전체 폭 차지 */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 10px;
+        }
+
+        /* 인증서 박스 공통 */
+        .cert-item {
+            border: 1px solid #efefef;
+            background: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        /* 이미지 비율 유지 */
+        .cert-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* 반응형 */
+        @media (max-width: 1000px) {
+            .registration-section .container {
+                grid-template-columns: 260px 1fr;
+                gap: 24px;
+            }
+
+            .top-row .cert-item {
+                width: 200px;
+                height: 300px;
+            }
+
+            .cert-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 760px) {
+            .registration-section .container {
+                grid-template-columns: 1fr;
+            }
+
+            .top-right {
+                grid-column: 1 / -1;
+            }
+
+            .top-row {
+                justify-content: center;
+            }
+
+            .top-row .cert-item {
+                width: 160px;
+                height: 240px;
+            }
+
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .top-row .cert-item {
+                width: 140px;
+                height: 200px;
+            }
+        }

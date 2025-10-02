@@ -83,3 +83,137 @@
      font-weight: bold;
      text-decoration: underline;
    }
+
+   /* FAQ */
+
+
+   details {
+     border-bottom: 1px solid #e5e5e5;
+     padding: 30px 0;
+   }
+
+   summary {
+     font-size: 18px;
+     font-weight: 600;
+     cursor: pointer;
+     list-style: none;
+     padding-left: 16px;
+     /* 전체 들여쓰기 */
+     position: relative;
+   }
+
+   summary::after {
+     content: '+';
+     position: absolute;
+     right: 16px;
+     font-weight: bold;
+     font-size: 24px;
+     line-height: 1;
+     transition: transform 0.3s;
+   }
+
+   details[open] summary::after {
+     content: '−';
+     font-size: 24px;
+   }
+
+   .faq-answer {
+     margin-top: 12px;
+     font-size: 15px;
+     color: #444;
+     line-height: 1.8;
+     padding-left: 16px;
+     /* 답변도 들여쓰기 */
+   }
+
+   .label-q {
+     color: #0072ce;
+     font-weight: 700;
+     margin-right: 6px;
+   }
+
+   .label-a {
+     color: #ff6600;
+     font-weight: 700;
+     margin-right: 6px;
+   }
+
+   /* post */
+   .wrap {
+     width: 100%;
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 16px 0px;
+     border-bottom: 1px solid #ddd;
+     margin-bottom: 40px;
+   }
+
+   .back {
+     align-items: center;
+     padding: 0px;
+   }
+
+   /* 헤더 영역 */
+   .notice-detail-head {
+     border-bottom: 1px solid #ddd;
+     padding-bottom: 16px;
+     margin-bottom: 25px;
+   }
+
+   .notice-detail-info {
+     display: flex;
+     justify-content: space-between;
+     font-size: 14px;
+     color: #666;
+   }
+
+   .notice-detail-info span {
+     margin-left: 12px;
+   }
+
+   /* 본문 */
+   .notice-detail-body {
+     font-size: 15px;
+     line-height: 1.7;
+     margin-bottom: 40px;
+     white-space: pre-line;
+   }
+
+   /* 첨부파일 */
+   .notice-detail-file {
+     margin-bottom: 20px;
+     text-align: right;
+   }
+
+   .notice-detail-file a {
+     display: inline-block;
+     padding: 6px 10px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     font-size: 14px;
+     color: #0048FF;
+     text-decoration: none;
+     background: #f9f9f9;
+   }
+
+   /* 버튼 */
+   .notice-detail-btn {
+     text-align: center;
+     margin-top: 40px;
+   }
+
+   .notice-detail-btn button {
+     background: #000;
+     color: #fff;
+     padding: 12px 36px;
+     border: 2px solid #000;
+     border-radius: 4px;
+     font-size: 15px;
+     cursor: pointer;
+   }
+
+   .notice-detail-btn button:hover {
+     background: #ffffff;
+     color: #000;
+   }
+
