@@ -11,7 +11,7 @@
  }
 
  /* 왼쪽 (스티키) */
- .left {
+ .greeting-section .left {
    flex: 1;
    position: sticky;
    top: 100px;
@@ -19,7 +19,7 @@
    align-self: flex-start;
  }
 
- h2 {
+ .greeting-section h2 {
    font-size: 36px;
    font-weight: 900;
    margin-bottom: 20px;
@@ -67,3 +67,54 @@
    line-height: 1.9;
    text-align: justify;
  }
+
+ /* 모바일 반응형 */
+@media (max-width: 768px) {
+  .greeting-section {
+    padding: 30px 20px;
+  }
+
+  .section-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* 왼쪽 (스티키 해제 + 가운데 정렬) */
+  .greeting-section .left {
+    position: static; /* sticky 해제 */
+    text-align: center;
+  }
+
+  .greeting-section h2 {
+    font-size: 28px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  /* 오른쪽 */
+  .right {
+    flex: none;
+  }
+
+  /* CEO 이미지 영역 세로 배치 */
+  .greeting-section .ceo-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    float: none;
+    margin-right: 0;
+  }
+
+  .greeting-section .person img {
+    max-width: 120px;
+  }
+
+  /* 본문 텍스트 */
+  .greeting-section .content p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left; /* 모바일에서는 양쪽정렬이 답답할 수 있어 왼쪽 정렬 추천 */
+  }
+}

@@ -196,6 +196,12 @@
      background: #f9f9f9;
    }
 
+
+   .notice-detail-file svg {
+     flex-shrink: 0;
+     vertical-align: middle;
+   }
+
    /* 버튼 */
    .notice-detail-btn {
      text-align: center;
@@ -204,7 +210,6 @@
 
    .notice-detail-btn button {
      background: #000;
-     color: #fff;
      padding: 12px 36px;
      border: 2px solid #000;
      border-radius: 4px;
@@ -212,8 +217,130 @@
      cursor: pointer;
    }
 
+   .notice-detail-btn button>a {
+     color: #fff;
+   }
+
    .notice-detail-btn button:hover {
      background: #ffffff;
+   }
+
+   .notice-detail-btn button:hover>a {
      color: #000;
    }
 
+   @media (max-width: 768px) {
+
+  /* 공지사항 전체 영역 */
+  .notice-section,
+  .wrap {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  /* 상단 제목 + 검색창 */
+  .notice-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 30px 0 15px;
+  }
+
+  .notice-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .search-box {
+    width: 300px;
+    padding: 6px 12px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  /* 리스트 */
+  .notice-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .notice-title {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .notice-meta {
+    gap: 15px;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  /* 페이지네이션 */
+  .pagination {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .pagination button {
+    font-size: 0.9rem;
+  }
+
+  /* FAQ */
+  summary {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  summary::after {
+    right: 10px;
+    font-size: 20px;
+  }
+
+  .faq-answer {
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  /* 게시글(post) 상세 */
+  .notice-detail-head {
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+
+  .notice-detail-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .notice-detail-body {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .notice-detail-file {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .notice-detail-file a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  /* 버튼 */
+  .notice-detail-btn {
+    margin-top: 30px;
+  }
+
+  .notice-detail-btn button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
