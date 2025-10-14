@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greeting</title>
+    <!-- <link rel="stylesheet" href="../css/header-banner.css"> -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 배너 -->
+    <div class="banner" style="background: url(../img/banner-company.webp) no-repeat center/cover;">
+        <div class="banner-inner">
+            <h1 class="banner-title">회사 소개</h1>
+            <span class="breadcrumb">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                회사소개
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                인사말
+            </span>
+        </div>
+    </div>
+
+    <!-- 서브 메뉴 -->
+    <div class="sub-menu">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="./company.html">인사말</a></li>
+                <li><a href="./history.html">회사 연혁</a></li>
+                <li><a href="./goals.html">경영목표</a></li>
+                <li><a href="./registration.html">인증 및 등록현황</a></li>
+                <li><a href="./location.html">오시는 길</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 본문 -->
+    <section class="greeting-section">
+        <div class="section-container">
+
+            <!-- 스티키 -->
+            <div class="left">
+                <h2>CEO <br> GREETING</h2>
+                <p class="intro">
+                    존경하는 이해관계자 여러분,<br>
+                    함께 성장하는 기업<br>
+                    주식회사 뉴원입니다.
+                </p>
+            </div>
+
+            <!-- 스크롤 -->
+            <div class="right">
+
+                <div class="content">
+                    <div class="ceo-info">
+                        <div class="person">
+                            <p><strong>CEO 이율범</strong></p>
+                            <img src="../img/ceo.jpg" alt="CEO">
+                        </div>
+                        <div class="person">
+                            <p><strong>COO 조창호</strong></p>
+                            <img src="../img/coo.jpg" alt="COO">
+                        </div>
+                    </div>
+                    <p>
+                        ㈜뉴원은 2005년 전기공사 자재 납품업으로 출발하여, 오늘날에는 전기·통신·소방 기자재 유통을 중
+                        심으로 한 전문 유통기업으로
+                        성장하였습니다. ㈜뉴원은 39명의 임직원, 392개의 공급사, 414개의 납품처 파트너와 함께 협력하
+                        며, 24년도 251억 원의 매출이라는 의미 있는 성과를 달성하였으며
+                        특히, 환경설비 제조사업의 본격적인 전개와 함께, 삼성전자 및
+                        SK하이닉스 등 주요 고객사에 제품을 공급하며 친환경 기술 기반
+                        제조기업으로서의 입지를 강화하였습니다. 또한, 메인비즈인증, 녹색자산유동화증권 발행 기업 선정,
+                        벤처기업인증, Inno-Biz 인증, ISO 9001 및 45001 인증 유지, 지속적인 특허등록, 신공장 준공(예정)
+                        등 지속가능한 기업으로 나아가기 위한 기반을 더욱 견고히 다져가고 있습니다.
+
+                    </p>
+
+                    <p>
+                        우리는 2022년부터 ESG 경영을 본격화하였고, 2023년 첫 지속가능경영보고서를 발간한 데 이어, 2024년에는 ESG 전략을 내재화하고 실
+                        행력을 높이는 데 집중하였습니다. 이러한 노력은 단순한 제도 도입을 넘어, 기업의 존재 이유와 방향성을 재정립하는 과정이었습니다. ㈜뉴
+                        원은 ESG 경영을 통해 “멀리 가려면 함께 가라” 는 철학을 실천하고 있습니다.
+                        우리는 지속성장의 원천이 사람과 기술, 그리고 신뢰에 있다고 믿습니다. 대표가 자리를 떠난 이후에도 임직원들이 자율적으로 운영하며 영속
+                        할 수 있는 기업,일하는 즐거움이 있는 삶의 터전, 고객과 파트너, 지역사회와 함께 가치를 나누는 기업이바로 ㈜뉴원이 지향하는 모습입니다.
+                        앞으로도 투명하고 안정적인 경영, 지속적인 기술 혁신, 환경과 사회에 대한 책임을 바탕으로,모두가 함께 성장하는 지속가능한 기업으로 나
+                        아가겠습니다.
+                    </p>
+
+                    <p>
+                        여러분과 함께, 더 멀리, 더 깊이 성장하는 ㈜뉴원이 되겠습니다.
+                        감사합니다.
+                    </p>
+                    <p>대표이사 이율범</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footerlogo">
+                <img src="../img/logo-white.webp" alt="">
+            </div>
+            <div>
+                <h3>본사</h3>
+                <p>경기도 수원시 권선구 서둔로 21</p>
+                <p>Tel: 031-298-1191</p>
+                <p>Fax: 031-297-4460</p>
+            </div>
+            <div class="box"></div>
+            <div>
+                <h3>일산지사</h3>
+                <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+                <p>Tel: 031-912-1191</p>
+                <p>Fax: 031-912-4460</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/header.js">
+    </script>
+</body>
+
+</html>
