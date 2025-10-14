@@ -1,4 +1,4 @@
-  /* 이헐게 연결하면 main.css 만 사용 하면되고 필요하면 따로 파일 만들어서 사용 하면됨 */
+  /* 이헐게 연결하면 main.css 만 사용 하면되고 필요하면 따로 파일 만들어서 사용 하면됨  */
 @charset "UTF-8";
 @import url(company.css);
 @import url(detail.css);
