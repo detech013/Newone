@@ -39,6 +39,10 @@
      margin: 0;
    }
 
+   .notice-list li:hover {
+     background: #f9f9f9;
+   }
+
    .notice-list li {
      display: flex;
      justify-content: space-between;
@@ -91,6 +95,11 @@
      border-bottom: 1px solid #e5e5e5;
      padding: 30px 0;
    }
+
+   details:hover {
+     background: #f9f9f9;
+   }
+
 
    summary {
      font-size: 18px;
@@ -229,117 +238,196 @@
      color: #000;
    }
 
+   /* 공통 여백 조정 */
+   .inquiry-section .wrap {
+     width: 100%;
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 24px;
+     box-sizing: border-box;
+     border-bottom: 1px solid #ddd;
+     margin-bottom: 40px;
+     background: transparent;
+   }
+
+   .answer-section .wrap {
+     width: 100%;
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 24px;
+     box-sizing: border-box;
+     border-radius: 8px;
+     border-bottom: 1px solid #ddd;
+     margin-bottom: 40px;
+     background: transparent;
+     background: #fafafa;
+     border-left: 4px solid #0048FF;
+     border-radius: 8px;
+     padding: 24px 32px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+   }
+
+   .post-title {
+     font-size: 20px;
+     font-weight: bold;
+     margin-bottom: 10px;
+   }
+
+   .notice-detail-info {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   .notice-detail-info .category {
+     font-weight: 600;
+     color: #333;
+   }
+
+   .notice-detail-info .meta span {
+     margin-left: 12px;
+     color: #777;
+   }
+
+   .notice-detail-file a {
+     display: inline-flex;
+     align-items: center;
+     gap: 6px;
+   }
+
+   /* 반응형 */
+   @media (max-width: 600px) {
+     .wrap {
+       padding: 20px;
+       margin: 0 12px 36px 12px;
+     }
+
+     .notice-detail-info {
+       flex-direction: column;
+       align-items: flex-start;
+
+     }
+
+     .answer-section .wrap {
+       padding: 20px 20px 20px 20px;
+       /* 왼쪽 살짝 강조 */
+       margin: 0 16px 36px 16px;
+     }
+   }
+
+
+
    @media (max-width: 768px) {
 
-  /* 공지사항 전체 영역 */
-  .notice-section,
-  .wrap {
-    max-width: 100%;
-    padding: 0 16px;
-  }
+     /* 공지사항 전체 영역 */
+     .notice-section,
+     .wrap {
+       max-width: 100%;
+       padding: 0 16px;
+     }
 
-  /* 상단 제목 + 검색창 */
-  .notice-header {
-    align-items: flex-start;
-    gap: 15px;
-    padding: 30px 0 15px;
-  }
+     /* 상단 제목 + 검색창 */
+     .notice-header {
+       align-items: flex-start;
+       gap: 15px;
+       padding: 30px 0 15px;
+     }
 
-  .notice-header h2 {
-    font-size: 1.3rem;
-  }
+     .notice-header h2 {
+       font-size: 1.3rem;
+     }
 
-  .search-box {
-    width: 300px;
-    padding: 6px 12px;
-  }
+     .search-box {
+       width: 300px;
+       padding: 6px 12px;
+     }
 
-  .search-box input {
-    width: 100%;
-  }
+     .search-box input {
+       width: 100%;
+     }
 
-  /* 리스트 */
-  .notice-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
+     /* 리스트 */
+     .notice-list li {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 6px;
+     }
 
-  .notice-title {
-    width: 100%;
-    font-size: 0.95rem;
-  }
+     .notice-title {
+       width: 100%;
+       font-size: 0.95rem;
+     }
 
-  .notice-meta {
-    gap: 15px;
-    font-size: 0.8rem;
-    flex-wrap: wrap;
-  }
+     .notice-meta {
+       gap: 15px;
+       font-size: 0.8rem;
+       flex-wrap: wrap;
+     }
 
-  /* 페이지네이션 */
-  .pagination {
-    gap: 10px;
-    margin-top: 20px;
-  }
+     /* 페이지네이션 */
+     .pagination {
+       gap: 10px;
+       margin-top: 20px;
+     }
 
-  .pagination button {
-    font-size: 0.9rem;
-  }
+     .pagination button {
+       font-size: 0.9rem;
+     }
 
-  /* FAQ */
-  summary {
-    font-size: 16px;
-    padding-left: 10px;
-  }
+     /* FAQ */
+     summary {
+       font-size: 16px;
+       padding-left: 10px;
+     }
 
-  summary::after {
-    right: 10px;
-    font-size: 20px;
-  }
+     summary::after {
+       right: 10px;
+       font-size: 20px;
+     }
 
-  .faq-answer {
-    padding-left: 10px;
-    font-size: 14px;
-  }
+     .faq-answer {
+       padding-left: 10px;
+       font-size: 14px;
+     }
 
-  /* 게시글(post) 상세 */
-  .notice-detail-head {
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-  }
+     /* 게시글(post) 상세 */
+     .notice-detail-head {
+       padding-bottom: 12px;
+       margin-bottom: 20px;
+     }
 
-  .notice-detail-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    font-size: 13px;
-  }
+     .notice-detail-info {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 6px;
+       font-size: 13px;
+     }
 
-  .notice-detail-body {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
+     .notice-detail-body {
+       font-size: 14px;
+       line-height: 1.6;
+       margin-bottom: 30px;
+     }
 
-  .notice-detail-file {
-    text-align: left;
-    font-size: 13px;
-  }
+     .notice-detail-file {
+       text-align: left;
+       font-size: 13px;
+     }
 
-  .notice-detail-file a {
-    font-size: 13px;
-    padding: 6px 8px;
-  }
+     .notice-detail-file a {
+       font-size: 13px;
+       padding: 6px 8px;
+     }
 
-  /* 버튼 */
-  .notice-detail-btn {
-    margin-top: 30px;
-  }
+     /* 버튼 */
+     .notice-detail-btn {
+       margin-top: 30px;
+     }
 
-  .notice-detail-btn button {
-    width: 100%;
-    max-width: 300px;
-    padding: 12px 0;
-    font-size: 14px;
-  }
-}
+     .notice-detail-btn button {
+       width: 100%;
+       max-width: 300px;
+       padding: 12px 0;
+       font-size: 14px;
+     }
+   }

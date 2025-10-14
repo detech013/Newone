@@ -6,6 +6,162 @@
     <title>notice</title>
     <link rel="stylesheet" href="../css/header-banner.css">
     <link rel="stylesheet" href="../css/notice.css">
+    <style>
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+.contact-list li {
+  padding: 16px 12px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.contact-list li:hover {
+  background: #f9f9f9;
+}
+
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 500;
+  color: #272727;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+}
+
+.contact-title svg {
+  flex-shrink: 0;
+}
+
+.contact-status {
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+/*'답변완료' */
+.answer-status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #008000;
+  background: #e9f6eb;
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* '답변대기' */
+.answer-status2 {
+     font-size: 14px;
+  font-weight: 500;
+  color: #a30000;
+  background: #f6e9e9;
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.contact-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #777;
+}
+
+.contact-meta span {
+  white-space: nowrap;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .contact-header {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .answer-status {
+    align-self: flex-end; /* ✅ 모바일에서 오른쪽 유지 */
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+
+  .answer-status2 {
+    align-self: flex-end; /* ✅ 모바일에서 오른쪽 유지 */
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+
+  .contact-title {
+    font-size: 14px;
+  }
+
+  .contact-meta {
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 13px;
+  }
+}
+
+.contact-meta span {
+  white-space: nowrap;
+}
+
+/* 오른쪽 '답변완료' 표시 */
+.answer-status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #008000; /* 초록색 */
+  background: #e9f6eb;
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .contact-list li {
+    padding: 12px 8px;
+  }
+
+  .contact-title {
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .contact-status {
+    margin-left: 4px;
+    font-size: 13px;
+  }
+
+  .contact-meta {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+  }
+}
+    </style>
 </head>
 
 <body>
@@ -174,20 +330,100 @@
 
         <!-- 리스트 -->
         <ul class="contact-list">
-            <li>
-                <span class="contact-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path
-                            d="M11.9993 5.33366H11.3327V4.00033C11.3327 2.16033 9.83935 0.666992 7.99935 0.666992C6.15935 0.666992 4.66602 2.16033 4.66602 4.00033V5.33366H3.99935C3.26602 5.33366 2.66602 5.93366 2.66602 6.66699V13.3337C2.66602 14.067 3.26602 14.667 3.99935 14.667H11.9993C12.7327 14.667 13.3327 14.067 13.3327 13.3337V6.66699C13.3327 5.93366 12.7327 5.33366 11.9993 5.33366ZM5.99935 4.00033C5.99935 2.89366 6.89268 2.00033 7.99935 2.00033C9.10602 2.00033 9.99935 2.89366 9.99935 4.00033V5.33366H5.99935V4.00033ZM11.9993 13.3337H3.99935V6.66699H11.9993V13.3337ZM7.99935 11.3337C8.73268 11.3337 9.33268 10.7337 9.33268 10.0003C9.33268 9.26699 8.73268 8.66699 7.99935 8.66699C7.26602 8.66699 6.66602 9.26699 6.66602 10.0003C6.66602 10.7337 7.26602 11.3337 7.99935 11.3337Z"
-                            fill="#272727" />
-                    </svg>가나다라마바사아자차카타파하</span><span class="contact-status">[1]</span>
-                <div class="contact-meta">
-                    <span>작성자 : 홍길동</span>
-                    <span>2025/07/25</span>
-                </div>
-            </li>
+  <li>
+    <div class="contact-header">
+      <span class="contact-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.9993 5.33366H11.3327V4.00033C11.3327 2.16033 9.83935 0.666992 7.99935 0.666992C6.15935 0.666992 4.66602 2.16033 4.66602 4.00033V5.33366H3.99935C3.26602 5.33366 2.66602 5.93366 2.66602 6.66699V13.3337C2.66602 14.067 3.26602 14.667 3.99935 14.667H11.9993C12.7327 14.667 13.3327 14.067 13.3327 13.3337V6.66699C13.3327 5.93366 12.7327 5.33366 11.9993 5.33366ZM5.99935 4.00033C5.99935 2.89366 6.89268 2.00033 7.99935 2.00033C9.10602 2.00033 9.99935 2.89366 9.99935 4.00033V5.33366H5.99935V4.00033ZM11.9993 13.3337H3.99935V6.66699H11.9993V13.3337ZM7.99935 11.3337C8.73268 11.3337 9.33268 10.7337 9.33268 10.0003C9.33268 9.26699 8.73268 8.66699 7.99935 8.66699C7.26602 8.66699 6.66602 9.26699 6.66602 10.0003C6.66602 10.7337 7.26602 11.3337 7.99935 11.3337Z" fill="#272727"/>
+        </svg>
+        문의합니다
+        <span class="contact-status">[1]</span>
+      </span>
+      <span class="answer-status">답변완료</span>
+    </div>
 
-        </ul>
+    <div class="contact-meta">
+      <span>작성자 : 홍길동</span>
+      <span>2025/07/25</span>
+    </div>
+  </li>
+
+   <li>
+    <div class="contact-header">
+      <span class="contact-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.9993 5.33366H11.3327V4.00033C11.3327 2.16033 9.83935 0.666992 7.99935 0.666992C6.15935 0.666992 4.66602 2.16033 4.66602 4.00033V5.33366H3.99935C3.26602 5.33366 2.66602 5.93366 2.66602 6.66699V13.3337C2.66602 14.067 3.26602 14.667 3.99935 14.667H11.9993C12.7327 14.667 13.3327 14.067 13.3327 13.3337V6.66699C13.3327 5.93366 12.7327 5.33366 11.9993 5.33366ZM5.99935 4.00033C5.99935 2.89366 6.89268 2.00033 7.99935 2.00033C9.10602 2.00033 9.99935 2.89366 9.99935 4.00033V5.33366H5.99935V4.00033ZM11.9993 13.3337H3.99935V6.66699H11.9993V13.3337ZM7.99935 11.3337C8.73268 11.3337 9.33268 10.7337 9.33268 10.0003C9.33268 9.26699 8.73268 8.66699 7.99935 8.66699C7.26602 8.66699 6.66602 9.26699 6.66602 10.0003C6.66602 10.7337 7.26602 11.3337 7.99935 11.3337Z" fill="#272727"/>
+        </svg>
+        문의합니다
+        <span class="contact-status"></span>
+      </span>
+      <span class="answer-status2">답변대기</span>
+    </div>
+
+    <div class="contact-meta">
+      <span>작성자 : 홍길동</span>
+      <span>2025/07/25</span>
+    </div>
+  </li>
+
+    <li>
+    <div class="contact-header">
+      <span class="contact-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.9993 5.33366H11.3327V4.00033C11.3327 2.16033 9.83935 0.666992 7.99935 0.666992C6.15935 0.666992 4.66602 2.16033 4.66602 4.00033V5.33366H3.99935C3.26602 5.33366 2.66602 5.93366 2.66602 6.66699V13.3337C2.66602 14.067 3.26602 14.667 3.99935 14.667H11.9993C12.7327 14.667 13.3327 14.067 13.3327 13.3337V6.66699C13.3327 5.93366 12.7327 5.33366 11.9993 5.33366ZM5.99935 4.00033C5.99935 2.89366 6.89268 2.00033 7.99935 2.00033C9.10602 2.00033 9.99935 2.89366 9.99935 4.00033V5.33366H5.99935V4.00033ZM11.9993 13.3337H3.99935V6.66699H11.9993V13.3337ZM7.99935 11.3337C8.73268 11.3337 9.33268 10.7337 9.33268 10.0003C9.33268 9.26699 8.73268 8.66699 7.99935 8.66699C7.26602 8.66699 6.66602 9.26699 6.66602 10.0003C6.66602 10.7337 7.26602 11.3337 7.99935 11.3337Z" fill="#272727"/>
+        </svg>
+        문의합니다
+        <span class="contact-status"></span>
+      </span>
+      <span class="answer-status2">답변대기</span>
+    </div>
+
+    <div class="contact-meta">
+      <span>작성자 : 홍길동</span>
+      <span>2025/07/25</span>
+    </div>
+  </li>
+
+    <li>
+    <div class="contact-header">
+      <span class="contact-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.9993 5.33366H11.3327V4.00033C11.3327 2.16033 9.83935 0.666992 7.99935 0.666992C6.15935 0.666992 4.66602 2.16033 4.66602 4.00033V5.33366H3.99935C3.26602 5.33366 2.66602 5.93366 2.66602 6.66699V13.3337C2.66602 14.067 3.26602 14.667 3.99935 14.667H11.9993C12.7327 14.667 13.3327 14.067 13.3327 13.3337V6.66699C13.3327 5.93366 12.7327 5.33366 11.9993 5.33366ZM5.99935 4.00033C5.99935 2.89366 6.89268 2.00033 7.99935 2.00033C9.10602 2.00033 9.99935 2.89366 9.99935 4.00033V5.33366H5.99935V4.00033ZM11.9993 13.3337H3.99935V6.66699H11.9993V13.3337ZM7.99935 11.3337C8.73268 11.3337 9.33268 10.7337 9.33268 10.0003C9.33268 9.26699 8.73268 8.66699 7.99935 8.66699C7.26602 8.66699 6.66602 9.26699 6.66602 10.0003C6.66602 10.7337 7.26602 11.3337 7.99935 11.3337Z" fill="#272727"/>
+        </svg>
+        문의합니다
+        <span class="contact-status"></span>
+      </span>
+      <span class="answer-status2">답변대기</span>
+    </div>
+
+    <div class="contact-meta">
+      <span>작성자 : 홍길동</span>
+      <span>2025/07/25</span>
+    </div>
+  </li>
+
+    <li>
+    <div class="contact-header">
+      <span class="contact-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.9993 5.33366H11.3327V4.00033C11.3327 2.16033 9.83935 0.666992 7.99935 0.666992C6.15935 0.666992 4.66602 2.16033 4.66602 4.00033V5.33366H3.99935C3.26602 5.33366 2.66602 5.93366 2.66602 6.66699V13.3337C2.66602 14.067 3.26602 14.667 3.99935 14.667H11.9993C12.7327 14.667 13.3327 14.067 13.3327 13.3337V6.66699C13.3327 5.93366 12.7327 5.33366 11.9993 5.33366ZM5.99935 4.00033C5.99935 2.89366 6.89268 2.00033 7.99935 2.00033C9.10602 2.00033 9.99935 2.89366 9.99935 4.00033V5.33366H5.99935V4.00033ZM11.9993 13.3337H3.99935V6.66699H11.9993V13.3337ZM7.99935 11.3337C8.73268 11.3337 9.33268 10.7337 9.33268 10.0003C9.33268 9.26699 8.73268 8.66699 7.99935 8.66699C7.26602 8.66699 6.66602 9.26699 6.66602 10.0003C6.66602 10.7337 7.26602 11.3337 7.99935 11.3337Z" fill="#272727"/>
+        </svg>
+        문의합니다
+        <span class="contact-status"></span>
+      </span>
+      <span class="answer-status2">답변대기</span>
+    </div>
+
+    <div class="contact-meta">
+      <span>작성자 : 홍길동</span>
+      <span>2025/07/25</span>
+    </div>
+  </li>
+
+  
+</ul>
+
+<div class="contact">작성하기</div>
 
         <!-- 페이지네이션 -->
         <div class="pagination">
