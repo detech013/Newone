@@ -74,10 +74,11 @@
       margin: 0 auto;
   }
 
+  /* 2025.10.15 padding 수정 */
   .slider-container {
       position: relative;
       overflow: hidden;
-      padding: 0 50px;
+      padding: 24px 50px;
   }
 
   .slider {
@@ -91,21 +92,21 @@
       box-sizing: border-box;
   }
 
+  /* 2025.10.15 nav-btn 수정 */
   .nav-btn {
       position: absolute;
       top: 60%;
-      transform: translateY(0%);
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
+      background: #9c9c9c;
+      border: 1px solid #acacac;
       padding: 15px;
-      border-radius: 50%;
+      border-radius: 10%;
       cursor: pointer;
       z-index: 10;
       transition: all 0.3s ease;
   }
 
   .nav-btn:hover {
-      background: rgba(0, 0, 0, 0.8);
+      background: #4e4e4e;
   }
 
   .nav-btn svg path {
@@ -126,19 +127,14 @@
       .slide {
           flex: 0 0 100%;
       }
-  }
 
-  .card {
-      border-radius: 10px;
-      padding: 60px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      .nav-btn {
+          top: 64%;
+          padding: 10px;
+      }
   }
-
+ 
+/* 슬라이드 카드 */
   .card {
       border: 1px solid #ddd;
       padding: 20px;
@@ -163,6 +159,170 @@
       object-fit: cover;
   }
 
+  /* 2025.10.15 company css 추가 */
+  .company {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .company-img {
+  flex: 1;
+  text-align: right;
+  max-width: 60%;
+}
+
+.company-img > img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: 50% 40%;
+}  
+
+@media (max-width: 768px) {
+  .company {
+    flex-direction: column;
+  }
+
+  .company-img {
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* 2025.10.15 esg 추가 */
+.esg .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.esg .card {
+  position: relative;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.esg .card:hover {
+  transform: translateY(-6px);
+  filter: brightness(1.1);
+}
+
+/* 배경 이미지 */
+.card.environment {
+  background-image: url('../img/environmental.webp');
+}
+
+.card.social {
+  background-image: url('../img/social.webp');
+}
+
+.card.governance {
+  background-image: url('../img/governance.webp');
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  border-radius: inherit;
+  transition: 0.3s ease;
+}
+
+.card:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  opacity: 0.8;
+  transform: translateY(50px);
+  transition: transform 0.4s ease;
+}
+
+.overlay h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transform: translateY(50px);
+  transition: transform 0.4s ease;
+}
+
+.overlay p {
+   font-size: 15px;
+  line-height: 1.6;
+  max-width: 280px;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  
+  /* 추가 */
+  margin-left: 0;       /* 혹시 기본 마진 제거 */
+  text-align: center;     /* 혹시 inherit 문제 예방 */
+  width: 100%;          
+}
+
+.card:hover .overlay h5,
+.card:hover .overlay h3 {
+  transform: translateY(-10px);
+}
+
+.card:hover .overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.esg .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+/* 2025.10.15 esg 반응형 추가 */
+@media (max-width: 1024px) {
+  .esg .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .esg .grid {
+    grid-template-columns: 1fr; /* 한 줄씩 세로 배치 */
+    gap: 20px;
+  }
+
+  .esg .card {
+    height: 320px; /* 카드 높이 축소 */
+  }
+
+  .overlay {
+    padding: 24px;
+  }
+
+  .overlay h3 {
+    font-size: 22px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
   /* 공지사항 */
   .notice-list {
       margin-top: 15px;

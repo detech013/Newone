@@ -15,7 +15,6 @@
    flex: 1;
    position: sticky;
    top: 100px;
-   /* 메뉴바 높이에 맞춰 조정 */
    align-self: flex-start;
  }
 
@@ -68,53 +67,59 @@
    text-align: justify;
  }
 
- /* 모바일 반응형 */
+ /* 2025.10.15 반응형 추가 */
 @media (max-width: 768px) {
+
   .greeting-section {
-    padding: 20px 20px;
+    padding: 40px 20px !important;
   }
 
   .section-container {
-    flex-direction: column;
-    gap: 30px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+    max-width: 100% !important;
   }
 
-  /* 왼쪽 (스티키 해제 + 가운데 정렬) */
   .greeting-section .left {
-    position: static; /* sticky 해제 */
-    text-align: center;
+    position: static !important;
+    flex: none !important;
+    margin: 22px 38px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    
   }
 
-  .greeting-section h2 {
-    font-size: 28px;
+   .greeting-section h2 {
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    margin-bottom: 4px !important;
+    line-height: 1.4 !important;
   }
 
   .intro {
-    font-size: 16px;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.8 !important;
   }
 
-  /* 오른쪽 */
   .right {
-    flex: none;
+    flex: none !important;
+    width: 100% !important;
   }
 
-  /* CEO 이미지 영역 세로 배치 */
   .greeting-section .ceo-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    float: none;
-    margin-right: 0;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    margin-bottom: 24px !important;
+    margin-right: 0 !important;
+    float: none !important;
   }
 
-  .greeting-section .person img {
-    max-width: 120px;
-  }
-
-  /* 본문 텍스트 */
   .greeting-section .content p {
-    font-size: 15px;
-    line-height: 1.8;
-    text-align: left; /* 모바일에서는 양쪽정렬이 답답할 수 있어 왼쪽 정렬 추천 */
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
   }
 }

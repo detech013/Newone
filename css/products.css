@@ -48,8 +48,9 @@
        color: #555;
    }
 
+   /* 2025.10.15 버튼 호버 추가 및 디자인 수정 */
    .product-btn {
-       display: inline-flex;
+       display: flex;
        align-items: center;
        gap: 6px;
        text-decoration: none;
@@ -57,11 +58,18 @@
        color: #001B8B;
        font-size: 1rem;
        font-size: 18px;
+
+   }
+
+   .product-btn:hover {
+       font-size: 19px;
    }
 
    .product-btn svg {
        width: 24px;
        fill: currentColor;
+       position: relative;
+       top: 2px;
    }
 
    .product.right {

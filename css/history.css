@@ -99,13 +99,13 @@
       margin: 0;
   }
 
-  /* 반응형 */
+  /* 2025.10.15 반응형 수정 */
   @media (max-width:900px) {
-      .history-container {
+      .section-container {
           gap: 30px;
       }
 
-      .history-left {
+      .left {
           width: 260px;
           top: 80px;
       }
@@ -118,11 +118,11 @@
   @media (max-width:640px) {
 
       /* 모바일: 좌/우 수직배치 */
-      .history-container {
+      .section-container {
           flex-direction: column;
       }
 
-      .history-left {
+      .left {
           position: static;
           width: 100%;
           margin-bottom: 24px;
