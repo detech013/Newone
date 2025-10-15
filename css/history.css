@@ -3,7 +3,8 @@
       padding: 60px;
   }
 
-  .section-container {
+  /* 2025.10.15 class 변경 */
+  .history-container {
       display: flex;
       gap: 60px;
       max-width: 1100px;
@@ -39,8 +40,9 @@
       --accent: #0a4bff;
   }
 
+  /* 2025.10.15 class 변경 */
   /* 오른쪽 연혁 */
-  .history-section .right {
+  .history-right {
       flex: 1;
       position: relative;
   }

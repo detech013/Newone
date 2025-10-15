@@ -325,45 +325,14 @@
     }
   }
 
+  /* 공지사항 class 변경 */
   /* 공지사항 */
-  .notice-list {
+  .main-notice {
     margin-top: 15px;
   }
 
-  .notice-list li {
+  .main-notice li {
     border-bottom: 1px solid #ddd;
     padding: 8px 0;
     list-style: none;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #00237D;
-    background-color: white;
-    border: 2px solid #00237D;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .button:hover {
-    background-color: #00237D;
-    color: white;
-  }
-
-  .button svg {
-    margin-left: 8px;
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
   }

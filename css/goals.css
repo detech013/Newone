@@ -4,7 +4,8 @@
   padding: 60px;
 }
 
-.section-container {
+/* 2025.10.15 class 변경 */
+.goals-container {
   display: flex;
   gap: 60px;
   max-width: 1100px;
@@ -32,7 +33,7 @@
 }
 
 /* 우측 */
-.right {
+.goals-right {
   flex: 2;
 }
 
