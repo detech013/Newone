@@ -1,0 +1,143 @@
+     /* 2025.10.16 esg css 추가 */
+     .esg {
+         max-width: 1000px;
+         margin: 0 auto;
+         padding: 80px 20px;
+     }
+
+     .esg-header {
+         color: #f57c00;
+         font-size: 20px;
+         font-weight: 700;
+         margin-bottom: 8px;
+     }
+
+     .esg-title {
+         font-size: 36px;
+         font-weight: 700;
+         margin-bottom: 16px;
+     }
+
+     .esg-subtitle {
+         font-size: 22px;
+         font-weight: 700;
+         margin-top: 10px;
+         margin-bottom: 40px;
+     }
+
+     .esg-section>p {
+         margin-bottom: 20px;
+     }
+
+     .esg-section {
+         margin-top: 20px;
+         margin-bottom: 60px;
+     }
+
+     .esg-section h4 {
+         font-size: 18px;
+         font-weight: 600;
+         margin-bottom: 8px;
+     }
+
+     .esg>span {
+         font-size: 16px;
+         color: #727272;
+     }
+
+
+     .esg-img {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 20px;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .esg-img img {
+         max-width: 100%;
+         height: auto;
+         display: block;
+         margin: 0 auto;
+
+     }
+
+
+     .caption {
+         text-align: center;
+         font-size: 14px;
+         color: #2e7d32;
+         margin-top: 5px;
+     }
+
+     @media screen and (max-width: 768px) {
+         .esg-text {
+             flex-direction: column;
+         }
+
+         .esg-img-list {
+             justify-content: flex-start;
+         }
+
+         .esg-img img {
+             height: 200px;
+             /* 모바일에서는 조금 더 높게 */
+         }
+
+         .esg-img img {
+             width: 100%;
+         }
+     }
+
+     .esg-text {
+        margin-top: 0;
+         display: flex;
+         gap: 20px;
+         align-items: center;
+         margin: 40px 0;
+         flex: 1;
+     }
+
+     .esg-text h3 {
+         font-size: 20px;
+         margin-bottom: 12px;
+     }
+
+     .esg-text p {
+         line-height: 1.6;
+     }
+
+     .esg-img-list {
+         display: flex;
+         gap: 12px;
+         flex: 1;
+         justify-content: flex-end;
+     }
+
+     .esg-img {
+         flex: 1;
+     }
+
+     .esg-img img {
+         object-fit: cover;
+     }
+
+     
+     @media screen and (max-width: 768px) {
+         .esg-text {
+             flex-direction: column;
+         }
+
+         .esg-img-list {
+             justify-content: flex-start;
+         }
+
+         .esg-img img {
+             height: 200px;
+         }
+
+         .esg-img img {
+             width: 100%;
+
+         }
+     }
