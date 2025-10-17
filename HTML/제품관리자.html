@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>관리자 페이지</title>
+ <style>
+    * {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f8fb;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6b93b0;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.lang {
+  background: #4e7394;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.nav {
+  display: flex;
+  background: #5c88ab;
+}
+
+.nav .menu {
+  flex: 1;
+  background: transparent;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav .menu.selected {
+  font-weight: bold;
+  background: #4e7394;
+}
+
+.product {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* 제품 목록 */
+.product-list {
+  background: #6b93b0;
+  color: #fff;
+  padding: 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.product-list h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.product-list ul {
+  list-style: none;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  height: 280px;
+  overflow-y: auto;
+}
+
+.product-list li {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.pagination {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.new-btn {
+  align-self: flex-end;
+  background: #4e7394;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* 제품 상세 */
+.product-detail {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.form-row input[type="text"],
+.form-row textarea {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row textarea {
+  height: 60px;
+  resize: vertical;
+}
+
+.img-btn {
+  margin-left: 10px;
+  padding: 6px 10px;
+  background: #4e7394;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 에디터 영역 */
+.editor-area {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 30px;
+  text-align: center;
+  color: #555;
+}
+
+/* 하단 버튼 */
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background: #4e7394;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #ccc;
+  color: #000;
+}
+ </style>
+</head>
+<body>
+  <header class="header">
+    <div class="lang">KOR</div>
+    <div class="title">관리자 페이지</div>
+  </header>
+
+  <nav class="nav">
+    <button class="menu active">메뉴 관리</button>
+    <button class="menu selected">제품 관리</button>
+    <button class="menu">게시판 관리</button>
+  </nav>
+
+  <main class="product">
+    <!-- 제품 목록 -->
+    <aside class="product-list">
+      <h2>제품 목록</h2>
+      <ul>
+        <li>* 검출기 1</li>
+        <li>* 검출기 2</li>
+        <li>* 검출기 3</li>
+        <li>* 검출기 4</li>
+        <li>* 검출기 5</li>
+      </ul>
+      <div class="pagination">1 2 3 4 5</div>
+      <button class="new-btn">신규</button>
+    </aside>
+
+    <!-- 제품 상세 -->
+    <section class="product-detail">
+      <div class="form-row">
+        <label>제품구분</label>
+        <input type="text" />
+        <button class="img-btn">메인사진첨부</button>
+      </div>
+      <div class="form-row">
+        <label>제 목</label>
+        <input type="text" />
+      </div>
+      <div class="form-row">
+        <label>소 제목</label>
+        <input type="text" />
+      </div>
+      <div class="form-row">
+        <label>요약설명</label>
+        <textarea></textarea>
+      </div>
+      <div class="form-row">
+        <label>내 용</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="editor-area">
+        <p>제품설명 하단 에디터 영역</p>
+      </div>
+
+      <div class="footer-row">
+        <label><input type="radio" name="active" /> 제품활성화</label>
+        <div class="btn-group">
+          <button class="edit-btn">수정</button>
+          <button class="delete-btn">삭제</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
