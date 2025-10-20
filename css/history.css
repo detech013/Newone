@@ -120,7 +120,7 @@
   @media (max-width:640px) {
 
       /* 모바일: 좌/우 수직배치 */
-      .section-container {
+      .history-container  {
           flex-direction: column;
       }
 
