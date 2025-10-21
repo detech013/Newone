@@ -202,6 +202,14 @@
     margin-top: 40px;
   }
 
+  /* 2025.10.21 esg css 추가 */
+  .esg {
+    padding: 60px 20px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* ---------------------- */
+
   .esg .card {
     position: relative;
     height: 420px;

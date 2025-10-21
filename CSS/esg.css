@@ -79,50 +79,53 @@
              justify-content: flex-start;
          }
 
-         .esg-img img {
+         /* .esg-img img {
              height: 200px;
-             /* 모바일에서는 조금 더 높게 */
-         }
+         } */
 
+         /* 2025.10.21 이미지 css 수정 */
          .esg-img img {
              width: 100%;
+             height: auto; 
+             object-fit: contain;
          }
+
+         .esg-text {
+             margin-top: 0;
+             display: flex;
+             gap: 20px;
+             align-items: center;
+             margin: 40px 0;
+             flex: 1;
+         }
+
+         .esg-text h3 {
+             font-size: 20px;
+             margin-bottom: 12px;
+         }
+
+         .esg-text p {
+             line-height: 1.6;
+         }
+
+         .esg-img-list {
+             display: flex;
+             gap: 12px;
+             flex: 1;
+             justify-content: flex-end;
+         }
+
+         .esg-img {
+             flex: 1;
+         }
+
+         /* .esg-img img {
+             object-fit: cover;
+         } */
+
      }
 
-     .esg-text {
-        margin-top: 0;
-         display: flex;
-         gap: 20px;
-         align-items: center;
-         margin: 40px 0;
-         flex: 1;
-     }
 
-     .esg-text h3 {
-         font-size: 20px;
-         margin-bottom: 12px;
-     }
-
-     .esg-text p {
-         line-height: 1.6;
-     }
-
-     .esg-img-list {
-         display: flex;
-         gap: 12px;
-         flex: 1;
-         justify-content: flex-end;
-     }
-
-     .esg-img {
-         flex: 1;
-     }
-
-     .esg-img img {
-         object-fit: cover;
-     }
-
-     
      @media screen and (max-width: 768px) {
          .esg-text {
              flex-direction: column;

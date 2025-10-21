@@ -157,10 +157,11 @@
      margin-bottom: 40px;
    }
 
-   .back {
+   /* 2025.10.21 back css 삭제 */
+   /* .back {
      align-items: center;
      padding: 0px;
-   }
+   } */
 
    /* 헤더 영역 */
    .notice-detail-head {
@@ -176,9 +177,10 @@
      color: #666;
    }
 
-   .notice-detail-info span {
+   /* 2025.10.21 css 삭제 */
+   /* .notice-detail-info span {
      margin-left: 12px;
-   }
+   } */
 
    /* 본문 */
    .notice-detail-body {
@@ -214,7 +216,9 @@
    /* 버튼 */
    .notice-detail-btn {
      text-align: center;
-     margin-top: 40px;
+     /* 2025.10.21 btn css 수정 */
+     /* margin-top: 40px; */
+     margin-bottom: 40px;
    }
 
    .notice-detail-btn button {
@@ -301,8 +305,9 @@
      color: #333;
    }
 
+   /* 2025.10.21 css 삭제 */
    .notice-detail-info .meta span {
-     margin-left: 12px;
+     /* margin-left: 12px; */
      color: #777;
    }
 
@@ -336,7 +341,7 @@
    }
 
    /* 반응형 */
-   @media (max-width: 600px) {
+   /* @media (max-width: 600px) {
      .wrap {
        padding: 20px;
        margin: 0 12px 36px 12px;
@@ -350,21 +355,49 @@
 
      .answer-section .wrap {
        padding: 20px 20px 20px 20px;
-       /* 왼쪽 살짝 강조 */
        margin: 0 16px 36px 16px;
      }
-   }
+   } */
 
 
 
    @media (max-width: 768px) {
 
+     /* 2025.10.21 css 위치 수정 */
+     /* .wrap {
+       padding: 20px;
+       margin: 0 12px 36px 12px;
+     } */
+
+     .notice-detail-info {
+       flex-direction: column;
+       align-items: flex-start;
+
+     }
+
+     .answer-section .wrap {
+       padding: 20px 20px 20px 20px;
+       margin: 0 16px 36px 16px;
+     }
+
      /* 공지사항 전체 영역 */
-     .notice-section,
+     /* .notice-section,
      .wrap {
        max-width: 100%;
        padding: 0 16px;
+     } */
+     /* 2025.10.21 게시판 영역 수정 */
+     .notice-section {
+       max-width: 100%;
+       margin: 16px;
+       padding-top: 16px;
      }
+
+     .wrap {
+       margin: 0 16px;
+     }
+
+     /* ------------------------ */
 
      /* 상단 제목 + 검색창 */
      .notice-header {
@@ -588,7 +621,6 @@
 
      .contact-meta {
        align-items: flex-start;
-       gap: 4px;
        font-size: 13px;
      }
    }

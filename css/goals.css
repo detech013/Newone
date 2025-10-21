@@ -116,7 +116,9 @@
 
 /* 반응형 */
 @media (max-width: 900px) {
-  .section-container {
+  /* 2025.10.21 수정 */
+  /* .section-container { */
+  .goals-container {
     flex-direction: column;
   }
 
