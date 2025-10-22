@@ -157,77 +157,96 @@
         </div>
     </div>
 
-    <!-- 본문 -->
     <section class="inquiry-section">
-        <div class="wrap inquiry">
-            <div class="notice-detail-head">
-                <h2 class="post-title">문의합니다</h2>
-                <div class="notice-detail-info">
-                    <!-- 2025.10.22 문의글 작성 사항에 맞춰 카테고리 내용 변경 -->
-                    <div class="category">제품 문의</div>
-                    <div class="meta">
-                        <span>작성자 : 홍길동</span>
-                        <span>2025/07/25</span>
+        <h2>문의글 작성하기</h2>
+        <form class="inquiry-form">
+
+            <div class="form-group">
+                <label for="category">문의유형</label>
+                <select id="category" name="category">
+                    <option value="">선택해주세요</option>
+                    <option>제품 문의</option>
+                    <option>서비스 문의</option>
+                    <option>기타</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">작성자</label>
+                <input type="text" id="name" name="name" placeholder="이름을 입력해주세요">
+            </div>
+
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" name="title" placeholder="제목을 입력해주세요">
+            </div>
+
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea id="content" name="content" placeholder="문의하실 내용을 입력해주세요"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>첨부파일</label>
+
+                <div class="file-box">
+                    <input type="file" id="file" name="file" multiple hidden>
+                    <div class="file-input-wrapper">
+                        <span class="file-placeholder">선택된 파일 없음</span>
+                        <label for="file" class="file-btn">파일 선택</label>
+                    </div>
+
+                    <p class="file-info">첨부파일은 10개 이하, 전체 120MB까지 가능합니다.</p>
+
+                    <div class="file-list">
+                        <div class="file-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_534_749)">
+                                    <path
+                                        d="M4.71671 11.1121C6.77744 9.06278 8.3894 7.42464 10.1824 5.66612C10.7744 5.04786 11.1493 4.44275 11.3071 3.8508C11.5834 2.73373 11.1586 1.7664 10.4192 1.00943C9.70885 0.299086 8.94917 -0.0363506 8.14017 0.00311604C6.92667 0.062316 6.53205 0.450376 5.74277 1.22649L0.711163 6.2778L1.5399 7.08679L6.5715 2.05521C7.0878 1.56434 7.7022 1.10156 8.40655 1.16728C9.47972 1.31794 10.4275 2.63144 10.1824 3.55482C9.87171 4.37406 9.44337 4.74771 8.85053 5.34053C7.04712 7.13933 5.64097 8.53036 3.888 10.2833C3.2292 10.8853 2.80314 11.0483 2.19108 10.4806C1.87538 10.1649 1.73725 9.85579 1.77671 9.55325C1.8205 9.20024 2.02034 8.95608 2.25026 8.72452L6.84774 4.12702C7.05777 3.91662 7.5361 3.51277 7.73567 3.69293C7.88878 4.04814 7.49447 4.38718 7.30159 4.58086L3.07899 8.80345L3.88798 9.63219L8.1303 5.40961C8.86099 4.65596 9.38596 3.73501 8.56439 2.88395C7.65577 2.10407 6.69856 2.62472 6.019 3.29832L1.42152 7.8958C0.947963 8.36935 0.678299 8.88238 0.612533 9.43488C0.560653 10.2094 0.909863 10.8312 1.38206 11.3094C1.82591 11.7508 2.30542 11.9953 2.90142 12C3.61798 11.9713 4.32254 11.4993 4.71671 11.1121Z"
+                                        fill="#0048ff" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_534_749">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <span class="file-name">제품 이미지.jpg</span>
+                            <button class="remove-btn" type="button">✕</button>
+                        </div>
+                        <div class="file-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_534_749)">
+                                    <path
+                                        d="M4.71671 11.1121C6.77744 9.06278 8.3894 7.42464 10.1824 5.66612C10.7744 5.04786 11.1493 4.44275 11.3071 3.8508C11.5834 2.73373 11.1586 1.7664 10.4192 1.00943C9.70885 0.299086 8.94917 -0.0363506 8.14017 0.00311604C6.92667 0.062316 6.53205 0.450376 5.74277 1.22649L0.711163 6.2778L1.5399 7.08679L6.5715 2.05521C7.0878 1.56434 7.7022 1.10156 8.40655 1.16728C9.47972 1.31794 10.4275 2.63144 10.1824 3.55482C9.87171 4.37406 9.44337 4.74771 8.85053 5.34053C7.04712 7.13933 5.64097 8.53036 3.888 10.2833C3.2292 10.8853 2.80314 11.0483 2.19108 10.4806C1.87538 10.1649 1.73725 9.85579 1.77671 9.55325C1.8205 9.20024 2.02034 8.95608 2.25026 8.72452L6.84774 4.12702C7.05777 3.91662 7.5361 3.51277 7.73567 3.69293C7.88878 4.04814 7.49447 4.38718 7.30159 4.58086L3.07899 8.80345L3.88798 9.63219L8.1303 5.40961C8.86099 4.65596 9.38596 3.73501 8.56439 2.88395C7.65577 2.10407 6.69856 2.62472 6.019 3.29832L1.42152 7.8958C0.947963 8.36935 0.678299 8.88238 0.612533 9.43488C0.560653 10.2094 0.909863 10.8312 1.38206 11.3094C1.82591 11.7508 2.30542 11.9953 2.90142 12C3.61798 11.9713 4.32254 11.4993 4.71671 11.1121Z"
+                                        fill="#0048ff" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_534_749">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <span class="file-name">제품 이미지.jpeg</span>
+                            <button class="remove-btn" type="button">✕</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="notice-detail-file">
-                <a href="#">
-                    자료.pdf
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM6.616 19C6.15533 19 5.771 18.846 5.463 18.538C5.155 18.23 5.00067 17.8453 5 17.384V14.961H6V17.384C6 17.538 6.064 17.6793 6.192 17.808C6.32 17.9367 6.461 18.0007 6.615 18H17.385C17.5383 18 17.6793 17.936 17.808 17.808C17.9367 17.68 18.0007 17.5387 18 17.384V14.961H19V17.384C19 17.8447 18.846 18.229 18.538 18.537C18.23 18.845 17.8453 18.9993 17.384 19H6.616Z"
-                            fill="#0048FF" />
-                    </svg>
-                </a>
             </div>
 
-            <div class="notice-detail-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aspernatur cumque necessitatibus nisi
-                sapiente, quasi excepturi reprehenderit, accusantium quibusdam fugit deserunt? Commodi rem aut iste
-                quisquam, nulla facilis ut nam.
+            <div class="form-buttons">
+                <button type="button" class="cancel">취소</button>
+                <button type="submit" class="submit">등록하기</button>
             </div>
-        </div>
+        </form>
     </section>
 
-    <!-- 답변글 (있을때만 표시) -->
-    <section class="answer-section">
-        <div class="wrap answer">
-            <div class="notice-detail-head">
-                <h2 class="post-title">답변</h2>
-                <div class="notice-detail-info">
-                    <div class="category">관리자 답변</div>
-                    <div class="meta">
-                        <span>작성자 : 관리자</span>
-                        <span>2025/07/26</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="notice-detail-file">
-                <a href="#">
-                    자료.pdf
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM6.616 19C6.15533 19 5.771 18.846 5.463 18.538C5.155 18.23 5.00067 17.8453 5 17.384V14.961H6V17.384C6 17.538 6.064 17.6793 6.192 17.808C6.32 17.9367 6.461 18.0007 6.615 18H17.385C17.5383 18 17.6793 17.936 17.808 17.808C17.9367 17.68 18.0007 17.5387 18 17.384V14.961H19V17.384C19 17.8447 18.846 18.229 18.538 18.537C18.23 18.845 17.8453 18.9993 17.384 19H6.616Z"
-                            fill="#0048FF" />
-                    </svg>
-                </a>
-            </div>
-
-            <div class="notice-detail-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quaerat, odit cumque atque dolor
-                quisquam, nam rem fugiat eius provident odio officia doloribus quos accusantium blanditiis in voluptates
-                magnam quas.
-            </div>
-        </div>
-    </section>
-
-    <!-- 2025.10.21 버튼 추가 -->
-    <div class="notice-detail-btn">
-        <button type="button"> <a href="../html/notice.html">목록</a></button>
-    </div>
     <!-- 푸터 -->
     <footer>
         <div class="container footer-inner">

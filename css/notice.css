@@ -663,3 +663,250 @@
        font-size: 13px;
      }
    }
+
+
+   /* 2025.10.22 문의글 작성 css 추가 */
+   :root {
+     --accent: #0048ff;
+     --border: #e5e5e5;
+     --bg: #fff;
+     --text: #222;
+     --muted: #888;
+     --file-bg: #f8f9fc;
+     font-family: "Noto Sans KR", sans-serif;
+   }
+
+   .inquiry-section {
+     max-width: 900px;
+     margin: 60px auto;
+     background: var(--bg);
+     border: 1px solid var(--border);
+     border-radius: 12px;
+     padding: 40px 50px;
+     box-sizing: border-box;
+   }
+
+   .inquiry-section h2 {
+     font-size: 24px;
+     font-weight: 700;
+     margin-bottom: 28px;
+   }
+
+   .inquiry-form {
+     display: flex;
+     flex-direction: column;
+     gap: 22px;
+   }
+
+   .form-group {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+   }
+
+   .form-group select {
+  appearance: none; /* 브라우저 기본 화살표 제거 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url("data:image/svg+xml;utf8,<svg fill='%23888' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 14px center;
+  background-size: 18px;
+  padding-right: 40px; /* 화살표 공간 확보 */
+}
+
+   .form-group label {
+     font-weight: 600;
+     color: var(--text);
+   }
+
+   .form-group input[type="text"],
+   .form-group textarea,
+   .form-group select {
+     padding: 12px 14px;
+     border: 1px solid var(--border);
+     border-radius: 8px;
+     font-size: 15px;
+     box-sizing: border-box;
+     font-family: inherit;
+     color: var(--text);
+   }
+
+   textarea {
+     resize: vertical;
+     min-height: 180px;
+     line-height: 1.6;
+   }
+
+   /* 첨부파일 */
+   .file-box {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .file-input-wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border: 1px solid var(--border);
+     border-radius: 8px;
+     padding: 8px 14px;
+     background: #fff;
+   }
+
+   .file-placeholder {
+     color: #777;
+     font-size: 14px;
+   }
+
+   .file-btn {
+     background: #ddd;
+     padding: 8px 16px;
+     border-radius: 6px;
+     font-size: 14px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: 0.2s;
+   }
+
+   .file-btn:hover {
+     opacity: 0.9;
+   }
+
+   .file-info {
+     font-size: 13px;
+     margin-left: 6px;
+     color: var(--muted);
+   }
+
+
+   .file-list {
+     margin-top: 10px;
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+   }
+
+   .file-item {
+     display: flex;
+     align-items: center;
+     gap: 4px;
+     padding: 4px 0;
+     font-size: 14px;
+     color: var(--accent);
+     line-height: 1.4;
+   }
+
+   .file-item svg {
+     width: 14px;
+     height: 14px;
+     flex-shrink: 0;
+     vertical-align: middle;
+     margin-top: -0.5px;
+   }
+
+   .file-item .file-name {
+     flex: none;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     color: var(--accent);
+     cursor: pointer;
+     margin-right: 4px;
+     display: flex;
+     align-items: center;
+   }
+
+   .file-item .remove-btn {
+     color: #999;
+     background: none;
+     border: none;
+     font-size: 15px;
+     cursor: pointer;
+     padding: 0 2px;
+     line-height: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: 0.2s;
+   }
+
+   .file-item .remove-btn:hover {
+     color: #ff4444;
+   }
+
+   /* 미리보기 행 확장 */
+.preview-row {
+  align-items: flex-start;
+}
+
+/* 기존 editor-area 대신 새 preview-area */
+.preview-area {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f6f8fb;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  min-height: 300px; /* 기본 높이 크게 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 업로드된 이미지 미리보기용 */
+.preview-area img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+   /* 버튼 영역 */
+   .form-buttons {
+     display: flex;
+     justify-content: flex-end;
+     gap: 10px;
+     margin-top: 30px;
+   }
+
+   button {
+     border: none;
+     padding: 12px 28px;
+     border-radius: 8px;
+     font-size: 15px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: 0.2s ease;
+   }
+
+   button.submit {
+     background: var(--accent);
+     color: #fff;
+   }
+
+   button.cancel {
+     background: #ddd;
+     color: #333;
+   }
+
+   button:hover {
+     opacity: 0.9;
+   }
+
+   @media (max-width: 768px) {
+     .inquiry-section {
+       padding: 24px 20px;
+       margin: 40px 12px;
+     }
+
+     .inquiry-section h2 {
+       font-size: 20px;
+     }
+
+     .file-upload-wrapper {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 6px;
+     }
+   }
