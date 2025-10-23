@@ -533,11 +533,3 @@
 .btn-box button:hover {
   background: #e8edf4;
 }
-
-/* 반응형 */
-@media(max-width: 768px) {
-  .popup-content {
-    width: 90%;
-    padding: 20px;
-  }
-}
