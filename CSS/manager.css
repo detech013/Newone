@@ -8,6 +8,106 @@
      background-color: #f6f8fb;
  }
 
+   /* 2025.10.23 로그인 화면 */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 중앙 정렬용 */
+}
+
+.login-box {
+  width: 420px; /* 👉 원하는 가로 넓이 지정 */
+  background: #fff;
+  padding: 40px 30px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border-radius: 4px;
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.login-section {
+  text-align: left;
+}
+
+.login-label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="id"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #8c8f94;
+  border-radius: 3px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember label {
+  margin: 0 0 0 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #2271b1;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #135e96;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #2271b1;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+
  /* 2025.10.20 제품관리 css 작성중 */
  .manager-header {
      display: flex;

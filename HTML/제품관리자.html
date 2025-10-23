@@ -16,7 +16,6 @@
   </header>
 
   <nav class="manager-nav">
-    <button class="menu">메뉴 관리</button>
     <button class="menu selected">제품 관리</button>
     <button class="menu">게시판 관리</button>
   </nav>
@@ -82,11 +81,11 @@
         <input type="text" />
       </div>
       <div class="form-row">
-        <label>요약설명</label>
+        <label>내 용</label>
         <textarea></textarea>
       </div>
       <div class="form-row">
-        <label>내 용</label>
+        <label>요약설명</label>
         <textarea></textarea>
       </div>
 
@@ -146,7 +145,8 @@
       </div>
 
       <div class="footer-row">
-        <label><input type="radio" name="active" /> 제품활성화</label>
+        <!-- 2025.10.23 체크박스로 수정 -->
+        <label><input type="checkbox" name="active" /> 제품활성화</label>
         <div class="btn-group">
           <button class="edit-btn">수정</button>
           <button class="delete-btn">삭제</button>
