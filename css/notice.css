@@ -676,7 +676,9 @@
      font-family: "Noto Sans KR", sans-serif;
    }
 
-   .inquiry-section {
+    /* 2025.10.24 class 변경
+    inquiry-section > inquiry-contect */
+   .inquiry-contect {
      max-width: 900px;
      margin: 60px auto;
      background: var(--bg);
@@ -686,7 +688,7 @@
      box-sizing: border-box;
    }
 
-   .inquiry-section h2 {
+   .inquiry-contect h2 {
      font-size: 24px;
      font-weight: 700;
      margin-bottom: 28px;
