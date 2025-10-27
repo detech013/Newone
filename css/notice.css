@@ -734,7 +734,8 @@
      color: var(--text);
    }
 
-   textarea {
+    /* 2025.10.27 css명 수정 */
+   .form-group textarea {
      resize: vertical;
      min-height: 180px;
      line-height: 1.6;
@@ -875,7 +876,8 @@
      margin-top: 30px;
    }
 
-   button {
+   /* 2025.10.27 버튼 class 수정 */
+   .buttons-form {
      border: none;
      padding: 12px 28px;
      border-radius: 8px;
@@ -885,17 +887,17 @@
      transition: 0.2s ease;
    }
 
-   button.submit {
+  .buttons-form .submit {
      background: var(--accent);
      color: #fff;
    }
 
-   button.cancel {
+   .buttons-form .cancel {
      background: #ddd;
      color: #333;
    }
 
-   button:hover {
+   .buttons-form:hover {
      opacity: 0.9;
    }
 
@@ -920,6 +922,7 @@
 
    /* 배경 */
    .popup-overlay {
+      display: none; /* 기본 비표시 */
      position: fixed;
      top: 0;
      left: 0;
@@ -992,3 +995,22 @@
     .button-area button:hover {
       background-color: #eee;
     }
+
+    /* 오류 상태일 때 */
+.password-box.error input {
+  border: 1px solid #e74c3c;
+  background-color: #fff5f5;
+}
+
+/* 살짝 흔들리는 애니메이션 */
+.password-box.error {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

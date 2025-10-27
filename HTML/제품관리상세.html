@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제품 관리 상세</title>
+  <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<body>
+  <!-- 2025.10.20 제품 관리 html 작성중 -->
+  <header class="manager-header">
+    <!-- 2025.10.27 lang 변경 -->
+    <div class="lang">
+          <select>
+            <option value="ko">KOR</option>
+            <option value="en">ENG</option>
+            <option value="jp">JPN</option>
+          </select>
+        </div>
+    <div class="title">관리자 페이지</div>
+  </header>
+
+  <!-- 2025.10.27 class명 변경 -->
+  <div class="manager-nav">
+    <div class="admin-menu">메뉴 관리</div>
+    <div class="admin-menu selected">제품 관리</div>
+    <div class="admin-menu">게시판 관리</div>
+  </div>
+
+  <main class="product-manager">
+    <!-- 제품 목록 -->
+    <aside class="product-list">
+      <h2 class="menu-title">제품 목록</h2>
+      <ul>
+        <li>검출기 1</li>
+        <li>검출기 2</li>
+        <li>검출기 3</li>
+        <li>검출기 4</li>
+        <li>검출기 5</li>
+      </ul>
+      <button class="new-btn">신규</button>
+    </aside>
+
+    <!-- 제품 상세 -->
+    <section class="product-detail">
+      <div class="form-row">
+        <label>제품구분</label>
+        <input type="text" />
+      </div>
+      <!-- 메인사진 첨부 + 미리보기 -->
+      <!-- 메인 사진은 1장만 첨부 가능 -->
+      <div class="form-row main-photo-row">
+        <label>메인사진</label>
+        <input type="text" />
+        <button class="img-btn">파일 선택</button>
+      </div>
+      <div class="main-photo-wrap">
+        <div class="main-photo-preview" id="mainPhotoPreview">
+          <p>이미지를 업로드하면 미리보기가 표시됩니다.</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>제 목</label>
+        <input type="text" />
+      </div>
+      <div class="form-row">
+        <label>소 제목</label>
+        <input type="text" />
+      </div>
+      <div class="form-row">
+        <label>내 용</label>
+        <textarea></textarea>
+      </div>
+      <div class="form-row">
+        <label>요약설명</label>
+        <textarea></textarea>
+      </div>
+
+      <!-- 이미지 여러장 첨부 최대 10개까지만 가능 -->
+      <div class="form-row">
+        <label>첨부파일</label>
+         <!-- 2025.10.27 class명 변경 -->
+        <div class="file-row">
+          <div class="file-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <g clip-path="url(#clip0_534_749)">
+                <path
+                  d="M4.71671 11.1121C6.77744 9.06278 8.3894 7.42464 10.1824 5.66612C10.7744 5.04786 11.1493 4.44275 11.3071 3.8508C11.5834 2.73373 11.1586 1.7664 10.4192 1.00943C9.70885 0.299086 8.94917 -0.0363506 8.14017 0.00311604C6.92667 0.062316 6.53205 0.450376 5.74277 1.22649L0.711163 6.2778L1.5399 7.08679L6.5715 2.05521C7.0878 1.56434 7.7022 1.10156 8.40655 1.16728C9.47972 1.31794 10.4275 2.63144 10.1824 3.55482C9.87171 4.37406 9.44337 4.74771 8.85053 5.34053C7.04712 7.13933 5.64097 8.53036 3.888 10.2833C3.2292 10.8853 2.80314 11.0483 2.19108 10.4806C1.87538 10.1649 1.73725 9.85579 1.77671 9.55325C1.8205 9.20024 2.02034 8.95608 2.25026 8.72452L6.84774 4.12702C7.05777 3.91662 7.5361 3.51277 7.73567 3.69293C7.88878 4.04814 7.49447 4.38718 7.30159 4.58086L3.07899 8.80345L3.88798 9.63219L8.1303 5.40961C8.86099 4.65596 9.38596 3.73501 8.56439 2.88395C7.65577 2.10407 6.69856 2.62472 6.019 3.29832L1.42152 7.8958C0.947963 8.36935 0.678299 8.88238 0.612533 9.43488C0.560653 10.2094 0.909863 10.8312 1.38206 11.3094C1.82591 11.7508 2.30542 11.9953 2.90142 12C3.61798 11.9713 4.32254 11.4993 4.71671 11.1121Z"
+                  fill="#0048ff" />
+              </g>
+              <defs>
+                <clipPath id="clip0_534_749">
+                  <rect width="12" height="12" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span class="file-name">제품 이미지.jpg</span>
+          </div>
+          <div class="file-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <g clip-path="url(#clip0_534_749)">
+                <path
+                  d="M4.71671 11.1121C6.77744 9.06278 8.3894 7.42464 10.1824 5.66612C10.7744 5.04786 11.1493 4.44275 11.3071 3.8508C11.5834 2.73373 11.1586 1.7664 10.4192 1.00943C9.70885 0.299086 8.94917 -0.0363506 8.14017 0.00311604C6.92667 0.062316 6.53205 0.450376 5.74277 1.22649L0.711163 6.2778L1.5399 7.08679L6.5715 2.05521C7.0878 1.56434 7.7022 1.10156 8.40655 1.16728C9.47972 1.31794 10.4275 2.63144 10.1824 3.55482C9.87171 4.37406 9.44337 4.74771 8.85053 5.34053C7.04712 7.13933 5.64097 8.53036 3.888 10.2833C3.2292 10.8853 2.80314 11.0483 2.19108 10.4806C1.87538 10.1649 1.73725 9.85579 1.77671 9.55325C1.8205 9.20024 2.02034 8.95608 2.25026 8.72452L6.84774 4.12702C7.05777 3.91662 7.5361 3.51277 7.73567 3.69293C7.88878 4.04814 7.49447 4.38718 7.30159 4.58086L3.07899 8.80345L3.88798 9.63219L8.1303 5.40961C8.86099 4.65596 9.38596 3.73501 8.56439 2.88395C7.65577 2.10407 6.69856 2.62472 6.019 3.29832L1.42152 7.8958C0.947963 8.36935 0.678299 8.88238 0.612533 9.43488C0.560653 10.2094 0.909863 10.8312 1.38206 11.3094C1.82591 11.7508 2.30542 11.9953 2.90142 12C3.61798 11.9713 4.32254 11.4993 4.71671 11.1121Z"
+                  fill="#0048ff" />
+              </g>
+              <defs>
+                <clipPath id="clip0_534_749">
+                  <rect width="12" height="12" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span class="file-name">제품 이미지.jpeg</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-row preview-row">
+        <label>미리보기</label>
+        <div class="preview-area">
+          <!-- <p>이미지를 업로드하면 이곳에 미리보기가 표시됩니다.</p> -->
+          <!-- 이미지 없을때는 p가 보이도록 -->
+          <img src="../img/products-detail.png" alt="">
+          <img src="../img/certificate15.png" alt="">
+        </div>
+      </div>
+
+      <div class="detail-footer-row">
+        <!-- 2025.10.23 체크박스로 수정 -->
+        <label>
+          <div class="btn-group">
+            <button class="edit-btn">수정</button>
+            <button class="delete-btn">삭제</button>
+          </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

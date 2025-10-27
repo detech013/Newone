@@ -10,6 +10,7 @@
   @import url(products.css);
   @import url(registration.css);
   @import url(esg.css);
+  @import url(manager.css);
 
   /* 메인 */
   .main {
@@ -57,7 +58,20 @@
   }
 
   /* 섹션 */
-  section {
+  /* 2025.10.27 class 수정 */
+ .products {
+    padding: 100px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .company {
+    padding: 100px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .esg {
     padding: 100px 20px 60px;
     max-width: 1200px;
     margin: auto;

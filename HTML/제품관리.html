@@ -4,27 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>관리자 페이지</title>
-  <link rel="stylesheet" href="../CSS/manager.css">
+  <title>제품 관리</title>
+  <link rel="stylesheet" href="../CSS/main.css">
 </head>
 
 <body>
   <!-- 2025.10.20 제품 관리 html 작성중 -->
   <header class="manager-header">
-    <div class="lang">KOR</div>
+    <!-- 2025.10.27 lang 변경 -->
+    <div class="lang">
+          <select>
+            <option value="ko">KOR</option>
+            <option value="en">ENG</option>
+            <option value="jp">JPN</option>
+          </select>
+        </div>
     <div class="title">관리자 페이지</div>
   </header>
 
-  <nav class="manager-nav">
-    <button class="menu">메뉴 관리</button>
-    <button class="menu selected">제품 관리</button>
-    <button class="menu">게시판 관리</button>
-  </nav>
+  <!-- 2025.10.27 class명 변경 -->
+  <div class="manager-nav">
+        <div class="admin-menu">메뉴 관리</div>
+        <div class="admin-menu selected">제품 관리</div>
+        <div class="admin-menu">게시판 관리</div>
+    </div>
 
   <main class="product-manager">
     <!-- 제품 목록 -->
     <aside class="product-list">
-      <h2>제품 목록</h2>
+      <h2 class="menu-title">제품 목록</h2>
       <ul>
         <li>검출기 1</li>
         <li>검출기 2</li>
@@ -32,15 +40,7 @@
         <li>검출기 4</li>
         <li>검출기 5</li>
       </ul>
-      <div class="pagination">
-        <button>〈</button>
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>〉</button>
-      </div>
+
       <button class="new-btn">신규</button>
     </aside>
 
@@ -94,7 +94,8 @@
       </div>
       <p class="file-info">첨부파일은 10개 이하, 전체 120MB까지 가능합니다.</p>
 
-      <div class="file-list">
+      <!-- 2025.10.27 class명 변경 -->
+      <div class="file-row">
         <div class="file-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
             <g clip-path="url(#clip0_534_749)">

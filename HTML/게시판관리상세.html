@@ -4,26 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>게시판 관리</title>
-  <link rel="stylesheet" href="../CSS/manager.css">
+  <title>게시판 관리 상세</title>
+  <link rel="stylesheet" href="../CSS/main.css">
 </head>
 
 <body>
   <!-- 2025.10.21 게시판 관리 html 작성중 -->
   <header class="manager-header">
-    <div class="lang">KOR</div>
+    <!-- 2025.10.27 lang 변경 -->
+    <div class="lang">
+      <select>
+        <option value="ko">KOR</option>
+        <option value="en">ENG</option>
+        <option value="jp">JPN</option>
+      </select>
+    </div>
     <div class="title">관리자 페이지</div>
   </header>
 
-  <nav class="manager-nav">
-    <button class="menu">메뉴 관리</button>
-    <button class="menu">제품 관리</button>
-    <button class="menu selected">게시판 관리</button>
-  </nav>
+  <!-- 2025.10.27 class명 변경 -->
+  <div class="manager-nav">
+    <div class="admin-menu">메뉴 관리</div>
+    <div class="admin-menu">제품 관리</div>
+    <div class="admin-menu  selected">게시판 관리</div>
+  </div>
+
 
   <div class="admin-body">
     <aside class="product-list">
-      <h2>제품 목록</h2>
+      <h2 class="menu-title">제품 목록</h2>
       <ul>
         <li>
           공지사항
@@ -31,21 +40,12 @@
         <li>FAQ</li>
         <li>문의사항</li>
       </ul>
-      <div class="pagination">
-        <button>〈</button>
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>〉</button>
-      </div>
     </aside>
 
     <!-- 오른쪽: 게시판 목록 -->
     <section class="board-main">
       <div class="board-header">
-        <h2>게시판 구분: 공지사항</h2>
+        <h4>게시판 구분: 공지사항</h4> <button class="new-btn">신규</button>
       </div>
 
       <table class="board-table">
@@ -60,19 +60,20 @@
           </tr>
         </thead>
         <tbody>
+          <!-- 2025.10.27 첨부 처리 완료 -->
           <tr>
             <td>1</td>
             <td>-</td>
             <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td>O</td>
+            <td>O</td>
           </tr>
           <tr>
             <td>2</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>X</td>
+            <td>X</td>
           </tr>
           <tr>
             <td>3</td>
@@ -131,17 +132,12 @@
       </div>
       <div class="footer-box">
         <!-- 2025.10.23 체크박스로 수정 -->
-
-        <div class="btn-group">
-          <button class="edit-btn">신규 작성</button>
-          <button class="delete-btn">수정</button>
-        </div>
       </div>
     </section>
 
     <section class="board-main">
       <div class="board-header">
-        <h2>게시판 구분: 공지사항</h2>
+        <h4>게시판 구분: 공지사항</h4>
       </div>
 
       <!-- 문의사항 게시판일 경우 문의글 확인 섹션 -->
@@ -156,9 +152,13 @@
           <input type="text" />
         </div>
         <div class="row">
+          <label>내용</label>
+          <textarea></textarea>
+        </div>
+        <!-- 2025.10.27 class명 변경 -->
+        <div class="row-file">
           <label>첨부파일</label>
-          <input type="text" />
-          <div class="notice-detail-file">
+          <div class="row-detail-file">
             <a href="#">자료.pdf
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
@@ -167,10 +167,6 @@
               </svg>
             </a>
           </div>
-        </div>
-        <div class="row">
-          <label>내용</label>
-          <textarea></textarea>
         </div>
       </div>
 
@@ -190,12 +186,15 @@
           <textarea></textarea>
         </div>
 
-
-        <div class="btn-box">
-          <!-- 답글 작성은 문의사항일때만 활성화 -->
-          <button>답글작성</button>
-          <button>수정</button>
-          <button>삭제</button>
+        <!-- 2025.10.27 체크박스 추가 -->
+        <div class="board-footer">
+          <label class="checkbox"><input type="checkbox" name="active" /> 게시글 활성화</label>
+          <div class="btn-box">
+            <!-- 답글 작성은 문의사항일때만 활성화 -->
+            <button>답글작성</button>
+            <button>수정</button>
+            <button>삭제</button>
+          </div>
         </div>
       </div>
 
@@ -210,11 +209,15 @@
           <textarea></textarea>
         </div>
 
-        <div class="btn-box">
-          <!-- 작성은 신규일때만 -->
-          <button>작성</button>
-          <button>수정</button>
-          <button>삭제</button>
+      <!-- 2025.10.27 체크박스 추가 -->
+        <div class="board-footer">
+          <label class="checkbox"><input type="checkbox" name="active" /> 게시글 활성화</label>
+          <div class="btn-box">
+            <!-- 답글 작성은 문의사항일때만 활성화 -->
+            <button>작성</button>
+            <button>수정</button>
+            <button>삭제</button>
+          </div>
         </div>
       </div>
 

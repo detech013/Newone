@@ -5,7 +5,6 @@
 
  body {
      margin: 0;
-     background-color: #f6f8fb;
  }
 
  /* 2025.10.23 로그인 화면 */
@@ -121,18 +120,38 @@
      align-items: center;
  }
 
- .manager-header .lang {
-     background: #4e7394;
-     padding: 6px 14px;
-     border-radius: 6px;
+ /* 2025.10.27 lang 변경 */
+  .lang {
+     display: flex;
+     align-items: center;
+     height: 40px;
  }
+
+ .lang select {
+     margin: 0;
+     padding: 6px 30px 6px 10px;
+     font-size: 14px;
+     border: 0.5px solid #ccc;
+     border-radius: 6px;
+     height: 36px;
+     line-height: 1.2;
+     box-sizing: border-box;
+     background-color: #fff;
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     background: url("data:image/svg+xml;utf8,<svg fill='%23000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 5px center;
+     background-color: #fff;
+ }
+
 
  .manager-nav {
-     display: flex;
+     display: flex !important;
      background: #5c88ab;
+     text-align: center;
  }
 
- .manager-nav .menu {
+ .manager-nav .admin-menu {
      flex: 1;
      background: transparent;
      color: #fff;
@@ -142,7 +161,7 @@
      cursor: pointer;
  }
 
- .manager-nav .menu.selected {
+ .manager-nav .admin-menu.selected {
      font-weight: bold;
      background: #4e7394;
  }
@@ -189,27 +208,6 @@
      padding: 8px 12px;
      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
      cursor: pointer;
- }
-
- /* 페이지네이션 */
- .pagination {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding-bottom: 20px;
- }
-
- .pagination button {
-     background: none;
-     border: none;
-     font-size: 1rem;
-     cursor: pointer;
-     color: #ffffff;
- }
-
- .pagination .active {
-     font-weight: 500;
-     text-decoration: underline;
  }
 
  /* 신규 버튼 */
@@ -336,13 +334,6 @@
      color: #555;
  }
 
- .file-list {
-     margin-top: 10px;
-     display: flex;
-     flex-direction: column;
-     gap: 4px;
- }
-
  .file-item {
      display: flex;
      align-items: center;
@@ -388,6 +379,15 @@
 
  .file-item .remove-btn:hover {
      color: #ff4444;
+ }
+
+ /* 2025.10.27 class 변경 */
+ .file-row {
+     display: flex;
+ }
+
+ .file-row>.file-item {
+     margin-right: 8px;
  }
 
  /* 미리보기 행 확장 */
@@ -481,7 +481,14 @@
      border-radius: 8px;
  }
 
- .board-header h2 {
+  .board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+  }
+
+ .board-header h4 {
      font-size: 16px;
      margin-bottom: 10px;
  }
@@ -545,10 +552,12 @@
  }
 
  .footer-box {
-  display: flex;
-  justify-content: flex-end; /* 내부 콘텐츠를 오른쪽으로 */
-  margin-top: 16px; /* 위쪽 여백 (선택사항) */
-}
+     display: flex;
+     justify-content: flex-end;
+     /* 내부 콘텐츠를 오른쪽으로 */
+     margin-top: 16px;
+     /* 위쪽 여백 (선택사항) */
+ }
 
 
  /* 검색창 */
@@ -589,10 +598,11 @@
  }
 
  .btn-group {
-  display: flex;
-  justify-content: flex-end; /* 오른쪽 정렬 */
-  gap: 8px; 
-}
+     display: flex;
+     justify-content: flex-end;
+     /* 오른쪽 정렬 */
+     gap: 8px;
+ }
 
  /* 섹션 구분 */
  .board-section {
@@ -629,9 +639,16 @@
      border-radius: 4px;
  }
 
-  .row textarea {
-     height: 80px;
+ .row textarea {
+     height: 400px;
      resize: vertical;
+ }
+
+ .row-file {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     margin-bottom: 8px;
  }
 
  /* 내용 박스 */
@@ -640,6 +657,13 @@
      height: 120px;
      border-radius: 4px;
      margin: 8px 0 16px;
+ }
+
+ /* 2025.10.27 css 추가 */
+ .board-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
  }
 
  /* 버튼 */
@@ -661,12 +685,14 @@
  }
 
  /* 첨부파일 */
- .notice-detail-file {
-    margin-left: 12px;
+ /* 2025.10.27 class명 변경 */
+ .row-detail-file {
+    /* 2025.10.25 margin값 변경 */
+     margin-left: 20px;
      text-align: right;
  }
 
- .notice-detail-file a {
+ .row-detail-file a {
      display: inline-block;
      padding: 6px 10px;
      border: 1px solid #ccc;
@@ -678,7 +704,7 @@
  }
 
 
- .notice-detail-file svg {
+ .row-detail-file svg {
      flex-shrink: 0;
      vertical-align: middle;
  }
@@ -705,6 +731,9 @@
      text-align: center;
      margin-top: 0;
      margin-bottom: 10px;
+     font-size: 22px;
+     font-weight: 700;
+     margin-bottom: 16px;
  }
 
  /* 메뉴 리스트 */
@@ -752,6 +781,12 @@
      /* 스크롤 영역 안에서도 고정 */
  }
 
+ /* 2025.10.27 plus 추가 */
+ .plus {
+     position: absolute;
+     right: 10px;
+ }
+
  /* 펼쳐졌을 때 회전 */
  .menu-item.active .arrow {
      transform: rotate(-180deg);
@@ -759,12 +794,17 @@
 
  /* 서브메뉴 (아코디언 숨김) */
  .submenu-list {
+     display: none;
      list-style: none;
      padding-left: 15px;
      margin-top: 5px;
      max-height: 0;
      overflow: hidden;
      transition: max-height 0.3s ease;
+ }
+
+ .menu-item.active .submenu-list {
+     display: block;
  }
 
  /* 펼쳐졌을 때 */
@@ -775,9 +815,10 @@
 
  /* 서브 항목 */
  .submenu-item {
-     padding: 5px 10px;
+     padding: 10px 10px;
      cursor: default;
      font-size: 0.95em;
+     cursor: pointer;
  }
 
  /* 버튼 */
@@ -801,3 +842,106 @@
      background-color: rgba(255, 255, 255, 0.3);
      border-radius: 3px;
  }
+
+ 
+ /* 메뉴 팝업 */
+/* 모달 기본 */
+.menu-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.menu-modal-content {
+  background: #fff;
+  width: 600px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.menu-modal-content h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+.menu-manage-section {
+  margin-bottom: 25px;
+}
+
+.menu-manage-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.menu-manage-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-manage-section li {
+  background: #f3f6fa;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-btns button {
+  background: #6b93b0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+.sort-btns button:hover {
+  background: #587d95;
+}
+
+.modal-buttons {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  background: #6b93b0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.modal-buttons .close-menu-modal {
+  background: #aaa;
+}
+
+/* 기존 메뉴 수정 버튼 */
+.btn-add {
+  margin-top: 15px;
+  width: 100%;
+  background: #5b82a1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background: #4a6e88;
+}
