@@ -73,12 +73,20 @@
    }
 
    .product.right {
-       flex-direction: row-reverse;
+       display: flex;
+  flex-direction: row-reverse !important;
    }
+
+   /* 2025.10.28 수정 */
+.product.right .product-info {
+  align-items: flex-end; /* 오른쪽형일 때만 오른쪽 정렬 */
+}
 
    .product-info {
        flex: 1;
        text-align: left;
+         display: flex;
+  flex-direction: column;
    }
 
    .product.right .product-info {

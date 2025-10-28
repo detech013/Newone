@@ -77,6 +77,13 @@
     margin: auto;
   }
 
+  /* 2025.10.28 css 수정 */
+  .support {
+    padding: 100px 20px 60px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
   h2 {
     margin-bottom: 20px;
   }
@@ -350,7 +357,8 @@
 
   /* 공지사항 class 변경 */
   /* 공지사항 */
-  .main-notice {
+  /* 2025.10.28 공지사항 삭제 */
+  /* .main-notice {
     margin-top: 15px;
   }
 
@@ -358,4 +366,4 @@
     border-bottom: 1px solid #ddd;
     padding: 8px 0;
     list-style: none;
-  }
+  } */

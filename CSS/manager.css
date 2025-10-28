@@ -844,7 +844,7 @@
      border-radius: 3px;
  }
 
- 
+ /* 2025.10.28 메뉴 팝업 수정 */
  /* 메뉴 팝업 */
 /* 모달 기본 */
 .menu-modal {
@@ -867,36 +867,36 @@
   overflow-y: auto;
 }
 
-.menu-modal-content h2 {
-  margin-top: 0;
-  text-align: center;
-  color: #333;
-}
-
-.menu-manage-section {
-  margin-bottom: 25px;
-}
-
-.menu-manage-section h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-.menu-manage-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-manage-section li {
-  background: #f3f6fa;
-  padding: 10px;
-  margin-bottom: 8px;
-  border-radius: 6px;
+.menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #f2f4f8;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submenu-list {
+  margin: 8px 0 15px 20px;
+  padding: 0;
+  list-style: none;
+  display: none; /* 기본은 접힘 */
+}
+
+.submenu-list > li {
+    margin-bottom: 8px;
+     display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f4f8;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-item.open .submenu-list {
+  display: block; /* 열리면 표시 */
 }
 
 .sort-btns button {
@@ -931,18 +931,3 @@
   background: #aaa;
 }
 
-/* 기존 메뉴 수정 버튼 */
-.btn-add {
-  margin-top: 15px;
-  width: 100%;
-  background: #5b82a1;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.btn-add:hover {
-  background: #4a6e88;
-}

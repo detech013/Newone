@@ -26,11 +26,10 @@
     });
 });
 
-// 모달 열기 / 닫기
+// 모달 열기/닫기
 const modal = document.querySelector(".menu-modal");
 const openBtn = document.querySelector(".btn-add");
 const closeBtn = document.querySelector(".close-menu-modal");
-const saveBtn = document.querySelector(".save-menu");
 
 openBtn.addEventListener("click", () => {
   modal.style.display = "flex";
@@ -39,27 +38,45 @@ closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-// ↑↓ 버튼으로 순서 바꾸기
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("up") || e.target.classList.contains("down")) {
+// 메뉴 헤더 클릭 → 아코디언 열기/닫기
+document.querySelectorAll(".menu-header").forEach(header => {
+  header.addEventListener("click", (e) => {
+    if(e.target.closest("button")) return; // 버튼 클릭이면 토글 안함
+    const submenu = header.nextElementSibling;
+    if(submenu) {
+      const current = getComputedStyle(submenu).display;
+      submenu.style.display = current === "none" ? "block" : "none";
+    }
+  });
+});
+
+// ↑↓ 버튼 클릭 → 순서 변경 (메인 메뉴 + 서브메뉴)
+document.querySelectorAll(".sort-btns button").forEach(button => {
+  button.addEventListener("click", (e) => {
+    e.stopPropagation(); // 버튼 클릭 시 menu-header 클릭 이벤트 방지
     const li = e.target.closest("li");
     const parent = li.parentNode;
-    if (e.target.classList.contains("up") && li.previousElementSibling) {
+    if(e.target.classList.contains("up") && li.previousElementSibling) {
       parent.insertBefore(li, li.previousElementSibling);
-    } else if (e.target.classList.contains("down") && li.nextElementSibling) {
+    } else if(e.target.classList.contains("down") && li.nextElementSibling) {
       parent.insertBefore(li.nextElementSibling, li);
     }
-  }
+  });
 });
 
-// 저장 시 실제 반영 (콘솔 예시)
-saveBtn.addEventListener("click", () => {
-  const mainMenus = [...document.querySelectorAll(".main-menu-sort li")].map(li => li.textContent.trim());
-  const subMenus = [...document.querySelectorAll(".submenu-sort li")].map(li => li.textContent.trim());
+// 저장 버튼 클릭 → 순서 출력 + 모달 닫기
+ // DOM 로드 후 실행
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.querySelector(".menu-modal");
+    const saveBtn = document.querySelector(".save-menu");
 
-  console.log("새로운 메인 메뉴 순서:", mainMenus);
-  console.log("새로운 서브 메뉴 순서:", subMenus);
+    if (!saveBtn || !modal) {
+      console.error("저장 버튼 또는 모달을 찾을 수 없습니다.");
+      return;
+    }
 
-  alert("순서가 저장되었습니다 (콘솔 확인)");
-  modal.style.display = "none";
-});
+    saveBtn.addEventListener("click", () => {
+      alert("저장되었습니다");
+      modal.style.display = "none";
+    });
+  });
