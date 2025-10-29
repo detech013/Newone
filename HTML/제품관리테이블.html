@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제품 관리 테이블</title>
+  <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<body>
+  <!-- 2025.10.29 제품 관리 테이블 추가-->
+  <header class="manager-header">
+    <div class="lang">
+      <select>
+        <option value="ko">KOR</option>
+        <option value="en">ENG</option>
+        <option value="jp">JPN</option>
+      </select>
+    </div>
+    <div class="title">관리자 페이지</div>
+  </header>
+
+  <div class="manager-nav">
+    <div class="admin-menu">메뉴 관리</div>
+    <div class="admin-menu selected">제품 관리</div>
+    <div class="admin-menu">게시판 관리</div>
+  </div>
+
+  <main class="product-manager">
+    <!-- 제품 목록 -->
+    <aside class="product-list">
+      <h2 class="menu-title">제품 목록</h2>
+      <ul>
+        <li>
+          제품 분류 1
+        </li>
+        <li>제품 분류 2</li>
+        <li>제품 분류 3</li>
+      </ul>
+
+      <button class="new-btn">신규</button>
+    </aside>
+
+    <!-- 제품 상세 -->
+    <section class="board-main">
+      <div class="board-header">
+        <h4>제품 분류 1</h4>
+        <button class="new-btn">신규</button>
+      </div>
+
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>제품 이미지</th>
+            <th>제품 분류</th>
+            <th>제품명</th>
+            <th>제품코드</th>
+            <th>노출여부</th>
+            <th>등록(수정일)</th>
+            <th>수정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><div class="product-preview">
+          <!-- <p>이미지를 업로드하면 이곳에 미리보기가 표시됩니다.</p> -->
+          <!-- 이미지 없을때는 p가 보이도록 -->
+          <img src="../img/nwenc-400.jpg" alt="">
+        </td>
+            <td>생산환경검출장치</td>
+            <td>생산환경검출장치 기본형</td>
+            <td>NWENC-400</td>
+            <td>O</td>
+            <td>2025.10.29 18:02</td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="new-btn">수정</button>
+              </div>
+            </td>
+          </tr>
+
+          <!-- 데이터 반복 -->
+        </tbody>
+      </table>
+
+      <div class="edit-pagination">
+        <button>〈</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>〉</button>
+      </div>
+      <div class="footer-box">
+        <!-- 2025.10.23 체크박스로 수정 -->
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

@@ -26,6 +26,8 @@
     });
 });
 
+// 2025.10.28 수정
+
 // 모달 열기/닫기
 const modal = document.querySelector(".menu-modal");
 const openBtn = document.querySelector(".btn-add");
