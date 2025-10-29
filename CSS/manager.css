@@ -968,41 +968,34 @@
      width: 20px;
  }
 
-
- /* 특정 컬럼 너비 조정 */
  .product-table th:nth-child(2),
  .product-table td:nth-child(2) {
-     width: 80px;
- }
-
- .product-table th:nth-child(3),
- .product-table td:nth-child(3) {
      width: 100px;
  }
 
-  .product-table th:nth-child(4),
- .product-table td:nth-child(4) {
+  .product-table th:nth-child(3),
+ .product-table td:nth-child(3) {
      width: 200px;
  }
 
-   .product-table th:nth-child(5),
- .product-table td:nth-child(5) {
+   .product-table th:nth-child(4),
+ .product-table td:nth-child(4) {
      width: 150px;
  }
  
-    .product-table th:nth-child(6),
- .product-table td:nth-child(6) {
+    .product-table th:nth-child(5),
+ .product-table td:nth-child(5) {
      width: 50px;
  }
 
-    .product-table th:nth-child(7),
- .product-table td:nth-child(7) {
+    .product-table th:nth-child(6),
+ .product-table td:nth-child(6) {
      width: 150px;
  }
 
-     .product-table th:nth-child(8),
- .product-table td:nth-child(8) {
-     width: 50px;
+     .product-table th:nth-child(7),
+ .product-table td:nth-child(7) {
+     width: 40px;
  }
 
 
