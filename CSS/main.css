@@ -59,39 +59,55 @@
 
   /* 섹션 */
   /* 2025.10.27 class 수정 */
- .products {
-    padding: 100px 20px 60px;
+  .products {
+    padding: 80px 20px;
     max-width: 1200px;
     margin: auto;
   }
 
   .company {
-    padding: 100px 20px 60px;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: auto;
   }
 
   .esg {
-    padding: 100px 20px 60px;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: auto;
   }
 
   /* 2025.10.28 css 수정 */
+  /* 2025.10.30 */
   .support {
-    padding: 100px 20px 60px;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: auto;
+  }
+
+  .text > h2 {
+    margin: 0px;
+    padding-bottom: 12px;
   }
 
   h2 {
     margin-bottom: 20px;
   }
 
+  .text>h4 {
+    font-size: 24px;
+    margin: 0px;
+    padding-bottom: 12px;
+  }
+
+  .text>p {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
   /* 제품 */
   .products {
     text-align: left;
-    padding: 40px 20px;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -229,6 +245,7 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
   /* ---------------------- */
 
   .esg .card {

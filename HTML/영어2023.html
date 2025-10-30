@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023esg</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<body>
+    <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 배너 -->
+     <!-- 2025.10.27 이미지 추가 -->
+    <div class="banner" style="background: url(../img/banner-esg.webp) no-repeat center/cover;">
+        <div class="banner-inner">
+            <h1 class="banner-title">ESG</h1>
+            <span class="breadcrumb">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                ESG
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                2023 ESG
+            </span>
+        </div>
+    </div>
+
+    <!-- 서브 메뉴 -->
+    <div class="sub-menu">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="./company.html">2023 ESG</a></li>
+                <li><a href="./history.html">2024 ESG</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 본문 -->
+  <section class="esg">
+    <span>2023 ESG Sustainability Report</span>
+    <h1 class="esg-title">ESG Management Goals</h1>
+    <p>
+        NewOne has established an ESG strategic framework focused on the 2023 action plan to ensure tangible outcomes in ESG sustainability management, aligned with the company-wide Mission.
+    </p>
+    <div class="esg-img">
+        <img src="https://ml7h6bxvg0ll.i.optimole.com/w:737/h:630/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/ESG전략.png" alt="">
+    </div>
+
+    <h1 class="esg-title">ESG Implementation Framework</h1>
+    <div class="esg-subtitle">ESG Implementation Schedule</div>
+    <div class="esg-img">
+        <img src="https://ml7h6bxvg0ll.i.optimole.com/w:485/h:440/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/ESG추진일정.png" alt="">
+    </div>
+
+    <div class="esg-subtitle">ESG Materiality Assessment</div>
+    <p>
+        Based on ESG activity reviews, priorities for each task were determined by evaluating urgency, importance, and precedence, followed by discussions with management.
+    </p>
+    <div class="esg-img">
+        <img src="https://ml7h6bxvg0ll.i.optimole.com/w:263/h:258/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-%EB%A7%A4%ED%8A%B8%EB%A6%AD%EC%8A%A4.png" alt="">
+        <img src="https://ml7h6bxvg0ll.i.optimole.com/w:415/h:159/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%A4%91%EB%8C%80%EC%84%B1%ED%8F%89%EA%B0%80%ED%91%9C.png" alt="">
+    </div>
+    <div class="esg-img">
+        <img src="https://ml7h6bxvg0ll.i.optimole.com/w:699/h:417/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%A0%84%EB%9E%B5%EA%B3%BC%EC%A0%9C-%EC%84%B1%EA%B3%BC%EC%A7%80%ED%91%9C.png" alt="">
+    </div>
+</section>
+
+<!-- Environment Section -->
+<section class="esg">
+    <div class="esg-header">Environment</div>
+    <h1 class="esg-title">Establishing Environmental Management Foundations</h1>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Reducing Greenhouse Gas Emissions</div>
+        <p>
+            NewOne strives to reduce greenhouse gas emissions generated in daily operations. All employees work to minimize direct emissions from logistics vehicles and electricity usage.
+        </p>
+
+        <h4>Logistics Vehicles</h4>
+        <p>
+            To minimize emissions, electric vehicles are introduced for material distribution. One corporate vehicle was replaced with an electric car, and two old internal combustion vehicles were replaced with high-efficiency models.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:719/h:296/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%A0%84%EA%B8%B0%EC%B0%A8-%EA%B5%90%EC%B2%B4.png" alt="">
+        </div>
+
+        <p>
+            Employees also practice fuel-efficient driving through safety training: maintaining steady speeds, regular vehicle maintenance, and using public transport. Carpooling during scheduled visits further reduces energy consumption.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:467/h:191/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%B9%B4%ED%92%80.png" alt="">
+        </div>
+
+        <p>
+            NewOne continuously seeks ways to efficiently use resources and reduce costs to minimize environmental impact. Employees perform eco-friendly operations to limit environmental effects on stakeholders.
+        </p>
+
+        <h4>Electricity</h4>
+        <p>
+            NewOne minimizes electricity usage by upgrading to high-efficiency appliances and replacing all office lighting with LEDs. Power is cut off outside working hours, and appropriate temperature management reduces HVAC energy consumption.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:467/h:190/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%A1%B0%EB%AA%85%EA%B5%90%EC%B2%B4.png" alt="">
+        </div>
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:468/h:127/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%98%A8%EC%8B%A4%EA%B0%80%EC%8A%A4%EB%B0%B0%EC%B6%9C%EB%9F%89.png" alt="">
+        </div>
+
+        <p>
+            Through these initiatives, greenhouse gas emissions per revenue unit from logistics vehicles exceeded the target (5% reduction from previous year). Overall emissions slightly increased due to electricity use, but total emissions exceeded the target by 2.5%.
+        </p>
+
+        <p>
+            Employees voluntarily participate in greenhouse gas reduction activities and continue to integrate energy-saving practices into daily operations.
+        </p>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Waste Reduction and Resource Recycling</div>
+        <p>
+            Preventing environmental pollution is a key corporate responsibility. Since April 2023, NewOne has enforced environmental regulations and reduced various wastes in the distribution process through recycling initiatives.
+        </p>
+        <p>
+            Packaging optimization and reuse efforts minimize material usage. Packaging materials are also collected and reused in transportation.
+        </p>
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:362/h:271/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%ED%8F%AC%EC%9E%A5-%EC%B5%9C%EC%A0%81%ED%99%94.png" alt="">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:317/h:260/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%ED%8F%AC%EC%9E%A5%EC%9E%AC-%EC%9E%AC%ED%99%9C%EC%9A%A9.png" alt="">
+        </div>
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:797/h:141/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%ED%8F%AC%EC%9E%A5%EC%9E%AC%EC%82%AC%EC%9A%A9%EB%9F%89-%EA%B0%90%EC%B6%95.png" alt="">
+        </div>
+        <p>
+            As a result, the goal of reducing packaging usage per revenue by 10% was achieved, and ongoing efforts will continue.
+        </p>
+        <p>
+            There were no environmental incidents or regulatory violations in 2023, and compliance will continue.
+        </p>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Promotion of Smart Service Support Projects</div>
+        <p>
+            In 2021, NewOne participated in the Smart Service Support Project led by the Ministry of SMEs and Startups, establishing an automated RPA system for outbound operations. RPA automated repetitive tasks, reducing errors, saving time, and reducing electricity and paper usage.
+        </p>
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:468/h:308/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9A%B0%EC%88%98%EC%82%AC%EB%A1%80%EC%84%A0%EC%A0%95.png" alt="">
+        </div>
+        <p>
+            NewOne plans to implement a Warehouse Management System (WMS) to further improve operational efficiency, enhance employee satisfaction, and contribute to environmental protection.
+        </p>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">New Business for Waste Reduction</div>
+        <p>
+            NewOne aims to minimize waste from leftover inventory by offering storage services for surplus stock after site construction. The company will properly store surplus items, share inventory status with clients, and resell items that cannot be reused.
+        </p>
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:468/h:383/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9E%89%EC%97%AC%EC%9E%AC%EA%B3%A0-%ED%9D%90%EB%A6%84%EB%8F%84.png" alt="">
+        </div>
+        <p>
+            Systems to support surplus inventory management will also be built to minimize waste and contribute to environmental improvement while maintaining high profitability.
+        </p>
+    </div>
+</section>
+
+<!-- Social -->
+
+<section class="esg">
+
+    <div class="esg-header">Social</div>
+    <h1 class="esg-title">Customer Satisfaction, Internal and External</h1>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Improvement of Employment Practices</div>
+        <p>
+            NewOne enhances the quality of jobs and provides tailored training opportunities to support employee growth, keeping pace with continuous business expansion.
+        </p>
+        <h4>Enhancing Job Quality</h4>
+        <p>
+            Embracing the motto of growing together with employees, NewOne restructured its workforce to consist entirely of regular employees instead of the previous mix of regular and contract positions.  
+            The company also increased the recruitment of female talent, strategically placing employees in outbound and inbound marketing roles. This has contributed to sustained sales growth from both sides.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:575/h:230/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EA%B3%A0%EC%9A%A9%EA%B4%80%ED%96%89%EA%B0%9C%EC%84%A0.png" alt="Improvement of Employment Practices">
+        </div>
+
+        <h4>Tailored Job Training</h4>
+        <p>
+            Beyond mandatory training, NewOne actively implements role-specific training programs to enhance employee capabilities and foster growth.  
+            By increasing training time and budgets by over 14% compared to the previous year, employees’ professional growth and job satisfaction have improved.  
+            Streamlining work through digitalization has further reduced workload, increased efficiency and productivity, and strengthened employees’ sense of pride.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:575/h:177/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EA%B5%90%EC%9C%A1%EA%B3%84%ED%9A%8D.png" alt="Tailored Job Training">
+        </div>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Community Engagement</div>
+        <h4>Support for Social Welfare Facilities</h4>
+        <p>
+            During the 2023 Chuseok holiday, all employees participated in donating 1 million KRW in gift certificates to “Subong Rehabilitation Center,” a local educational facility for people with disabilities.  
+            Moving forward, NewOne will continue participating in programs that contribute to the development of the community in collaboration with various local social welfare organizations.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:980/h:366/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%88%98%EB%B4%89%EC%9E%AC%ED%99%9C%EC%9B%90.png" alt="Support for Social Welfare Facilities">
+        </div>
+
+        <h4>Creation of Local Employment</h4>
+        <p>
+            In October, NewOne participated in the Suwon City Job Fair to introduce the company to local young job seekers, resulting in the recruitment of five new full-time employees.  
+            The company will continue actively creating quality job opportunities to secure local talent in the future.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:576/h:217/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9D%BC%EC%9E%90%EB%A6%AC.png" alt="Local Employment Creation">
+        </div>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Enhancement of Workplace Safety and Health</div>
+        <p>
+            NewOne believes that creating a healthy and comfortable workplace is the foundation of ESG activities. The company strictly adheres to occupational safety regulations and strengthens health initiatives to ensure a safe and healthy working environment.
+        </p>
+        <h4>ISO45001 Certification and Safety Awareness</h4>
+        <p>
+            To prevent serious accidents and take proactive measures, NewOne established an Occupational Health and Safety Management System and obtained ISO45001 certification in April 2023.  
+            Employees undergo safety and fire management training, and safety posters are displayed in work areas to reinforce safety awareness.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:576/h:511/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%95%88%EC%A0%84%ED%8F%AC%EC%8A%A4%ED%84%B0.png" alt="Safety Awareness">
+        </div>
+
+        <h4>Accident Prevention and Medical Support</h4>
+        <p>
+            As a distributor of electrical, telecommunication, and fire equipment, employee injuries mainly occur during the handling, loading, and unloading of products.  
+            NewOne strictly enforces safety and health guidelines on-site, reducing the accident rate from 55.6% to 9.1% compared to the previous year, marking significant progress toward a zero-accident workplace.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:576/h:211/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9E%AC%ED%95%B4%EC%9C%A8.png" alt="Accident Prevention">
+        </div>
+
+        <p>
+            In case of unforeseen accidents, the company not only covers industrial accident insurance but also provides medical support through a dedicated fund, contributing 500,000 KRW per month (6 million KRW annually) since 2021.  
+            From 2024, the health checkup program, previously for employees only, will be extended to their families.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:576/h:202/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%82%B0%EC%9E%AC%EC%8B%A0%EC%B2%AD.png" alt="Medical Support">
+        </div>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Product Safety and Quality Enhancement</div>
+        <p>
+            To improve customer satisfaction and corporate credibility, NewOne implements detailed management plans to minimize defective product purchases, order errors, and faulty shipments, thereby reducing returns and customer inconvenience.
+        </p>
+
+        <h4>Strengthening Quality through Purchase-to-Shipment Process Improvement</h4>
+        <p>
+            The company reorganized the purchase-to-shipment process to prevent defective product purchases, shipment errors, and order mistakes that lead to returns and waste.  
+            Each stage clearly defines the responsibilities of the sales and logistics teams, ensuring all members carry out their duties responsibly.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:432/h:162/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EA%B5%AC%EB%A7%A4%EB%8F%84%ED%91%9C.png" alt="Process Improvement">
+        </div>
+
+        <h4>Return Process Reestablishment and Data Management</h4>
+        <p>
+            Return reasons are categorized into client requests, invoice errors, purchase mistakes, and supplier defects.  
+            The sales team verifies the reason for each return, inputs it into the system, and ensures the return process is correctly followed.  
+            By continuously monitoring return causes, NewOne quickly identifies increases due to new product lines, updates product manuals, and hires additional staff to ensure thorough verification from purchase to shipment.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:432/h:91/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EB%B0%98%ED%92%88%EA%B1%B4%EC%88%98.png" alt="Return Data Management">
+        </div>
+    </div>
+
+</section>
+
+<!-- Governance -->
+<section class="esg">
+
+    <div class="esg-header">Governance</div>
+    <h1 class="esg-title">Enhancing Corporate Credibility</h1>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Transparent Management and ESG Implementation</div>
+        <p>
+            NewOne began preparing for ESG initiatives in November 2022 and officially implemented ESG management from January 2023. Over the past year, the key activities have been as follows.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:467/h:283/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%8B%A4%ED%96%89%EA%B3%BC%EC%A0%9C.png" alt="ESG Implementation">
+        </div>
+
+        <h4>Foundation Building</h4>
+        <p>
+            In Q1 2023, ESG activities were launched with an initiative to build the foundation for ESG management.  
+            In January, ESG KPIs were defined through company assessments and consultations with executives. In February, ESG KPI targets were set and agreed upon.  
+            By March, responsibilities for each ESG initiative were assigned to specific departments, and annual activity plans and target values were established, marking the start of ESG activities.
+        </p>
+
+        <h4>ESG Management Declaration</h4>
+        <p>
+            In Q2 2023, NewOne publicly announced its commitment to ESG management and began full-scale ESG activities.  
+            In April, the ESG Management Pledge and Code of Ethics were adopted, and from May, monthly ESG activity progress reviews were conducted.
+        </p>
+
+        <h4>Activity Review</h4>
+        <p>
+            In Q3 2023, ESG activity review was conducted. Based on the performance in the first half of 2023, underperforming areas were identified and improvement measures were proposed.  
+            Outstanding CSR cases were selected, and NewOne was recognized as a 2023 CSR Best Practice Company by the Ministry of SMEs and Startups.
+        </p>
+
+        <h4>Publication and Distribution of ESG Report</h4>
+        <p>
+            In Q4 2023, ESG activity reporting was initiated. A CSR Best Practice booklet was published, ESG activity results were shared, and the official ESG report was released.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:252/h:296/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/ESG%EC%84%A0%ED%8F%AC.png" alt="ESG Declaration">
+        </div>
+    </div>
+
+    <div class="esg-section">
+        <div class="esg-subtitle">Ethical Management</div>
+
+        <h4>Background</h4>
+        <p>
+            NewOne established a Code of Ethical Conduct and conducts regular ethics training to promote a fair and transparent management culture.  
+            This framework integrates socially expected ethical values into decision-making, fostering a healthy and fair organizational culture aligned with societal norms.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:432/h:206/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%B6%94%EC%A7%84%EB%B0%B0%EA%B2%BD.png" alt="Ethical Management Background">
+        </div>
+
+        <h4>Compliance with Ethical Management</h4>
+        <p>
+            Since declaring its Code of Ethics in 2023, NewOne has actively practiced ethical management and respectful collaboration with partner companies.  
+            All employees actively participate in practical, on-site implementation of ethical management.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:576/h:239/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9C%A4%EB%A6%AC%ED%97%8C%EC%9E%A5.png" alt="Ethical Management Compliance">
+        </div>
+
+        <h4>Ethics Education</h4>
+        <p>
+            In April 2023, the company's ethical management objectives were formalized in a charter and communicated to all employees.  
+            Customers were also informed of NewOne’s commitment to ethical management.  
+            This initiative lays the foundation for preventing potential ethical issues in business transactions.  
+            Starting in the first half of 2023, NewOne plans to conduct ethics training twice a year to strengthen the practical execution of ethical management.
+        </p>
+
+        <div class="esg-img">
+            <img src="https://ml7h6bxvg0ll.i.optimole.com/w:504/h:426/q:mauto/f:best/https://www.newonetotal.co.kr/wp-content/uploads/2024/01/%EC%9C%A4%EB%A6%AC%EA%B2%BD%EC%98%81.png" alt="Ethics Education">
+        </div>
+    </div>
+
+</section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footerlogo">
+                <img src="../img/logo-white.webp" alt="">
+            </div>
+            <div>
+                <h3>본사</h3>
+                <p>경기도 수원시 권선구 서둔로 21</p>
+                <p>Tel: 031-298-1191</p>
+                <p>Fax: 031-297-4460</p>
+            </div>
+            <div class="box"></div>
+            <div>
+                <h3>일산지사</h3>
+                <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+                <p>Tel: 031-912-1191</p>
+                <p>Fax: 031-912-4460</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/header.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>history</title>
+    <link rel="stylesheet" href="../CSS/header-banner.css">
+    <link rel="stylesheet" href="../css/history.css">
+</head>
+
+<body>
+    <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 배너 -->
+    <div class="banner" style="background: url(../img/banner-company.webp) no-repeat center/cover;">
+        <div class="banner-inner">
+            <h1 class="banner-title">회사 소개</h1>
+            <span class="breadcrumb">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                회사소개
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                회사연혁
+            </span>
+        </div>
+    </div>
+
+    <!-- 서브 메뉴 -->
+    <div class="sub-menu">
+        <div class="container">
+            <ul>
+                <li><a href="./company.html">인사말</a></li>
+                <li class="active"><a href="./history.html">회사 연혁</a></li>
+                <li><a href="./goals.html">경영목표</a></li>
+                <li><a href="./registration.html">인증 및 등록현황</a></li>
+                <li><a href="./location.html">오시는 길</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 본문 -->
+    <section class="history-section">
+         <!-- 2025.10.15 class 변경 -->
+        <div class="history-container">
+
+            <!-- LEFT (sticky) -->
+            <div class="left">
+                <h2>YEARLY<br>HIGHLIGHTS</h2>
+                <p class="intro">
+                    Dear valued stakeholders,<br>
+                    We are Newone a company<br>
+                    that grows together <br>
+                    with you.
+                </p>
+            </div>
+
+            <!-- RIGHT (timeline) -->
+             <!-- 2025.10.15 class 변경 -->
+            <div class="history-right">
+    <div class="timeline-grid">
+
+        <div class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+                <div class="timeline-date">2005.09</div>
+                <p class="timeline-text">Established Newone Electric<br>(Pyeong-ri, Hyangnam-eup, Hwaseong-si, Gyeonggi-do)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2007.07</div>
+                <p class="timeline-text">Business expansion and relocation</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2010.08</div>
+                <p class="timeline-text">Incorporated as Newone Electric Co.<br>
+                    Established total distribution network for electrical, communication, firefighting, and industrial safety supplies</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2013.12</div>
+                <p class="timeline-text">Relocated to Suwon Tool Market (expansion)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2018.08</div>
+                <p class="timeline-text">Established total material distribution network for electrical, communication, firefighting, temporary, and safety supplies</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2018.09</div>
+                <p class="timeline-text">Acquired Main-Biz Certification (Management Innovation SME)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2020.09</div>
+                <p class="timeline-text">Company expansion and relocation</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2021.09</div>
+                <p class="timeline-text">Selected as an Excellent Company in the Smart Service Support Project<br>(Introduced RPA for business automation)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2022.04</div>
+                <p class="timeline-text">Renamed to Newone Co. — A new leap, a new challenge</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2023.04</div>
+                <p class="timeline-text">Proclaimed ESG Management and held Launching Ceremony</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2023.06</div>
+                <p class="timeline-text">Acquired ISO 45001 (Occupational Health and Safety Management System)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2023.11</div>
+                <p class="timeline-text">Selected as an Excellent CSR Case among SMEs</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.02</div>
+                <p class="timeline-text">Published ESG Sustainability Report</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.03</div>
+                <p class="timeline-text">Completed Smart Service Advancement Project<br>(RPA upgrade, WMS, and website development)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.04</div>
+                <p class="timeline-text">Attracted investment through issuance of Green ABS by the Ministry of Environment</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.05</div>
+                <p class="timeline-text">Opened Anyang Factory</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.06</div>
+                <p class="timeline-text">Selected site for new logistics warehouse and advanced factory (Hwaseong-si, Gyeonggi-do)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.08</div>
+                <p class="timeline-text">Acquired ISO 9001 (Quality Management System)</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.09</div>
+                <p class="timeline-text">Established Mid-to-Long Term Business Strategy for “Vision 2028”</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.11</div>
+                <p class="timeline-text">Acquired INNO-Biz Certification (Technology Innovation SME)<br>
+                Approved for Business Transition Plan by the Ministry of SMEs and Startups</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2024.12</div>
+                <p class="timeline-text">Awarded Excellent Job Creation Company by Suwon City</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2025.04</div>
+                <p class="timeline-text">Selected for Commercialization Support Project by KEITI (Korea Environmental Industry & Technology Institute)<br>
+                Acquired Venture Business Certification</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2025.07</div>
+                <p class="timeline-text">Promoted to Corporate Research Institute</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2025.09</div>
+                <p class="timeline-text">Awarded Minister’s Prize for Excellence in Management Innovation (Main-Biz)<br>
+                Received Director’s Award from KEITI</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2025.10</div>
+                <p class="timeline-text">Launched Construction Electrical Material Recycling Service System</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <div>
+                <div class="timeline-date">2026.03</div>
+                <p class="timeline-text">Scheduled completion of new factory</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+     <footer>
+    <div class="container footer-inner">
+        <div class="footerlogo">
+            <img src="../img/logo-white.webp" alt="Newone Logo">
+        </div>
+        <div>
+            <h3>Anyang Factory</h3>
+            <p>Room 210, 53 Jeonpa-ro, Manan-gu, <br> Anyang-si, Gyeonggi-do</p>
+            <p>Tel: +82-31-298-1191</p>
+            <p>Fax: +82-31-297-4460</p>
+        </div>
+        <div class="box"></div>
+        <div>
+            <h3>Head Office</h3>
+            <p>21 Seodun-ro, Gwonseon-gu, <br>Suwon-si, Gyeonggi-do</p>
+            <p>Tel: +82-31-298-1191</p>
+            <p>Fax: +82-31-297-4460</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../javascript/header.js">
+    </script>
+</body>
+
+</html>
