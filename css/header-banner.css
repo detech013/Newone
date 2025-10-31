@@ -283,10 +283,11 @@
  }
 
  /* 배너 */
+ /* 2025.10.31 */
  .banner {
      position: relative;
      width: 100%;
-     height: 200px;
+     height: 280px;
      display: flex;
      align-items: flex-end;
      padding-bottom: 40px;

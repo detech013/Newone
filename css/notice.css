@@ -66,7 +66,7 @@
    }
 
    /* 페이지네이션 */
-   .pagination {
+   /* .pagination {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -86,7 +86,7 @@
    .pagination .active {
      font-weight: bold;
      text-decoration: underline;
-   }
+   } */
 
    /* FAQ */
 

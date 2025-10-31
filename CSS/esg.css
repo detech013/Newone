@@ -62,19 +62,21 @@
 
      }
 
-      .esg-text {
-             margin-top: 0;
-             display: flex;
-             gap: 20px;
-             align-items: center;
-             margin: 40px 0;
-             flex: 1;
-         }
+     /* 2025.10.31 */
+     .esg-text {
+         margin-top: 0;
+         display: flex;
+         gap: 20px;
+         align-items: center;
+         margin: 40px 0;
+         flex: 1;
+     }
 
-         .esg-img-list {
-    display: flex;
-    gap: 10px; /* 이미지 사이 간격 */
-}
+     .esg-img-list {
+         display: flex;
+         gap: 10px;
+         /* 이미지 사이 간격 */
+     }
 
      .caption {
          text-align: center;
@@ -99,7 +101,7 @@
          /* 2025.10.21 이미지 css 수정 */
          .esg-img img {
              width: 100%;
-             height: auto; 
+             height: auto;
              object-fit: contain;
          }
 

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 관리</title>
+  <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<body>
+  <!-- 2025.10.24 메뉴 관리 html 작성중 -->
+  <header class="manager-header">
+    <!-- 2025.10.27 lang 변경 -->
+    <div class="lang">
+      <select>
+        <option value="ko">KOR</option>
+        <option value="en">ENG</option>
+        <option value="jp">JPN</option>
+      </select>
+    </div>
+    <div class="title">관리자 페이지</div>
+  </header>
+
+  <!-- 2025.10.27 class명 변경 -->
+  <div class="manager-nav">
+    <div class="admin-menu selected">메뉴 관리</div>
+    <div class="admin-menu">제품 관리</div>
+    <div class="admin-menu">게시판 관리</div>
+  </div>
+
+  <div class="admin-body">
+    <aside class="menu-sidebar">
+      <h2 class="menu-title">메뉴 목록</h2>
+      <ul class="menu-list">
+        <li class="menu-item">
+          메인 메뉴 추가 <span class="plus">+</span>
+        </li>
+
+        <li class="menu-item">
+          회사 소개 <span class="arrow">▾</span>
+          <ul class="submenu-list">
+            <li class="submenu-item">서브 메뉴 추가 <span class="plus">+</span></li>
+            <li class="submenu-item">인사말</li>
+            <li class="submenu-item">회사 연혁</li>
+            <li class="submenu-item">경영 목표</li>
+            <li class="submenu-item">인증 및 등록현황</li>
+            <li class="submenu-item">오시는 길</li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          ESG <span class="arrow">▾</span>
+          <ul class="submenu-list">
+            <li class="submenu-item">서브 메뉴 추가 <span class="plus">+</span></li>
+            <li class="submenu-item">2023 ESG</li>
+            <li class="submenu-item">2024 ESG</li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          주요 제품 <span class="arrow">▾</span>
+          <ul class="submenu-list">
+            <li class="submenu-item">서브 메뉴 추가 <span class="plus">+</span></li>
+            <li class="submenu-item">전체 제품</li>
+            <li class="submenu-item">생산환경오염 검출장치</li>
+            <li class="submenu-item">파이어제로</li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          고객센터 <span class="arrow">▾</span>
+          <ul class="submenu-list">
+            <li class="submenu-item">서브 메뉴 추가 <span class="plus">+</span></li>
+            <li class="submenu-item">공지사항</li>
+            <li class="submenu-item">FAQ</li>
+            <li class="submenu-item">문의사항</li>
+          </ul>
+        </li>
+      </ul>
+
+      <button class="btn-add">메뉴 수정</button>
+    </aside>
+
+    <!-- 2025.10.27 메뉴 팝업 추가 -->
+     <!-- 2025.10.28 메뉴 팝업 수정 -->
+    <div class="menu-modal">
+      <div class="menu-modal-content">
+        <h2>메뉴 순서 관리</h2>
+
+         <ul class="menu-list">
+      <!-- 메인 메뉴 1 -->
+      <li class="menu-item">
+        <div class="menu-header">
+          <span>회사 소개</span>
+          <span class="sort-btns">
+            <button class="up">↑</button>
+            <button class="down">↓</button>
+          </span>
+        </div>
+
+        <ul class="submenu-modal">
+          <li>
+            인사말
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            회사 연혁
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            경영 목표
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            인증 및 등록현황
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            오시는 길
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 메인 메뉴 2 -->
+      <li class="menu-item">
+        <div class="menu-header">
+          <span>ESG</span>
+          <span class="sort-btns">
+            <button class="up">↑</button>
+            <button class="down">↓</button>
+          </span>
+        </div>
+
+        <ul class="submenu-modal">
+          <li>
+            2023 ESG
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            2024 ESG
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 메인 메뉴 3 -->
+      <li class="menu-item">
+        <div class="menu-header">
+          <span>주요 제품</span>
+          <span class="sort-btns">
+            <button class="up">↑</button>
+            <button class="down">↓</button>
+          </span>
+        </div>
+
+        <ul class="submenu-modal">
+          <li>
+            전체 제품
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            생산환경오염 검출장치
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            파이어제로
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 메인 메뉴 4 -->
+      <li class="menu-item">
+        <div class="menu-header">
+          <span>고객센터</span>
+          <span class="sort-btns">
+            <button class="up">↑</button>
+            <button class="down">↓</button>
+          </span>
+        </div>
+
+        <ul class="submenu-modal">
+          <li>
+            공지사항
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            FAQ
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+          <li>
+            문의사항
+            <span class="sort-btns">
+              <button class="up">↑</button>
+              <button class="down">↓</button>
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+        <div class="modal-buttons">
+          <button class="close-menu-modal">닫기</button>
+          <button class="save-menu">저장</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 오른쪽: 게시판 목록 -->
+    <section class="board-main">
+      <h2>
+        메뉴 추가
+      </h2>
+      <p class="Caution">주요 제품 명칭 변경시 제품 관리에서 모든 유형을 동일한 유형으로 변경해주세요</p>
+      <div class="form-row">
+        <label>상위 메뉴</label>
+        <select>
+          <!-- 분류는 메뉴 관리에서 추가하면 분류가 늘어남 -->
+          <!-- 분류는 메인 메뉴 추가할때는 hidden -->
+          <option value="">선택하세요</option>
+          <option value="option1">회사 소개</option>
+          <option value="option2">ESG</option>
+          <option value="option3">주요 제품</option>
+          <option value="option4">고객센터</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>ID</label>
+        <input type="text" />
+      </div>
+      <div class="form-row">
+        <label>메뉴명</label>
+        <input type="text" />
+      </div>
+      <div class="form-row">
+        <label>URL</label>
+        <input type="text" />
+      </div>
+      <div class="footer-row">
+        <!-- 2025.10.23 체크박스로 수정 -->
+        <label><input type="checkbox" name="active" /> 메뉴 활성화</label>
+        <div class="btn-group">
+          <button class="edit-btn">등록</button>
+          <!-- 등록할때는 등록만, 수정 및 삭제 할때는 등록은 hidden -->
+          <button class="edit-btn">수정</button>
+          <button class="delete-btn">삭제</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../JAVASCRIPT/admin.js"></script>
+</body>
+
+</html>

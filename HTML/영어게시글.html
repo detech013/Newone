@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>post</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<body>
+    <!-- pc 헤더 -->
+    <header class="pc-header">
+        <div class="navbar__div">
+            <nav class="navbar">
+                <!-- 로고 -->
+                <div class="navbar__logo">
+                    <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+                </div>
+
+                <!-- 메뉴 -->
+                <ul class="navbar__menu">
+                    <li class="menu">
+                        <div><a href="./company.html" class="menu__title">회사 소개</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./company.html">인사말</a></li>
+                            <li><a href="./history.html">회사 연혁</a></li>
+                            <li><a href="./goals.html">경영목표</a></li>
+                            <li><a href="./registration.html">인증 및 등록현황</a></li>
+                            <li><a href="./location.html">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./2023.html" class="menu__title">ESG</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./2023.html">2023 ESG</a></li>
+                            <li><a href="./2024.html">2024 ESG</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./products.html" class="menu__title">주요 제품</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./products.html">전체</a></li>
+                            <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                            <li><a href="./nfz.html">파이어 제로</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <div><a href="./notice.html" class="menu__title">고객센터</a></div>
+                        <ul class="navbar__submenu">
+                            <li><a href="./notice.html">공지사항</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 언어 선택 -->
+                <div class="navbar__lang">
+                    <select>
+                        <option value="ko">KOR</option>
+                        <option value="en">ENG</option>
+                        <option value="jp">JPN</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 모바일 헤더 -->
+    <header class="mobile-header">
+        <div class="mobile-navbar">
+            <div class="mobile-logo">
+                <a href="./main.html"><img src="../img/logo-color.webp" alt="logo"></a>
+            </div>
+            <button id="openSidebar" class="hamburger" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M6 36V32H42V36H6ZM6 26V22H42V26H6ZM6 16V12H42V16H6Z" fill="black" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 사이드바 -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button id="closeSidebar" class="closebtn" aria-label="메뉴 닫기">×</button>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html" class="main-link">회사 소개</a>
+                    <ul>
+                        <li><a href="./company.html">인사말</a></li>
+                        <li><a href="./history.html">회사 연혁</a></li>
+                        <li><a href="./goals.html">경영목표</a></li>
+                        <li><a href="./registration.html">인증 및 등록현황</a></li>
+                        <li><a href="./location.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./2023.html" class="main-link">ESG</a>
+                    <ul>
+                        <li><a href="./2023.html">2023 ESG</a></li>
+                        <li><a href="./2024.html">2024 ESG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./products.html" class="main-link">주요 제품</a>
+                    <ul>
+                        <li><a href="./products.html">전체</a></li>
+                        <li><a href="./nwenc.html">생산환경오염 검출 장치</a></li>
+                        <li><a href="./nfz.html">파이어 제로</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./notice.html" class="main-link">고객센터</a>
+                    <ul>
+                        <li><a href="./notice.html">공지사항</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./contact.html">문의하기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 배너 -->
+    <div class="banner" style="background: url(../img/banner-notice.jpg) no-repeat center/cover;">
+        <div class="banner-inner">
+            <h1 class="banner-title">고객센터</h1>
+            <span class="breadcrumb">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path d="M10.5 20V14H14.5V20H19.5V12H22.5L12.5 3L2.5 12H5.5V20H10.5Z" fill="white" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                고객센터
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path
+                        d="M8.192 2.69259L17.5 12.0006L8.192 21.3086L7.128 20.2446L15.373 12.0006L7.129 3.75659L8.192 2.69259Z"
+                        fill="white" />
+                </svg>
+                공지사항
+            </span>
+        </div>
+    </div>
+
+    <!-- 서브 메뉴 -->
+    <div class="sub-menu">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="./notice.html">공지사항</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a href="./contact.html">문의하기</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 본문 -->
+    <div class="notice-section">
+        <div class="notice-header">
+            <h2>가나다라마바사아자차카타파하</h2>
+            <!-- 2025.10.21 뒤로가기 버튼 삭제 -->
+            <!-- <div class="back">
+                <a href="../html/notice.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 16 16" fill="none">
+                        <path d="M3.825 7L9.425 1.4L8 0L0 8L8 16L9.425 14.6L3.825 9H16V7H3.825Z" fill="black" />
+                    </svg>
+                </a>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="notice-detail-head">
+            <div class="notice-detail-info">
+                <div>
+                    <span>Notice</span>
+                </div>
+                <div>
+                    <!-- 2025.10.24 조회수 삭제 -->
+                    <!-- <span>조회수 : 000</span> -->
+                    <span>2025/07/25</span>
+                </div>
+            </div>
+        </div>
+        <div class="notice-detail-file">
+            <a href="#">자료.pdf
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 15.577L8.461 12.039L9.169 11.319L11.5 13.65V5H12.5V13.65L14.83 11.32L15.539 12.039L12 15.577ZM6.616 19C6.15533 19 5.771 18.846 5.463 18.538C5.155 18.23 5.00067 17.8453 5 17.384V14.961H6V17.384C6 17.538 6.064 17.6793 6.192 17.808C6.32 17.9367 6.461 18.0007 6.615 18H17.385C17.5383 18 17.6793 17.936 17.808 17.808C17.9367 17.68 18.0007 17.5387 18 17.384V14.961H19V17.384C19 17.8447 18.846 18.229 18.538 18.537C18.23 18.845 17.8453 18.9993 17.384 19H6.616Z"
+                        fill="#0048FF" />
+                </svg>
+            </a>
+        </div>
+
+
+        <div class="notice-detail-body">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim neque ipsum voluptatem officia voluptatum
+            iure laudantium, harum assumenda veritatis omnis unde nostrum repudiandae odit at tempore vero. Ea, dolores
+            placeat?
+        </div>
+
+        <!-- 2025.10.21 버튼 위치 수정 -->
+        <!-- <div class="notice-detail-btn">
+            <button type="button"> <a href="../html/notice.html">목록</a></button>
+        </div> -->
+
+    </div>
+
+    <!-- 2025.10.21 버튼 위치 수정 -->
+    <div class="notice-detail-btn">
+        <button type="button"> <a href="../html/notice.html">List</a></button>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footerlogo">
+                <img src="../img/logo-white.webp" alt="">
+            </div>
+            <div>
+                <h3>본사</h3>
+                <p>경기도 수원시 권선구 서둔로 21</p>
+                <p>Tel: 031-298-1191</p>
+                <p>Fax: 031-297-4460</p>
+            </div>
+            <div class="box"></div>
+            <div>
+                <h3>일산지사</h3>
+                <p>경기도 고양시 일산동구 중앙로 1079 601호</p>
+                <p>Tel: 031-912-1191</p>
+                <p>Fax: 031-912-4460</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/header.js">
+    </script>
+</body>
+
+</html>
