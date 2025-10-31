@@ -62,6 +62,19 @@
 
      }
 
+      .esg-text {
+             margin-top: 0;
+             display: flex;
+             gap: 20px;
+             align-items: center;
+             margin: 40px 0;
+             flex: 1;
+         }
+
+         .esg-img-list {
+    display: flex;
+    gap: 10px; /* 이미지 사이 간격 */
+}
 
      .caption {
          text-align: center;
