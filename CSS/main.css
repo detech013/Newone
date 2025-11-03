@@ -384,3 +384,43 @@
     padding: 8px 0;
     list-style: none;
   } */
+
+  /* 중앙정렬 + 점 제거 */
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+}
+
+/* 링크 기본 파란색/밑줄 제거 + 폰트 통일 */
+ul.pagination a,
+ul.pagination a:link,
+ul.pagination a:visited,
+ul.pagination a:hover,
+ul.pagination a:active {
+  color: #000;               /* 전부 검정 */
+  text-decoration: none;     /* 기본 밑줄 제거 */
+  font-size: 17px;           /* 폰트 크기 통일 */
+  line-height: 1;
+  display: inline-block;
+}
+
+/* 활성 페이지만 밑줄 */
+ul.pagination li.active > a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* 비활성 스타일 */
+ul.pagination li.disabled > a {
+  opacity: 0.35;
+  pointer-events: none;
+}
+ul.pagination a:contains("‹"),
+ul.pagination a:contains("›") {
+  font-size: 26px; /* 화살표 크게 */
+}
